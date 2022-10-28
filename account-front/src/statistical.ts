@@ -325,36 +325,36 @@ async function renderMonthCostList() {
     const data = await response.json();
     console.log(data);
 
-    // TEST_ITEM.map(
-    //     ({
-    //         id,
-    //         payedMoney,
-    //         payYear,
-    //         payMonth,
-    //         payDay,
-    //         payTime,
-    //         classify,
-    //         category,
-    //         memo,
-    //     }) => {
-    //         const costItem = new CostItem(
-    //             id,
-    //             payedMoney,
-    //             payYear,
-    //             payMonth,
-    //             payDay,
-    //             payTime,
-    //             classify,
-    //             category,
-    //             memo
-    //         );
-    //         listItemsEl.appendChild(costItem.createItem());
-    //     }
-    // );
+    data.map(
+        ({
+            id,
+            payedMoney,
+            payYear,
+            payMonth,
+            payDay,
+            payTime,
+            classify,
+            category,
+            memo,
+        }) => {
+            const costItem = new CostItem(
+                id,
+                payedMoney,
+                payYear,
+                payMonth,
+                payDay,
+                payTime,
+                classify,
+                category,
+                memo
+            );
+            listItemsEl.appendChild(costItem.createItem());
+        }
+    );
 
-    // renderStatisticAll(TEST_ITEM);
-    // renderStatisticIncome(TEST_ITEM);
-    // renderStatisticExpense(TEST_ITEM);
+    renderStatisticAll(data);
+    renderStatisticIncome(data);
+    renderStatisticExpense(data);
 }
 
 function init() {
