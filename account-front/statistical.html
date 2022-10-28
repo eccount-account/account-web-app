@@ -25,8 +25,8 @@
                 </ul>
             </header>
             <div class="buttonArea">
-                <button class="allHistory">전체수입보기</button>
-                <button class="">전체출금보기</button>
+                <button class="allIncomeHistory">전체수입보기</button>
+                <button class="allExpendHistory">전체출금보기</button>
             </div>
             <section class="contents">
                 <div class="selectDate">
@@ -34,12 +34,32 @@
                     <button class="submitBtn">검색</button>
                 </div>
                 <div class="statisticMony">
-                    <div class="monySum">2,950,000원</div>
-                    <div class="monyIncome">3,000,000원</div>
-                    <div class="monyExpense">50,000원</div>
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>합계</th>
+                                <th>수입</th>
+                                <th>지출</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <th class="monySum">2,950,000원</th>
+                            <th class="monyIncome">3,000,000원</th>
+                            <th class="monyExpense">50,000원</th>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="statisticList">
-                    <ul class="ListItems"></ul>
+                <div>
+                    <table class="styled-table">
+                        <thead>
+                            <th>구분</th>
+                            <th>카테고리</th>
+                            <th>금액</th>
+                            <th>메모</th>
+                            <th>날짜</th>
+                        </thead>
+                        <tbody class="ListItems tableRow"></tbody>
+                    </table>
                 </div>
             </section>
             <div class="mdidyInput"></div>

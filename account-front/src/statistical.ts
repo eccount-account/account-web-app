@@ -5,6 +5,9 @@ import { createEl } from "./utile";
 import { fetchData } from "./api";
 
 const listItemsEl = document.querySelector(".ListItems") as HTMLSelectElement;
+const selectMonthEl = document.querySelector(
+    ".selectMonth"
+) as HTMLSelectElement;
 
 interface PostOption {
     method: string;
@@ -51,12 +54,12 @@ class CostItem {
     }
 
     createItem() {
-        const listItemEl = createEl("li", "cl-listItem");
-        const payedmoneyEl = createEl("div", "cl-payedmoney");
-        const payedateEl = createEl("div", "cl-payedate");
-        const classifyEl = createEl("div", "cl-classify");
-        const categoryEl = createEl("div", "cl-category");
-        const memoEl = createEl("div", "cl-memo");
+        const listItemEl = createEl("tr", "cl-listItem");
+        const payedmoneyEl = createEl("td", "cl-payedmoney");
+        const payedateEl = createEl("td", "cl-payedate");
+        const classifyEl = createEl("td", "cl-classify");
+        const categoryEl = createEl("td", "cl-category");
+        const memoEl = createEl("td", "cl-memo");
 
         payedmoneyEl.innerText = `${this.payedMoney.toLocaleString()}원`;
         payedateEl.innerText = this.getFullDate();
@@ -64,14 +67,16 @@ class CostItem {
         categoryEl.innerText = this.category;
         memoEl.innerText = this.memo;
 
-        listItemEl.appendChild(payedmoneyEl);
-        listItemEl.appendChild(payedateEl);
+        classifyEl.classList.add(
+            `${this.classify === "수입" ? "style-imcome" : "style-expend"}`
+        );
         listItemEl.appendChild(classifyEl);
         listItemEl.appendChild(categoryEl);
+        listItemEl.appendChild(payedmoneyEl);
         listItemEl.appendChild(memoEl);
+        listItemEl.appendChild(payedateEl);
 
-        listItemEl.addEventListener("click", (event) => {
-            console.log("클릭 id", this.id, this, event);
+        listItemEl.addEventListener("click", () => {
             this.modifyIncomItem(this.id, this.classify);
         });
         return listItemEl;
@@ -98,11 +103,13 @@ class CostItem {
             }
         );
 
-        const data = await response.json();
+        const data = await response.status;
         console.log(data);
+        renderMonthCostList();
     }
 
     async requestDelete(id, classify) {
+        console.log("삭제 id -> ", id, "분류 -> ", classify);
         const response = await fetch(
             `/api/${classify === "수입" ? "income" : "expend"}/id/${id}`,
             {
@@ -113,8 +120,9 @@ class CostItem {
             }
         );
 
-        const data = await response.json();
+        const data = await response.status;
         console.log(data);
+        renderMonthCostList();
     }
 
     async modifyIncomItem(id, classify) {
@@ -133,18 +141,6 @@ class CostItem {
             "수출 특정 아이디 한개 데이터 가져오기",
             selectExpendOne[0]
         );
-
-        // const TEST_DATA = {
-        //     id: 1,
-        //     payedMoney: 20000,
-        //     payYear: 2022,
-        //     payMonth: 3,
-        //     payDay: 2,
-        //     payTime: 10,
-        //     classify: "수입",
-        //     category: "근로소득",
-        //     memo: "치킨먹었음",
-        // };
 
         const modifyAreaEl = createEl("div", "modifyArea");
         const modifypayedMoneyEl = createEl("input", "modifypayedMoney");
@@ -183,12 +179,17 @@ class CostItem {
             );
         });
         deleteBtn.addEventListener("click", () => {
-            this.requestDelete(selectExpendOne[0].id, selectExpendOne.classify);
+            this.requestDelete(selectExpendOne[0].id, classify);
         });
 
         mdidyInputEl.appendChild(modifyAreaEl);
     }
 }
+const categor = {
+    imcome: ["금융소득", "근로소득", "기타", "없음"],
+    expend: ["식비", "교통비", "주거비", "유흥비", "저축", "기타"],
+};
+class Modal {}
 
 function sumAllCost(data) {
     return data.reduce(
@@ -228,6 +229,7 @@ function renderStatisticAll(data) {
 function renderStatisticIncome(data) {
     const targetEl = document.querySelector(".monyIncome") as HTMLSelectElement;
     targetEl.innerText = `${sumIncomeCost(data).toLocaleString()}원`;
+    targetEl.classList.add("style-imcome");
 }
 
 function renderStatisticExpense(data) {
@@ -235,79 +237,12 @@ function renderStatisticExpense(data) {
         ".monyExpense"
     ) as HTMLSelectElement;
     targetEl.innerText = `${sumExpenseCost(data).toLocaleString()}원`;
+    targetEl.classList.add("style-expend");
 }
 
-async function renderMonthCostList() {
+async function renderMonthCostList(date?) {
+    const [year, month] = date.value.split("-");
     listItemsEl.innerText = "";
-    //api 대신 가져오기
-    // const TEST_ITEM = [
-    //     {
-    //         id: 1,
-    //         payedMoney: 2000,
-    //         payYear: 2022,
-    //         payMonth: 10,
-    //         payDay: 25,
-    //         payTime: 1100,
-    //         classify: "수입",
-    //         category: "금융소득",
-    //         memo: "안녕하세요1",
-    //     },
-    //     {
-    //         id: 1,
-    //         payedMoney: 2000,
-    //         payYear: 2022,
-    //         payMonth: 10,
-    //         payDay: 25,
-    //         payTime: 1100,
-    //         classify: "지출",
-    //         category: "식비",
-    //         memo: "안녕하세요1",
-    //     },
-    //     {
-    //         id: 2,
-    //         payedMoney: 3000,
-    //         payYear: 2022,
-    //         payMonth: 3,
-    //         payDay: 2,
-    //         payTime: 10,
-    //         classify: "수입",
-    //         category: "근로소득",
-    //         memo: "월급",
-    //     },
-    //     {
-    //         id: 2,
-    //         payedMoney: 3000,
-    //         payYear: 2022,
-    //         payMonth: 1,
-    //         payDay: 3,
-    //         payTime: 11,
-    //         classify: "지출",
-    //         category: "교통비",
-    //         memo: "교통비",
-    //     },
-    //     {
-    //         id: 3,
-    //         payedMoney: 3000,
-    //         payYear: 2022,
-    //         payMonth: 1,
-    //         payDay: 3,
-    //         payTime: 11,
-    //         classify: "수입",
-    //         category: "근로소득",
-    //         memo: "교통비",
-    //     },
-    //     {
-    //         id: 4,
-    //         payedMoney: 200,
-    //         payYear: 2022,
-    //         payMonth: 1,
-    //         payDay: 3,
-    //         payTime: 11,
-    //         classify: "지출",
-    //         category: "교통비",
-    //         memo: "교통비",
-    //     },
-    // ];
 
     const response = await fetch(`/api/monthtotal`, {
         method: "POST",
@@ -316,8 +251,8 @@ async function renderMonthCostList() {
         },
         body: JSON.stringify({
             content: {
-                payMonth: 10,
-                payYear: 2022,
+                payMonth: month,
+                payYear: year,
             },
         }),
     });
@@ -361,7 +296,9 @@ function init() {
     const submitBtnEl = document.querySelector(
         ".submitBtn"
     ) as HTMLSelectElement;
-    submitBtnEl.addEventListener("click", renderMonthCostList);
+    submitBtnEl.addEventListener("click", () => {
+        renderMonthCostList(selectMonthEl);
+    });
 }
 
 //윈도우 열리면 바로 init() 함수 실행
