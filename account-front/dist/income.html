@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>수입</title>
+    <script defer src="vendors.ad1e80883698f970753c.bundle.js"></script><script defer src="income.c39f4af219f616d76050.bundle.js"></script></head>
+    <body>
+        <div id="root">
+            <header class="navigation">
+                <div class="logo">
+                    <a href="index.html">가계부</a>
+                </div>
+                <ul class="nav-area">
+                    <li class="nav-item">
+                        <a href="income.html">수입입력</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="expense.html">지출입력</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="statistical.html">통계</a>
+                    </li>
+                </ul>
+            </header>
+            <section class="contents">
+                <div class="income-area">
+                    <div class="user-input-area">
+                        <div class="input-title">
+                            <p>수입을 입력해주세요</p>
+                        </div>
+                        <div class="input-item">
+                            <p class="input-label">수입방법</p>
+                            <select class="payedCategory">
+                                <option value="금융소득" selected>
+                                    금융소득
+                                </option>
+                                <option value="근로소득">근로소득</option>
+                                <option value="기타">기타</option>
+                                <option value="없음">없음</option>
+                            </select>
+                        </div>
+                        <div class="input-item">
+                            <p class="input-label">수입금액</p>
+                            <input type="number" class="payedMoney" />
+                        </div>
+                        <div class="input-item">
+                            <p class="input-label">날짜</p>
+                            <input type="date""/>
+                        </div>
+                        <div class="input-item">
+                            <p>메모</p>
+                            <textarea class="payedMemo"></textarea>
+                        </div>
+                        <button class="submitBtn">입력</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

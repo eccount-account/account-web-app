@@ -1,0 +1,187 @@
+import "./css/reset.css";
+import "./css/navigation.css";
+import "./css/statisticalItem.css";
+
+import { createEl } from "./utile";
+import { fetchData } from "./api";
+
+const selectIncomeAllEl = document.querySelector(
+    ".selectIncomeAll"
+) as HTMLSelectElement;
+
+const selectExpendAllEl = document.querySelector(
+    ".selectExpendAll"
+) as HTMLSelectElement;
+
+const statisticItemsEl = document.querySelector(
+    ".statisticItems"
+) as HTMLSelectElement;
+
+class CostItem {
+    id: number;
+    classify: string;
+    payedMoney: number;
+    category: string;
+    memo: string;
+    year: number;
+    month: number;
+    day: number;
+    payment?: string;
+    constructor(
+        id: number,
+        classify: string,
+        payedMoney: number,
+        category: string,
+        memo: string,
+        year: number,
+        month: number,
+        day: number,
+        payment?: string
+    ) {
+        this.id = id;
+        this.classify = classify;
+        this.payedMoney = payedMoney;
+        this.category = category;
+        this.memo = memo;
+        this.year = year;
+        this.month = month;
+        this.day = day;
+        this.payment = payment;
+
+        console.log(
+            "콘스트럭쳐",
+            this.id,
+            this.classify,
+            this.payedMoney,
+            this.category,
+            this.memo,
+            this.year,
+            this.day,
+            "페이먼트",
+            this.payment
+        );
+    }
+
+    //날짜 생성 함수
+    getFullDate() {
+        return `${this.year}-${this.month}-${this.day}`;
+    }
+
+    //엘리먼트 생성
+    createItem() {
+        const statisticItemEl = createEl("li", "statisticItem");
+        const statisticDateEl = createEl("div", "statisticDate");
+        const statisticTextEl = createEl("div", "statisticText");
+        const statisticClassifyEl = createEl("div", "statisticClassify");
+        const statisticDescEl = createEl("div", "statisticDesc");
+        const statisticCategoryEl = createEl("div", "statisticCategory");
+        const statisticMemoEl = createEl("div", "statisticMemo");
+        const statisticMonyEl = createEl("div", "statisticMony");
+
+        statisticDateEl.innerText = this.getFullDate();
+        statisticClassifyEl.innerText = this.classify;
+        statisticCategoryEl.innerText = this.category;
+        statisticMemoEl.innerText = this.memo;
+        statisticMonyEl.innerText = `${
+            this.classify === "입급"
+                ? "+" + this.payedMoney.toLocaleString()
+                : "-" + this.payedMoney.toLocaleString()
+        }원`;
+
+        statisticDescEl.appendChild(statisticCategoryEl);
+        statisticDescEl.appendChild(statisticMemoEl);
+
+        statisticTextEl.appendChild(statisticClassifyEl);
+        statisticTextEl.appendChild(statisticDescEl);
+
+        statisticItemEl.appendChild(statisticDateEl);
+        statisticItemEl.appendChild(statisticTextEl);
+        statisticItemEl.appendChild(statisticMonyEl);
+
+        return statisticItemEl;
+    }
+}
+
+async function renderAllIncome() {
+    const selectIncomeAll = await fetchData("/api/income/");
+    console.log("수입 전체 데이터 가져오기", selectIncomeAll);
+    statisticItemsEl.innerText = "";
+
+    selectIncomeAll.map(
+        ({ id, payedMoney, category, memo, payYear, payMonth, payDay }) => {
+            console.log(
+                id,
+                payedMoney,
+                category,
+                memo,
+                payYear,
+                payMonth,
+                payDay
+            );
+
+            const constItem = new CostItem(
+                id,
+                "입금",
+                payedMoney,
+                category,
+                memo,
+                payYear,
+                payMonth,
+                payDay
+            );
+            statisticItemsEl.appendChild(constItem.createItem());
+        }
+    );
+}
+
+// const constItem = new CostItem(
+//     1,
+//     "입급",
+//     20000,
+//     "카드",
+//     "외식했음",
+//     2022,
+//     10,
+//     2,
+//     "식비"
+// );
+// const newCodeItemEl = constItem.createItem();
+// statisticItemsEl.appendChild(newCodeItemEl);
+// console.log(constItem);
+
+async function dataGet() {
+    const selectIncomeAll = await fetchData("/api/income/");
+    console.log("수입 전체 데이터 가져오기", selectIncomeAll);
+    const selectIncomOne = await fetchData("/api/income/id/1");
+    console.log("수입 특정 아이디 한개 데이터 가져오기", selectIncomOne);
+    const year = 2022;
+    const selectIncomYear = await fetchData(`/api/income/payyear/${year}`);
+    console.log("수입 특정 년 가져오기", selectIncomYear);
+    const month = 10;
+    const selectIncomMonth = await fetchData(`/api/income/paymonth/${month}`);
+    console.log("수입 특정 월 가져오기", selectIncomMonth);
+    const day = 19;
+    const selectIncomDay = await fetchData(`/api/income/payday/${day}`);
+    console.log("수입 특정 일 가져오기", selectIncomDay);
+    const selectExpendAll = await fetchData("/api/expend");
+    console.log("수출 전체 데이터 가져오기", selectExpendAll);
+    const exId = 1;
+    const selectExpendOne = await fetchData(`/api/expend/id/${exId}`);
+    console.log("수출 특정 아이디 한개 데이터 가져오기", selectExpendOne);
+    const exYear = 2022;
+    const selectExpendYear = await fetchData(`/api/expend/payyear/${exYear}`);
+    console.log("수출 특정 년 가져오기", selectExpendYear);
+    const exMonth = 12;
+    const selectExpendMonth = await fetchData(`/api/paymonth/${exMonth}`);
+    console.log("수출 특정 월 가져오기", selectExpendMonth);
+    const exDay = 25;
+    const selectExpendDay = await fetchData(`/api/expend/payday/${exDay}`);
+    console.log("수출 특정 월 가져오기", selectExpendDay);
+}
+
+//dataGet();
+
+//IncomeAllEl?.addEventListener("click", allIncomDate);
+
+selectIncomeAllEl.addEventListener("click", renderAllIncome);
+selectExpendAllEl.addEventListener("click", renderAllIncome);

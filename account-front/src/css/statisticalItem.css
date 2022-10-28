@@ -1,0 +1,16 @@
+.statisticMony {
+    display: flex;
+    flex-direction: row;
+}
+
+.ListItems {
+    display: flex;
+    flex-direction: column;
+    background-color: tomato;
+    width: 600px;
+}
+
+.cl-listItem {
+    display: flex;
+    flex-direction: row;
+}
