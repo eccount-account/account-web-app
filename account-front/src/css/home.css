@@ -116,3 +116,37 @@ button {
     cursor: pointer;
     border-radius: 8px;
 }
+
+.detailBoard {
+    width: 280px;
+    height: 300px;
+}
+
+.detailBoardBox input,
+.detailBoardBox select {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 12px;
+    border-color: rgba(228, 237, 242, 0.3, 1);
+    border: 1px solid #e4edf2;
+    margin-bottom: 8px;
+}
+
+.detailBoardBox p {
+    margin-bottom: 4px;
+    font-size: 16px;
+    color: rgb(102, 108, 119);
+}
+
+.detailBoardBox .boardBtnArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.detailBoardBox button {
+    width: 45%;
+}

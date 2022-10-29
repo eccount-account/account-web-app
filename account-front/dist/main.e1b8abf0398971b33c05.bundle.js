@@ -628,25 +628,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".statisticMony {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:nth-of-type(even) {\r\n    background-color: #f3f3f3;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n.style-imcome {\r\n    color: #ff6677;\r\n    font-weight: 800;\r\n}\r\n\r\n.style-expend {\r\n    color: #4a88e5;\r\n    font-weight: 800;\r\n}\r\n\r\n.overlay {\r\n    display: none;\r\n    position: fixed;\r\n    z-index: 10;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(16, 16, 16, 0.5);\r\n}\r\n\r\n#modal-overlay-backgroud {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.overlay.active {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: #fff;\r\n}\r\n\r\n/* z-index를 .overlay보다 높게해주면, modal-overlay-backgroud보다 위에 있으므로 클릭해도 꺼지지 않는다. */\r\n.overlay .modal-overlay-content {\r\n    background-color: #fff;\r\n    color: #000;\r\n    border-radius: 0.5rem;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    max-width: 40rem;\r\n    z-index: 11;\r\n}\r\n\r\n.overlay .modal-overlay-content > * {\r\n    margin: 2rem;\r\n}\r\n\r\n.detailBoardBox {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n\r\nbutton {\r\n    background: #13bd7e;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    padding: 4px 12px;\r\n    color: #ffffff;\r\n    font-size: 14px;\r\n    cursor: pointer;\r\n    border-radius: 8px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/home.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;IAChB,uBAAuB;IACvB,gBAAgB;IAChB,wCAAwC;AAC5C;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB;;AAEA;;IAEI,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,eAAe;IACf,WAAW;IACX,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;IACZ,uCAAuC;AAC3C;;AAEA;IACI,eAAe;IACf,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,WAAW;AACf;;AAEA,+EAA+E;AAC/E;IACI,sBAAsB;IACtB,WAAW;IACX,qBAAqB;IACrB,aAAa;IACb,sBAAsB;IACtB,6BAA6B;IAC7B,gBAAgB;IAChB,WAAW;AACf;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,8BAA8B;IAC9B,YAAY;IACZ,wBAAwB;AAC5B;;AAEA;IACI,mBAAmB;IACnB,yCAAyC;IACzC,YAAY;IACZ,iBAAiB;IACjB,cAAc;IACd,eAAe;IACf,eAAe;IACf,kBAAkB;AACtB","sourcesContent":[".statisticMony {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:nth-of-type(even) {\r\n    background-color: #f3f3f3;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n.style-imcome {\r\n    color: #ff6677;\r\n    font-weight: 800;\r\n}\r\n\r\n.style-expend {\r\n    color: #4a88e5;\r\n    font-weight: 800;\r\n}\r\n\r\n.overlay {\r\n    display: none;\r\n    position: fixed;\r\n    z-index: 10;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(16, 16, 16, 0.5);\r\n}\r\n\r\n#modal-overlay-backgroud {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.overlay.active {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: #fff;\r\n}\r\n\r\n/* z-index를 .overlay보다 높게해주면, modal-overlay-backgroud보다 위에 있으므로 클릭해도 꺼지지 않는다. */\r\n.overlay .modal-overlay-content {\r\n    background-color: #fff;\r\n    color: #000;\r\n    border-radius: 0.5rem;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    max-width: 40rem;\r\n    z-index: 11;\r\n}\r\n\r\n.overlay .modal-overlay-content > * {\r\n    margin: 2rem;\r\n}\r\n\r\n.detailBoardBox {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n\r\nbutton {\r\n    background: #13bd7e;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    padding: 4px 12px;\r\n    color: #ffffff;\r\n    font-size: 14px;\r\n    cursor: pointer;\r\n    border-radius: 8px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".statisticMony {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:nth-of-type(even) {\r\n    background-color: #f3f3f3;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n.style-imcome {\r\n    color: #ff6677;\r\n    font-weight: 800;\r\n}\r\n\r\n.style-expend {\r\n    color: #4a88e5;\r\n    font-weight: 800;\r\n}\r\n\r\n.overlay {\r\n    display: none;\r\n    position: fixed;\r\n    z-index: 10;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(16, 16, 16, 0.5);\r\n}\r\n\r\n#modal-overlay-backgroud {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.overlay.active {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: #fff;\r\n}\r\n\r\n/* z-index를 .overlay보다 높게해주면, modal-overlay-backgroud보다 위에 있으므로 클릭해도 꺼지지 않는다. */\r\n.overlay .modal-overlay-content {\r\n    background-color: #fff;\r\n    color: #000;\r\n    border-radius: 0.5rem;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    max-width: 40rem;\r\n    z-index: 11;\r\n}\r\n\r\n.overlay .modal-overlay-content > * {\r\n    margin: 2rem;\r\n}\r\n\r\n.detailBoardBox {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n\r\nbutton {\r\n    background: #13bd7e;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    padding: 4px 12px;\r\n    color: #ffffff;\r\n    font-size: 14px;\r\n    cursor: pointer;\r\n    border-radius: 8px;\r\n}\r\n\r\n.detailBoard {\r\n    width: 280px;\r\n    height: 300px;\r\n}\r\n\r\n.detailBoardBox input,\r\n.detailBoardBox select {\r\n    width: 100%;\r\n    height: 40px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    border: 1px solid #e4edf2;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n.detailBoardBox p {\r\n    margin-bottom: 4px;\r\n    font-size: 16px;\r\n    color: rgb(102, 108, 119);\r\n}\r\n\r\n.detailBoardBox .boardBtnArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-around;\r\n}\r\n\r\n.detailBoardBox button {\r\n    width: 45%;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/home.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;IAChB,uBAAuB;IACvB,gBAAgB;IAChB,wCAAwC;AAC5C;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB;;AAEA;;IAEI,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,eAAe;IACf,WAAW;IACX,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;IACZ,uCAAuC;AAC3C;;AAEA;IACI,eAAe;IACf,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,WAAW;AACf;;AAEA,+EAA+E;AAC/E;IACI,sBAAsB;IACtB,WAAW;IACX,qBAAqB;IACrB,aAAa;IACb,sBAAsB;IACtB,6BAA6B;IAC7B,gBAAgB;IAChB,WAAW;AACf;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,8BAA8B;IAC9B,YAAY;IACZ,wBAAwB;AAC5B;;AAEA;IACI,mBAAmB;IACnB,yCAAyC;IACzC,YAAY;IACZ,iBAAiB;IACjB,cAAc;IACd,eAAe;IACf,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,aAAa;AACjB;;AAEA;;IAEI,WAAW;IACX,YAAY;IACZ,6BAA6B;IAC7B,iBAAiB;IACjB,mBAAmB;IACnB,mBAAmB;IACnB,yCAAyC;IACzC,yBAAyB;IACzB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,eAAe;IACf,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,6BAA6B;AACjC;;AAEA;IACI,UAAU;AACd","sourcesContent":[".statisticMony {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:nth-of-type(even) {\r\n    background-color: #f3f3f3;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n.style-imcome {\r\n    color: #ff6677;\r\n    font-weight: 800;\r\n}\r\n\r\n.style-expend {\r\n    color: #4a88e5;\r\n    font-weight: 800;\r\n}\r\n\r\n.overlay {\r\n    display: none;\r\n    position: fixed;\r\n    z-index: 10;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(16, 16, 16, 0.5);\r\n}\r\n\r\n#modal-overlay-backgroud {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.overlay.active {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: #fff;\r\n}\r\n\r\n/* z-index를 .overlay보다 높게해주면, modal-overlay-backgroud보다 위에 있으므로 클릭해도 꺼지지 않는다. */\r\n.overlay .modal-overlay-content {\r\n    background-color: #fff;\r\n    color: #000;\r\n    border-radius: 0.5rem;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    max-width: 40rem;\r\n    z-index: 11;\r\n}\r\n\r\n.overlay .modal-overlay-content > * {\r\n    margin: 2rem;\r\n}\r\n\r\n.detailBoardBox {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n\r\nbutton {\r\n    background: #13bd7e;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    padding: 4px 12px;\r\n    color: #ffffff;\r\n    font-size: 14px;\r\n    cursor: pointer;\r\n    border-radius: 8px;\r\n}\r\n\r\n.detailBoard {\r\n    width: 280px;\r\n    height: 300px;\r\n}\r\n\r\n.detailBoardBox input,\r\n.detailBoardBox select {\r\n    width: 100%;\r\n    height: 40px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    border: 1px solid #e4edf2;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n.detailBoardBox p {\r\n    margin-bottom: 4px;\r\n    font-size: 16px;\r\n    color: rgb(102, 108, 119);\r\n}\r\n\r\n.detailBoardBox .boardBtnArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-around;\r\n}\r\n\r\n.detailBoardBox button {\r\n    width: 45%;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-/* 15 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createEl": () => (/* binding */ createEl)
-/* harmony export */ });
-//엘리먼트 생성, 클래스 이름 부여
-function createEl(elKind, className = "") {
-    const el = document.createElement(elKind);
-    el.className = className;
-    return el;
-}
 
 
 /***/ })
@@ -730,7 +714,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _css_navigation_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 /* harmony import */ var _css_home_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(13);
-/* harmony import */ var _utile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -743,8 +726,21 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-
 const listItemsEl = document.querySelector(".ListItems");
+//유틸함수
+function createEl(elKind, className = "") {
+    const el = document.createElement(elKind);
+    el.className = className;
+    return el;
+}
+function cutDateFull(date) {
+    const [year, month, day] = date.split("-");
+    return [Number(year), Number(month), Number(day)];
+}
+function cutDateMonth(date) {
+    const [year, month] = date.split("-");
+    return [Number(year), Number(month)];
+}
 //클라이언트 데이터 서버 전송
 function fetchData(url) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -769,6 +765,34 @@ function saveData(url, bodyData, method) {
         yield fetch(url, requstOption);
     });
 }
+function changeCategory(targetEl, classify) {
+    const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
+    const EXPEND_SELECT = [
+        "식비",
+        "교통비",
+        "주거비",
+        "유흥비",
+        "저축",
+        "기타",
+    ];
+    targetEl.innerText = "";
+    if (classify === "수입") {
+        INCOME_SELECT.forEach((item) => {
+            const optionEl = document.createElement("option");
+            optionEl.value = item;
+            optionEl.innerText = item;
+            targetEl.append(optionEl);
+        });
+    }
+    else {
+        EXPEND_SELECT.forEach((item) => {
+            const optionEl = document.createElement("option");
+            optionEl.value = item;
+            optionEl.innerText = item;
+            targetEl.append(optionEl);
+        });
+    }
+}
 class CostItem {
     constructor(id, payedMoney, payYear, payMonth, payDay, payTime, classify, category, memo) {
         this.id = id;
@@ -786,12 +810,12 @@ class CostItem {
         return `${this.payYear}-${this.payMonth}-${this.payDay}`;
     }
     createItem() {
-        const listItemEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("tr", "cl-listItem");
-        const payedmoneyEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-payedmoney");
-        const payedateEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-payedate");
-        const classifyEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-classify");
-        const categoryEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-category");
-        const memoEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-memo");
+        const listItemEl = createEl("tr", "cl-listItem");
+        const payedmoneyEl = createEl("td", "cl-payedmoney");
+        const payedateEl = createEl("td", "cl-payedate");
+        const classifyEl = createEl("td", "cl-classify");
+        const categoryEl = createEl("td", "cl-category");
+        const memoEl = createEl("td", "cl-memo");
         payedmoneyEl.innerText = `${this.payedMoney.toLocaleString()}원`;
         payedateEl.innerText = this.getFullDate();
         classifyEl.innerText = this.classify;
@@ -851,43 +875,43 @@ class CostItem {
             detailBoardEl.innerHTML = ""; //일단 지움
             const response = yield fetchData(`/api/${classify === "수입" ? "income" : "expend"}/id/${id}`);
             const selectItem = response[0];
-            const detailBoardBoxEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("div", "detailBoardBox");
-            const detailBoardMonyEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("input", "detailBoardMony");
-            const detailBoardMonyP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
-            const detailBoardCategoryEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("input", "detailBoardCategory");
-            const detailBoardCategoryP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
-            const detailBoardDateEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("input", "dateilBoard");
-            const detailBoardDateP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
-            const detailBoardMomoEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("input", "detailBoardMomo");
-            const detailBoardMomoP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
-            const boardBtnArea = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("div", "boardBtnArea");
-            const modifyBtn = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("button", "submit");
-            const deleteBtn = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("button", "submit");
+            const detailBoardBoxEl = createEl("div", "detailBoardBox");
+            const detailBoardMonyEl = createEl("input", "detailBoardMony");
+            const detailBoardMonyP = createEl("p", "input-label");
+            //셀렉트 박스
+            const detailBoardCategoryEl = createEl("select", "detailBoardCategory");
+            const detailBoardCategoryP = createEl("p", "input-label");
+            const detailBoardDateEl = createEl("input", "dateilBoard");
+            const detailBoardDateP = createEl("p", "input-label");
+            const detailBoardMomoEl = createEl("input", "detailBoardMomo");
+            const detailBoardMomoP = createEl("p", "input-label");
+            const boardBtnArea = createEl("div", "boardBtnArea");
+            const modifyBtn = createEl("button", "submit");
+            const deleteBtn = createEl("button", "submit");
             detailBoardMonyP.innerText = "금액";
             detailBoardCategoryP.innerText = "카테고리";
             detailBoardDateP.innerText = "날짜";
             detailBoardMomoP.innerText = "메모";
             detailBoardMonyEl.value = selectItem.payedMoney;
-            detailBoardCategoryEl.value = selectItem.category;
+            changeCategory(detailBoardCategoryEl, classify);
             detailBoardDateEl.setAttribute("type", "date");
             detailBoardDateEl.value = `${selectItem.payYear}-${selectItem.payMonth}-${selectItem.payDay}`; //클릭한 시간 넣어주기
             detailBoardMomoEl.value = selectItem.memo;
-            console.log("수정전 날짜", `${selectItem.payYear}-${selectItem.payMonth}-${selectItem.payDay}`);
             modifyBtn.innerText = `수정`;
             deleteBtn.innerText = `삭제`;
-            detailBoardBoxEl.appendChild(detailBoardMonyP);
-            detailBoardBoxEl.appendChild(detailBoardMonyEl);
             detailBoardBoxEl.appendChild(detailBoardCategoryP);
             detailBoardBoxEl.appendChild(detailBoardCategoryEl);
-            detailBoardBoxEl.appendChild(detailBoardMomoP);
-            detailBoardBoxEl.appendChild(detailBoardMomoEl);
+            detailBoardBoxEl.appendChild(detailBoardMonyP);
+            detailBoardBoxEl.appendChild(detailBoardMonyEl);
             detailBoardBoxEl.appendChild(detailBoardDateP);
             detailBoardBoxEl.appendChild(detailBoardDateEl);
+            detailBoardBoxEl.appendChild(detailBoardMomoP);
+            detailBoardBoxEl.appendChild(detailBoardMomoEl);
             boardBtnArea.appendChild(modifyBtn);
             boardBtnArea.appendChild(deleteBtn);
             detailBoardBoxEl.appendChild(boardBtnArea);
             modifyBtn.addEventListener("click", () => {
-                const [year, month, day] = detailBoardDateEl.value.split("-");
+                const [year, month, day] = cutDateFull(detailBoardDateEl.value);
                 this.requestModify(selectItem.id, detailBoardMonyEl.value, detailBoardCategoryEl.value, detailBoardMomoEl.value, classify, year, month, day);
                 closeModal();
             });
@@ -956,17 +980,17 @@ function renderAllList(selectClassify) {
     return __awaiter(this, void 0, void 0, function* () {
         listItemsEl.innerText = "";
         const response = yield fetch(`/api/${selectClassify}`);
-        const data = yield response.json();
-        if (!data) {
+        const monyList = yield response.json();
+        if (!monyList) {
             return;
         }
-        data.map(({ id, payedMoney, payYear, payMonth, payDay, payTime, classify, category, memo, }) => {
+        monyList.map(({ id, payedMoney, payYear, payMonth, payDay, payTime, classify, category, memo, }) => {
             const costItem = new CostItem(id, payedMoney, payYear, payMonth, payDay, payTime, selectClassify === "income" ? "수입" : "지출", category, memo);
             listItemsEl.appendChild(costItem.createItem());
         });
-        renderStatisticAll(data, false);
-        renderStatisticIncome(data);
-        renderStatisticExpense(data);
+        renderStatisticAll(monyList, false);
+        renderStatisticIncome(monyList);
+        renderStatisticExpense(monyList);
     });
 }
 function renderMonthList(year, month) {
@@ -1002,14 +1026,14 @@ function init() {
     const selectAllIncomeEl = document.querySelector(".allIncomeHistory");
     const selectAllExpendEl = document.querySelector(".allExpendHistory");
     selectMonthEl.value = new Date().toISOString().slice(0, 7);
-    const [intYear, initMonth] = selectMonthEl.value.split("-");
+    const [intYear, initMonth] = cutDateMonth(selectMonthEl.value);
     renderMonthList(intYear, initMonth);
     selectMonthEl.addEventListener("change", () => {
-        const [year, month] = selectMonthEl.value.split("-");
+        const [year, month] = cutDateMonth(selectMonthEl.value);
         renderMonthList(year, month);
     });
     selectMonthEl.addEventListener("change", () => {
-        const [year, month] = selectMonthEl.value.split("-");
+        const [year, month] = cutDateMonth(selectMonthEl.value);
         renderMonthList(year, month);
     });
     selectAllIncomeEl.addEventListener("click", () => {
@@ -1026,4 +1050,4 @@ window.addEventListener("DOMContentLoaded", init);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.80a7fad4f4f8dd6b2225.bundle.js.map
+//# sourceMappingURL=main.e1b8abf0398971b33c05.bundle.js.map

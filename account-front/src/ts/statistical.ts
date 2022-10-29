@@ -1,9 +1,23 @@
 import "../css/reset.css";
 import "../css/navigation.css";
 import "../css/statistical.css";
-import { createEl } from "./utile";
 
-function createTableHeader() {}
+//유틸함수
+function createEl(elKind, className = "") {
+    const el = document.createElement(elKind);
+    el.className = className;
+    return el;
+}
+
+function cutDateFull(date: string) {
+    const [year, month, day] = date.split("-");
+    return [Number(year), Number(month), Number(day)];
+}
+
+function cutDateMonth(date: string) {
+    const [year, month] = date.split("-");
+    return [Number(year), Number(month)];
+}
 
 function createTableItem(targetEl, categoryName, categoryAcc, categorySum) {
     const listItemEl = createEl("tr", "listItem");
@@ -69,7 +83,7 @@ function calculateCategoryCost(data) {
     };
 }
 
-async function renderMonthList(year, month) {
+async function renderMonthList(year: number, month: number) {
     const response = await fetch(`/api/monthtotal`, {
         method: "POST",
         headers: {
@@ -113,11 +127,12 @@ function init() {
         'input[type="month"]'
     ) as HTMLSelectElement;
     selectMonthEl.value = new Date().toISOString().slice(0, 7);
-    const [intYear, initMonth] = selectMonthEl.value.split("-");
+    const [intYear, initMonth] = cutDateMonth(selectMonthEl.value);
+
     renderMonthList(intYear, initMonth);
 
     selectMonthEl.addEventListener("change", () => {
-        const [year, month] = selectMonthEl.value.split("-");
+        const [year, month] = cutDateMonth(selectMonthEl.value);
         renderMonthList(year, month);
     });
 }

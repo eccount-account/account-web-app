@@ -1,7 +1,6 @@
 import "../css/reset.css";
 import "../css/navigation.css";
 import "../css/home.css";
-import { createEl } from "./utile";
 
 const listItemsEl = document.querySelector(".ListItems") as HTMLSelectElement;
 
@@ -18,6 +17,23 @@ interface ModifyItem {
     payYear: number;
     payMonth: number;
     payDay: number;
+}
+
+//유틸함수
+function createEl(elKind, className = "") {
+    const el = document.createElement(elKind);
+    el.className = className;
+    return el;
+}
+
+function cutDateFull(date: string) {
+    const [year, month, day] = date.split("-");
+    return [Number(year), Number(month), Number(day)];
+}
+
+function cutDateMonth(date: string) {
+    const [year, month] = date.split("-");
+    return [Number(year), Number(month)];
 }
 
 //클라이언트 데이터 서버 전송
@@ -42,6 +58,36 @@ async function saveData(url: string, bodyData: string, method: string) {
     };
 
     await fetch(url, requstOption);
+}
+
+function changeCategory(targetEl, classify: string) {
+    const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
+    const EXPEND_SELECT = [
+        "식비",
+        "교통비",
+        "주거비",
+        "유흥비",
+        "저축",
+        "기타",
+    ];
+
+    targetEl.innerText = "";
+
+    if (classify === "수입") {
+        INCOME_SELECT.forEach((item) => {
+            const optionEl = document.createElement("option");
+            optionEl.value = item;
+            optionEl.innerText = item;
+            targetEl.append(optionEl);
+        });
+    } else {
+        EXPEND_SELECT.forEach((item) => {
+            const optionEl = document.createElement("option");
+            optionEl.value = item;
+            optionEl.innerText = item;
+            targetEl.append(optionEl);
+        });
+    }
 }
 
 class CostItem {
@@ -154,7 +200,7 @@ class CostItem {
         renderMonthList(year, month);
     }
 
-    async viewDetailBoard(id, classify) {
+    async viewDetailBoard(id: number, classify: string) {
         const detailBoardEl = document.querySelector(
             ".detailBoard"
         ) as HTMLSelectElement;
@@ -170,7 +216,8 @@ class CostItem {
         const detailBoardMonyEl = createEl("input", "detailBoardMony");
         const detailBoardMonyP = createEl("p", "input-label");
 
-        const detailBoardCategoryEl = createEl("input", "detailBoardCategory");
+        //셀렉트 박스
+        const detailBoardCategoryEl = createEl("select", "detailBoardCategory");
         const detailBoardCategoryP = createEl("p", "input-label");
 
         const detailBoardDateEl = createEl("input", "dateilBoard");
@@ -189,37 +236,34 @@ class CostItem {
         detailBoardMomoP.innerText = "메모";
 
         detailBoardMonyEl.value = selectItem.payedMoney;
-        detailBoardCategoryEl.value = selectItem.category;
+
+        changeCategory(detailBoardCategoryEl, classify);
+
         detailBoardDateEl.setAttribute("type", "date");
         detailBoardDateEl.value = `${selectItem.payYear}-${selectItem.payMonth}-${selectItem.payDay}`; //클릭한 시간 넣어주기
         detailBoardMomoEl.value = selectItem.memo;
 
-        console.log(
-            "수정전 날짜",
-            `${selectItem.payYear}-${selectItem.payMonth}-${selectItem.payDay}`
-        );
-
         modifyBtn.innerText = `수정`;
         deleteBtn.innerText = `삭제`;
-
-        detailBoardBoxEl.appendChild(detailBoardMonyP);
-        detailBoardBoxEl.appendChild(detailBoardMonyEl);
 
         detailBoardBoxEl.appendChild(detailBoardCategoryP);
         detailBoardBoxEl.appendChild(detailBoardCategoryEl);
 
-        detailBoardBoxEl.appendChild(detailBoardMomoP);
-        detailBoardBoxEl.appendChild(detailBoardMomoEl);
+        detailBoardBoxEl.appendChild(detailBoardMonyP);
+        detailBoardBoxEl.appendChild(detailBoardMonyEl);
 
         detailBoardBoxEl.appendChild(detailBoardDateP);
         detailBoardBoxEl.appendChild(detailBoardDateEl);
+
+        detailBoardBoxEl.appendChild(detailBoardMomoP);
+        detailBoardBoxEl.appendChild(detailBoardMomoEl);
 
         boardBtnArea.appendChild(modifyBtn);
         boardBtnArea.appendChild(deleteBtn);
         detailBoardBoxEl.appendChild(boardBtnArea);
 
         modifyBtn.addEventListener("click", () => {
-            const [year, month, day] = detailBoardDateEl.value.split("-");
+            const [year, month, day] = cutDateFull(detailBoardDateEl.value);
             this.requestModify(
                 selectItem.id,
                 detailBoardMonyEl.value,
@@ -246,7 +290,7 @@ class CostItem {
     }
 }
 
-function showModal() {
+function showModal(): void {
     document.getElementById("modal-overlay").classList.add("active");
 
     document
@@ -256,11 +300,11 @@ function showModal() {
         });
 }
 
-function closeModal() {
+function closeModal(): void {
     document.getElementById("modal-overlay").classList.remove("active");
 }
 
-function sumAllCost(data) {
+function sumAllCost(data): number {
     return data.reduce(
         (acc, item) =>
             (acc += item.payedMoney * (item.classify === "수입" ? 1 : -1)),
@@ -268,7 +312,7 @@ function sumAllCost(data) {
     );
 }
 
-function sumIncomeCost(data) {
+function sumIncomeCost(data): number {
     let sumCost = 0;
     data.forEach((item) => {
         if (item.classify === "수입") {
@@ -278,7 +322,7 @@ function sumIncomeCost(data) {
     return sumCost;
 }
 
-function sumExpenseCost(data) {
+function sumExpenseCost(data): number {
     let sumCost = 0;
     data.forEach((item) => {
         if (item.classify === "지출") {
@@ -299,7 +343,7 @@ function renderStatisticAll(data, flag: boolean) {
     targetEl.innerText = `${sumAllCost(data).toLocaleString()}원`;
 }
 
-function renderStatisticIncome(data) {
+function renderStatisticIncome(data): void {
     const targetEl = document.querySelector(".monyIncome") as HTMLSelectElement;
     targetEl.innerText = "";
     targetEl.innerText = `${sumIncomeCost(data).toLocaleString()}원`;
@@ -315,17 +359,17 @@ function renderStatisticExpense(data) {
     targetEl.classList.add("style-expend");
 }
 
-async function renderAllList(selectClassify) {
+async function renderAllList(selectClassify: string) {
     listItemsEl.innerText = "";
 
     const response = await fetch(`/api/${selectClassify}`);
 
-    const data = await response.json();
-    if (!data) {
+    const monyList = await response.json();
+    if (!monyList) {
         return;
     }
 
-    data.map(
+    monyList.map(
         ({
             id,
             payedMoney,
@@ -352,9 +396,9 @@ async function renderAllList(selectClassify) {
         }
     );
 
-    renderStatisticAll(data, false);
-    renderStatisticIncome(data);
-    renderStatisticExpense(data);
+    renderStatisticAll(monyList, false);
+    renderStatisticIncome(monyList);
+    renderStatisticExpense(monyList);
 }
 
 async function renderMonthList(year, month) {
@@ -424,16 +468,16 @@ function init() {
     ) as HTMLSelectElement;
 
     selectMonthEl.value = new Date().toISOString().slice(0, 7);
-    const [intYear, initMonth] = selectMonthEl.value.split("-");
+    const [intYear, initMonth] = cutDateMonth(selectMonthEl.value);
     renderMonthList(intYear, initMonth);
 
     selectMonthEl.addEventListener("change", () => {
-        const [year, month] = selectMonthEl.value.split("-");
+        const [year, month] = cutDateMonth(selectMonthEl.value);
         renderMonthList(year, month);
     });
 
     selectMonthEl.addEventListener("change", () => {
-        const [year, month] = selectMonthEl.value.split("-");
+        const [year, month] = cutDateMonth(selectMonthEl.value);
         renderMonthList(year, month);
     });
 
