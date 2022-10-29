@@ -497,7 +497,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n    color: red;\r\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n}", "",{"version":3,"sources":["webpack://./src/css/cssLoader.css"],"names":[],"mappings":"AAAA;IACI,UAAU;IACV,mDAAoC;AACxC","sourcesContent":["body {\r\n    color: red;\r\n    background: url('../img/sample.png');\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n    color: red;\r\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/cssLoader.css"],"names":[],"mappings":"AAAA;IACI,UAAU;IACV,mDAAoC;AACxC","sourcesContent":["body {\r\n    color: red;\r\n    background: url(\"../img/sample.png\");\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -689,4 +689,4 @@ console.log("css loaded");
 
 /******/ })()
 ;
-//# sourceMappingURL=cssLoader.9ac17d4a6a4b48e87742.bundle.js.map
+//# sourceMappingURL=cssLoader.b53177aefcafa9f77848.bundle.js.map

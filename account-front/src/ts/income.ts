@@ -1,7 +1,7 @@
-import "./css/reset.css";
-import "./css/navigation.css";
-import "./css/inputBox.css";
-import "./css/button.css";
+import "../css/reset.css";
+import "../css/navigation.css";
+import "../css/inputBox.css";
+import "../css/button.css";
 
 interface PostOption {
     method: string;
@@ -38,13 +38,13 @@ async function saveInputData(
         body: bodyData,
     };
 
-    const response = await fetch("/api/expend", requstOption);
+    const response = await fetch("/api/income", requstOption);
+    console.log(response.status);
+
     if (response.status === 200) {
-        alert("입력이완료 되었습니다.");
+        alert("입력이 완료되었습니다.");
     }
 }
-
-const submitBtnEl = document.querySelector(".submitBtn");
 
 function submitInputData(): any {
     const payedCategoryEl = document.querySelector(
@@ -74,4 +74,17 @@ function submitInputData(): any {
     );
 }
 
-submitBtnEl?.addEventListener("click", submitInputData);
+function init() {
+    const submitBtnEl = document.querySelector(
+        ".submitBtn"
+    ) as HTMLSelectElement;
+    const payedMoneyEl = document.querySelector(
+        "input[type='date']"
+    ) as HTMLSelectElement;
+    payedMoneyEl.value = new Date().toISOString().substring(0, 10);
+
+    submitBtnEl.addEventListener("click", submitInputData);
+}
+
+//윈도우 열리면 바로 init() 함수 실행
+window.addEventListener("DOMContentLoaded", init);

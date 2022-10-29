@@ -1,4 +1,8 @@
 import { monthModel } from "../models/monthModel";
+import express from "express";
+
+type req = express.Request;
+type res = express.Response;
 
 export class monthTotalController {
     model : monthModel;
@@ -6,7 +10,7 @@ export class monthTotalController {
         this.model = new monthModel();
     }
 
-    getAllData = (req: any, res: any) => {
+    getAllData = (req: req, res: res) => {
         if (!req.body?.content) {
             res.sendStatus(400);
             return;

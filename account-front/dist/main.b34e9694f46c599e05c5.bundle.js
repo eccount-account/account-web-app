@@ -556,9 +556,97 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "header {\r\n    /* position: fixed; */\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/navigation.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,gBAAgB;IAChB,WAAW;IACX,YAAY;IACZ,YAAY;IACZ,YAAY;IACZ,gCAAgC;AACpC;;AAEA;IACI,WAAW;IACX,eAAe;IACf,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,mBAAmB;IACnB,UAAU;IACV,qBAAqB;AACzB;;AAEA;IACI,WAAW;IACX,eAAe;IACf,WAAW;AACf;;AAEA;IACI,qBAAqB;IACrB,eAAe;IACf,eAAe;IACf,gBAAgB;IAChB,iBAAiB;AACrB","sourcesContent":["header {\r\n    /* position: fixed; */\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "header {\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/navigation.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;IAChB,WAAW;IACX,YAAY;IACZ,YAAY;IACZ,YAAY;IACZ,gCAAgC;AACpC;;AAEA;IACI,WAAW;IACX,eAAe;IACf,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,mBAAmB;IACnB,UAAU;IACV,qBAAqB;AACzB;;AAEA;IACI,WAAW;IACX,eAAe;IACf,WAAW;AACf;;AAEA;IACI,qBAAqB;IACrB,eAAe;IACf,eAAe;IACf,gBAAgB;IAChB,iBAAiB;AACrB","sourcesContent":["header {\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+/* 13 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_home_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(14);
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_home_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_home_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_home_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_home_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+/* 14 */
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".statisticMony {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:nth-of-type(even) {\r\n    background-color: #f3f3f3;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n.style-imcome {\r\n    color: #ff6677;\r\n    font-weight: 800;\r\n}\r\n\r\n.style-expend {\r\n    color: #4a88e5;\r\n    font-weight: 800;\r\n}\r\n\r\n.overlay {\r\n    display: none;\r\n    position: fixed;\r\n    z-index: 10;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(16, 16, 16, 0.5);\r\n}\r\n\r\n#modal-overlay-backgroud {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.overlay.active {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: #fff;\r\n}\r\n\r\n/* z-index를 .overlay보다 높게해주면, modal-overlay-backgroud보다 위에 있으므로 클릭해도 꺼지지 않는다. */\r\n.overlay .modal-overlay-content {\r\n    background-color: #fff;\r\n    color: #000;\r\n    border-radius: 0.5rem;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    max-width: 40rem;\r\n    z-index: 11;\r\n}\r\n\r\n.overlay .modal-overlay-content > * {\r\n    margin: 2rem;\r\n}\r\n\r\n.detailBoardBox {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n\r\nbutton {\r\n    background: #13bd7e;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    padding: 4px 12px;\r\n    color: #ffffff;\r\n    font-size: 14px;\r\n    cursor: pointer;\r\n    border-radius: 8px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/home.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;IAChB,uBAAuB;IACvB,gBAAgB;IAChB,wCAAwC;AAC5C;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB;;AAEA;;IAEI,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,eAAe;IACf,WAAW;IACX,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;IACZ,uCAAuC;AAC3C;;AAEA;IACI,eAAe;IACf,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,WAAW;AACf;;AAEA,+EAA+E;AAC/E;IACI,sBAAsB;IACtB,WAAW;IACX,qBAAqB;IACrB,aAAa;IACb,sBAAsB;IACtB,6BAA6B;IAC7B,gBAAgB;IAChB,WAAW;AACf;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,8BAA8B;IAC9B,YAAY;IACZ,wBAAwB;AAC5B;;AAEA;IACI,mBAAmB;IACnB,yCAAyC;IACzC,YAAY;IACZ,iBAAiB;IACjB,cAAc;IACd,eAAe;IACf,eAAe;IACf,kBAAkB;AACtB","sourcesContent":[".statisticMony {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:nth-of-type(even) {\r\n    background-color: #f3f3f3;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n.style-imcome {\r\n    color: #ff6677;\r\n    font-weight: 800;\r\n}\r\n\r\n.style-expend {\r\n    color: #4a88e5;\r\n    font-weight: 800;\r\n}\r\n\r\n.overlay {\r\n    display: none;\r\n    position: fixed;\r\n    z-index: 10;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(16, 16, 16, 0.5);\r\n}\r\n\r\n#modal-overlay-backgroud {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.overlay.active {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: #fff;\r\n}\r\n\r\n/* z-index를 .overlay보다 높게해주면, modal-overlay-backgroud보다 위에 있으므로 클릭해도 꺼지지 않는다. */\r\n.overlay .modal-overlay-content {\r\n    background-color: #fff;\r\n    color: #000;\r\n    border-radius: 0.5rem;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    max-width: 40rem;\r\n    z-index: 11;\r\n}\r\n\r\n.overlay .modal-overlay-content > * {\r\n    margin: 2rem;\r\n}\r\n\r\n.detailBoardBox {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n\r\nbutton {\r\n    background: #13bd7e;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    padding: 4px 12px;\r\n    color: #ffffff;\r\n    font-size: 14px;\r\n    cursor: pointer;\r\n    border-radius: 8px;\r\n}\r\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+/* 15 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createEl": () => (/* binding */ createEl)
+/* harmony export */ });
+//엘리먼트 생성, 클래스 이름 부여
+function createEl(elKind, className = "") {
+    const el = document.createElement(elKind);
+    el.className = className;
+    return el;
+}
 
 
 /***/ })
@@ -641,10 +729,295 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _css_navigation_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _css_home_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(13);
+/* harmony import */ var _utile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 
 
+
+
+const listItemsEl = document.querySelector(".ListItems");
+//클라이언트 데이터 서버 전송
+function fetchData(url) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const response = yield fetch(url);
+        const dataList = yield response.json();
+        if (!dataList) {
+            return dataList;
+        }
+        return dataList;
+    });
+}
+//클라이언트에서 서버로 데이터 전송
+function saveData(url, bodyData, method) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const requstOption = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: bodyData,
+        };
+        yield fetch(url, requstOption);
+    });
+}
+class CostItem {
+    constructor(id, payedMoney, payYear, payMonth, payDay, payTime, classify, category, memo) {
+        this.id = id;
+        this.payedMoney = payedMoney;
+        this.payYear = payYear;
+        this.payMonth = payMonth;
+        this.payDay = payDay;
+        this.payTime = payTime;
+        this.classify = classify;
+        this.category = category;
+        this.memo = memo;
+    }
+    //날짜 생성 함수
+    getFullDate() {
+        return `${this.payYear}-${this.payMonth}-${this.payDay}`;
+    }
+    createItem() {
+        const listItemEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("tr", "cl-listItem");
+        const payedmoneyEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-payedmoney");
+        const payedateEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-payedate");
+        const classifyEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-classify");
+        const categoryEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-category");
+        const memoEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-memo");
+        payedmoneyEl.innerText = `${this.payedMoney.toLocaleString()}원`;
+        payedateEl.innerText = this.getFullDate();
+        classifyEl.innerText = this.classify;
+        categoryEl.innerText = this.category;
+        memoEl.innerText = this.memo;
+        classifyEl.classList.add(`${this.classify === "수입" ? "style-imcome" : "style-expend"}`);
+        listItemEl.appendChild(classifyEl);
+        listItemEl.appendChild(categoryEl);
+        listItemEl.appendChild(payedmoneyEl);
+        listItemEl.appendChild(memoEl);
+        listItemEl.appendChild(payedateEl);
+        listItemEl.addEventListener("click", () => {
+            this.viewDetailBoard(this.id, this.classify);
+            showModal();
+        });
+        return listItemEl;
+    }
+    requestModify(id, money, categor, memo, classify, year, month, day) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield fetch(`/api/${classify === "수입" ? "income" : "expend"}/id/${id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    content: {
+                        payedMoney: money,
+                        category: categor,
+                        memo: memo,
+                        payYear: year,
+                        payMonth: month,
+                        payDay: day,
+                    },
+                }),
+            });
+            const data = yield response.status;
+            console.log(data);
+            renderMonthList(year, month);
+        });
+    }
+    requestDelete(id, classify, year, month) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield fetch(`/api/${classify === "수입" ? "income" : "expend"}/id/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            const data = yield response.status;
+            console.log(data);
+            renderMonthList(year, month);
+        });
+    }
+    viewDetailBoard(id, classify) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const detailBoardEl = document.querySelector(".detailBoard");
+            detailBoardEl.innerHTML = ""; //일단 지움
+            const response = yield fetchData(`/api/${classify === "수입" ? "income" : "expend"}/id/${id}`);
+            const selectItem = response[0];
+            const detailBoardBoxEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("div", "detailBoardBox");
+            const detailBoardMonyEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("input", "detailBoardMony");
+            const detailBoardMonyP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
+            const detailBoardCategoryEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("input", "detailBoardCategory");
+            const detailBoardCategoryP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
+            const detailBoardDateEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("input", "dateilBoard");
+            const detailBoardDateP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
+            const detailBoardMomoEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("input", "detailBoardMomo");
+            const detailBoardMomoP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
+            const boardBtnArea = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("div", "boardBtnArea");
+            const modifyBtn = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("button", "submit");
+            const deleteBtn = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("button", "submit");
+            detailBoardMonyP.innerText = "금액";
+            detailBoardCategoryP.innerText = "카테고리";
+            detailBoardDateP.innerText = "날짜";
+            detailBoardMomoP.innerText = "메모";
+            detailBoardMonyEl.value = selectItem.payedMoney;
+            detailBoardCategoryEl.value = selectItem.category;
+            detailBoardDateEl.setAttribute("type", "date");
+            detailBoardDateEl.value = `${selectItem.payYear}-${selectItem.payMonth}-${selectItem.payDay}`; //클릭한 시간 넣어주기
+            detailBoardMomoEl.value = selectItem.memo;
+            console.log("수정전 날짜", `${selectItem.payYear}-${selectItem.payMonth}-${selectItem.payDay}`);
+            modifyBtn.innerText = `수정`;
+            deleteBtn.innerText = `삭제`;
+            detailBoardBoxEl.appendChild(detailBoardMonyP);
+            detailBoardBoxEl.appendChild(detailBoardMonyEl);
+            detailBoardBoxEl.appendChild(detailBoardCategoryP);
+            detailBoardBoxEl.appendChild(detailBoardCategoryEl);
+            detailBoardBoxEl.appendChild(detailBoardMomoP);
+            detailBoardBoxEl.appendChild(detailBoardMomoEl);
+            detailBoardBoxEl.appendChild(detailBoardDateP);
+            detailBoardBoxEl.appendChild(detailBoardDateEl);
+            boardBtnArea.appendChild(modifyBtn);
+            boardBtnArea.appendChild(deleteBtn);
+            detailBoardBoxEl.appendChild(boardBtnArea);
+            modifyBtn.addEventListener("click", () => {
+                const [year, month, day] = detailBoardDateEl.value.split("-");
+                this.requestModify(selectItem.id, detailBoardMonyEl.value, detailBoardCategoryEl.value, detailBoardMomoEl.value, classify, year, month, day);
+                closeModal();
+            });
+            deleteBtn.addEventListener("click", () => {
+                this.requestDelete(selectItem.id, classify, selectItem.payYear, selectItem.payMonth);
+                closeModal();
+            });
+            detailBoardEl.appendChild(detailBoardBoxEl);
+        });
+    }
+}
+function showModal() {
+    document.getElementById("modal-overlay").classList.add("active");
+    document
+        .getElementById("modal-overlay-backgroud")
+        .addEventListener("click", () => {
+        document.getElementById("modal-overlay").classList.remove("active");
+    });
+}
+function closeModal() {
+    document.getElementById("modal-overlay").classList.remove("active");
+}
+function sumAllCost(data) {
+    return data.reduce((acc, item) => (acc += item.payedMoney * (item.classify === "수입" ? 1 : -1)), 0);
+}
+function sumIncomeCost(data) {
+    let sumCost = 0;
+    data.forEach((item) => {
+        if (item.classify === "수입") {
+            sumCost += item.payedMoney;
+        }
+    });
+    return sumCost;
+}
+function sumExpenseCost(data) {
+    let sumCost = 0;
+    data.forEach((item) => {
+        if (item.classify === "지출") {
+            sumCost -= item.payedMoney;
+        }
+    });
+    return sumCost;
+}
+function renderStatisticAll(data, flag) {
+    const targetEl = document.querySelector(".monySum");
+    targetEl.innerText = "";
+    if (!flag) {
+        targetEl.innerText = `${(sumAllCost(data) * -1).toLocaleString()}원`;
+        return;
+    }
+    targetEl.innerText = `${sumAllCost(data).toLocaleString()}원`;
+}
+function renderStatisticIncome(data) {
+    const targetEl = document.querySelector(".monyIncome");
+    targetEl.innerText = "";
+    targetEl.innerText = `${sumIncomeCost(data).toLocaleString()}원`;
+    targetEl.classList.add("style-imcome");
+}
+function renderStatisticExpense(data) {
+    const targetEl = document.querySelector(".monyExpense");
+    targetEl.innerText = "";
+    targetEl.innerText = `${sumExpenseCost(data).toLocaleString()}원`;
+    targetEl.classList.add("style-expend");
+}
+function renderAllList(selectClassify) {
+    return __awaiter(this, void 0, void 0, function* () {
+        listItemsEl.innerText = "";
+        const response = yield fetch(`/api/${selectClassify}`);
+        const data = yield response.json();
+        if (!data) {
+            return;
+        }
+        data.map(({ id, payedMoney, payYear, payMonth, payDay, payTime, classify, category, memo, }) => {
+            const costItem = new CostItem(id, payedMoney, payYear, payMonth, payDay, payTime, selectClassify === "income" ? "수입" : "지출", category, memo);
+            listItemsEl.appendChild(costItem.createItem());
+        });
+        renderStatisticAll(data, false);
+        renderStatisticIncome(data);
+        renderStatisticExpense(data);
+    });
+}
+function renderMonthList(year, month) {
+    return __awaiter(this, void 0, void 0, function* () {
+        listItemsEl.innerText = "";
+        const response = yield fetch(`/api/monthtotal`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                content: {
+                    payMonth: month,
+                    payYear: year,
+                },
+            }),
+        });
+        const data = yield response.json();
+        if (!data) {
+            return;
+        }
+        data.map(({ id, payedMoney, payYear, payMonth, payDay, payTime, classify, category, memo, }) => {
+            const costItem = new CostItem(id, payedMoney, payYear, payMonth, payDay, payTime, classify, category, memo);
+            listItemsEl.appendChild(costItem.createItem());
+        });
+        renderStatisticAll(data, true);
+        renderStatisticIncome(data);
+        renderStatisticExpense(data);
+    });
+}
 function init() {
-    console.log("home");
+    const selectMonthEl = document.querySelector('input[type="month"]');
+    const selectAllIncomeEl = document.querySelector(".allIncomeHistory");
+    const selectAllExpendEl = document.querySelector(".allExpendHistory");
+    selectMonthEl.value = new Date().toISOString().slice(0, 7);
+    const [intYear, initMonth] = selectMonthEl.value.split("-");
+    renderMonthList(intYear, initMonth);
+    selectMonthEl.addEventListener("change", () => {
+        const [year, month] = selectMonthEl.value.split("-");
+        renderMonthList(year, month);
+    });
+    selectMonthEl.addEventListener("change", () => {
+        const [year, month] = selectMonthEl.value.split("-");
+        renderMonthList(year, month);
+    });
+    selectAllIncomeEl.addEventListener("click", () => {
+        renderAllList("income");
+    });
+    selectAllExpendEl.addEventListener("click", () => {
+        renderAllList("expend");
+    });
 }
 //윈도우 열리면 바로 init() 함수 실행
 window.addEventListener("DOMContentLoaded", init);
@@ -653,4 +1026,4 @@ window.addEventListener("DOMContentLoaded", init);
 
 /******/ })()
 ;
-//# sourceMappingURL=statistical.89a62f6f50e620626dbb.bundle.js.map
+//# sourceMappingURL=main.b34e9694f46c599e05c5.bundle.js.map

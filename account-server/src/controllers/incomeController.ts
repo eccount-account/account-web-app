@@ -1,16 +1,21 @@
 import { Controller } from "./commonAPI.js";
+import express from "express";
+
+type req = express.Request;
+type res = express.Response;
 
 const incomeGetApi = new Controller("income");
 
-export const api = {
-    insertData: (req: any, res: any) => { incomeGetApi.insertData(req, res) },
-    getAllData: (req: any, res: any) => { incomeGetApi.getAllData(req, res) },
-    deleteAllData: (req: any, res: any) => { incomeGetApi.deleteAllData(req, res) },
-    modifyDataById: (req: any, res: any) => { incomeGetApi.modifyDataById(req, res) },
-    deleteDataById: (req: any, res: any) => { incomeGetApi.deleteDataById(req, res) },
-    getDataById: (req: any, res: any) => { incomeGetApi.getDataById(req, res) },
 
-    // getYearData: (req: any, res: any) => { incomeGetApi.getYearData(req, res) },
-    getMonthData: (req: any, res: any) => { incomeGetApi.getMonthData(req, res) },
-    // getDayData: (req: any, res: any) => { incomeGetApi.getDayData(req, res) }
+export const api = {
+    insertData: (req: req, res: res) => { incomeGetApi.insertData(req, res) },
+    getAllData: (req: req, res: res) => { incomeGetApi.getAllData(req, res) },
+    deleteAllData: (req: req, res: res) => { incomeGetApi.deleteAllData(req, res) },
+    modifyDataById: (req: req, res: res) => { incomeGetApi.modifyDataById(req, res) },
+    deleteDataById: (req: req, res: res) => { incomeGetApi.deleteDataById(req, res) },
+    getDataById: (req: req, res: res) => { incomeGetApi.getDataById(req, res) },
+
+    // getYearData: (req: req, res: res) => { incomeGetApi.getYearData(req, res) },
+    getMonthData: (req: req, res: res) => { incomeGetApi.getMonthData(req, res) },
+    // getDayData: (req: req, res: res) => { incomeGetApi.getDayData(req, res) }
 }

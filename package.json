@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@types/mysql": "^2.15.21"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }

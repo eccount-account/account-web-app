@@ -1,89 +1,78 @@
-import { Model as DBModel } from "../models/model.js";
-import express from "express";
-
-type req = express.Request;
-type res = express.Response;
-
-export class Controller {
-    table: string;
-    model: DBModel;
-    constructor(table: string) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Controller = void 0;
+const model_js_1 = require("../models/model.js");
+class Controller {
+    constructor(table) {
         this.table = table;
-        this.model = new DBModel();
+        this.model = new model_js_1.Model();
     }
-
-    insertData (req: req, res: res) {
-        if (!req.body?.content) {
+    insertData(req, res) {
+        var _a;
+        if (!((_a = req.body) === null || _a === void 0 ? void 0 : _a.content)) {
             res.sendStatus(400);
             return;
         }
         const dataColumn = Object.keys(req.body.content);
         const inputValues = Object.values(req.body.content);
-
         try {
             this.model.insertToDB(this.table, dataColumn, inputValues, res);
-        } catch(err: any) {
+        }
+        catch (err) {
             res.sendStatus(400);
         }
-
     }
-
-    getAllData (req: req, res: res)  {
-        try { 
+    getAllData(req, res) {
+        try {
             this.model.getAllFromDB(this.table, res);
-        } catch {
+        }
+        catch (_a) {
             res.sendStatus(400);
         }
-
     }
-
-    deleteAllData (req: req, res: res) {
+    deleteAllData(req, res) {
         try {
             this.model.removeAllFromDB(this.table, res);
-        } catch {
+        }
+        catch (_a) {
             res.sendStatus(400);
         }
-
     }
-
-    modifyDataById (req: req, res: res) {
-        if (!req.body?.content) {
+    modifyDataById(req, res) {
+        var _a;
+        if (!((_a = req.body) === null || _a === void 0 ? void 0 : _a.content)) {
             res.sendStatus(400);
             return;
         }
-        let updateValues: string = "";
-        let updateArray: string[] = [];
+        let updateValues = "";
+        let updateArray = [];
         for (let key in req.body.content) {
             updateArray.push(`${key} = '${req.body.content[key]}' `);
         }
         updateValues = updateArray.join(" , ");
-
         try {
             this.model.modifyDB(this.table, updateValues, req.params.id, res);
-        } catch {
+        }
+        catch (_b) {
             res.sendStatus(400);
         }
-
     }
-
-    deleteDataById (req: req, res: res) {
+    deleteDataById(req, res) {
         try {
             this.model.deleteFromDBById(this.table, req.params.id, res);
-        } catch {
+        }
+        catch (_a) {
             res.sendStatus(400);
         }
-
     }
-
-    getDataById (req: req, res: res) {
+    getDataById(req, res) {
         try {
-            const rows: any = this.model.getDataFromDBById(this.table, req.params.id, res);
-        } catch {
+            const rows = this.model.getDataFromDBById(this.table, req.params.id, res);
+        }
+        catch (_a) {
             res.sendStatus(400);
         }
-
     }
-
     // getYearData (req: req, res: res) {
     //     connection.query(
     //         `select * from ${this.table} where payYear = ? `,
@@ -96,17 +85,16 @@ export class Controller {
     //         }
     //     );
     // }
-
-
-    getMonthData (req: req, res: res) {
-        if (!req.body?.payMonth) {
+    getMonthData(req, res) {
+        var _a;
+        if (!((_a = req.body) === null || _a === void 0 ? void 0 : _a.payMonth)) {
             res.sendStatus(400);
             return;
         }
-
         try {
-            this.model.getMonthDataFromDB (this.table, +req.params.paymonth, res);
-        } catch {
+            this.model.getMonthDataFromDB(this.table, +req.params.paymonth, res);
+        }
+        catch (_b) {
             res.sendStatus(400);
         }
         // getMonthDataFromDB
@@ -121,18 +109,5 @@ export class Controller {
         //     }
         // );
     }
-
-    // getDayData (req: req, res: res) {
-    //     connection.query(
-    //         `select * from ${this.table} where payDay = ? `,
-    //         [req.params.payday],
-    //         (err: any, rows: any) => {
-    //             if (err) {
-    //                 throw err;
-    //             }
-    //             res.send(rows);
-    //         }
-    //     );
-    // }
-    
 }
+exports.Controller = Controller;

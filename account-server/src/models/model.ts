@@ -1,23 +1,28 @@
 import { connectionCreated } from "../config/db.js";
+import mysql, { MysqlError } from "mysql";
+import express from "express";
+
+type res = express.Response;
 
 export class Model {
-    connection: any;
+    connection: mysql.Connection;
     constructor() {
         this.connection = connectionCreated;
     }
 
-    insertToDB(table: string, dataColumn: string[], inputValues: any[], res: any) {
-        this.connection.query(`insert into ${table} \
-            (${dataColumn.join(", ")}) \
-            values (?) `, [inputValues], (err: any, rows: any) => {
+    insertToDB(table: string, dataColumn: string[], inputValues: any[], res: res) {
+        this.connection.query(`insert into ${table}
+            (${dataColumn.join(", ")})
+            values (?) `, [inputValues], 
+            (err: any, rows: any) => {
             if (err) {
-                throw new Error(err);
+                throw err;
             }
             res.sendStatus(200);
         });
     }
 
-    getAllFromDB(table: string, res: any) {
+    getAllFromDB(table: string, res: res) {
         const rows = this.connection.query(
             `select * from ${table} `, 
             (err: any, rows: any) => {
@@ -28,7 +33,7 @@ export class Model {
         });
     }
 
-    removeAllFromDB(table: string, res: any) {
+    removeAllFromDB(table: string, res: res) {
         this.connection.query(`delete * from ${table} `, (err: any, rows: any) => {
             if (err) {
                 throw err;
@@ -37,7 +42,7 @@ export class Model {
         });
     }
 
-    modifyDB(table: string, updateValues: string, id: string, res: any) {
+    modifyDB(table: string, updateValues: string, id: string, res: res) {
         this.connection.query(
             `update ${table} set ${updateValues} where id = ?`,
             [id],
@@ -50,7 +55,7 @@ export class Model {
         );
     }
     
-    deleteFromDBById (table: string, id: string, res: any) {
+    deleteFromDBById (table: string, id: string, res: res) {
         this.connection.query(
             `delete from ${table} where id = ? `,
             [id],
@@ -63,7 +68,7 @@ export class Model {
         );
     }
 
-    getDataFromDBById(table: string, id: string, res: any) {
+    getDataFromDBById(table: string, id: string, res: res) {
         this.connection.query(
             `select * from ${table} where id = ? `,
             [id],
@@ -71,12 +76,12 @@ export class Model {
                 if (err) {
                     throw err;
                 }
-                res.sendStatus(200);
+                res.send(rows);
             }
         );
     }
 
-    getMonthDataFromDB(table: string, payMonth: number, res: any) {
+    getMonthDataFromDB(table: string, payMonth: number, res: res) {
         this.connection.query(
             `select * from ${table} where payMonth = ? `,
             [payMonth],

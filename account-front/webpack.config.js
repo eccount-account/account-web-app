@@ -15,13 +15,13 @@ module.exports = {
 
     entry: {
         // 최초 진입점
-        main: "./src/index.ts", // 청크네임
-        cssLoader: "./src/cssLoader.ts",
-        income: "./src/income.ts",
-        statistical: "./src/statistical.ts",
-        expense: "./src/expense.ts",
-        api: "./src/api.ts",
-        utile: "./src/utile.ts",
+        main: "./src/ts/index.ts", // 청크네임
+        cssLoader: "./src/ts/cssLoader.ts",
+        income: "./src/ts/income.ts",
+        statistical: "./src/ts/statistical.ts",
+        expense: "./src/ts/expense.ts",
+        api: "./src/ts/api.ts",
+        utile: "./src/ts/utile.ts",
     },
     output: {
         // 출력
@@ -52,27 +52,27 @@ module.exports = {
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
             filename: "index.html",
-            template: "./index.html",
+            template: "./src/index.html",
             chunks: ["main"],
         }),
         new HtmlWebpackPlugin({
             filename: "cssLoader.html",
-            template: "./cssLoader.html",
+            template: "./src/cssLoader.html",
             chunks: ["cssLoader"],
         }),
         new HtmlWebpackPlugin({
             filename: "income.html",
-            template: "./income.html",
+            template: "./src/income.html",
             chunks: ["income"],
         }),
         new HtmlWebpackPlugin({
             filename: "expense.html",
-            template: "./expense.html",
+            template: "./src/expense.html",
             chunks: ["expense"],
         }),
         new HtmlWebpackPlugin({
             filename: "statistical.html",
-            template: "./statistical.html",
+            template: "./src/statistical.html",
             chunks: ["statistical"],
         }),
     ],
@@ -90,11 +90,11 @@ module.exports = {
             },
         },
     },
-    devServer: {
-        proxy: {
-            "/api": "http://localhost:3000",
-        },
-    },
+    // devServer: {
+    //     proxy: {
+    //         "/api": "http://localhost:3000",
+    //     },
+    // },
 };
 
 // // commonJS 방식, 설정 내보내기

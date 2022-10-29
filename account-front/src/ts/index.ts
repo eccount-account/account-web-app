@@ -1,6 +1,6 @@
-import "./css/reset.css";
-import "./css/navigation.css";
-import "./css/home.css";
+import "../css/reset.css";
+import "../css/navigation.css";
+import "../css/home.css";
 import { createEl } from "./utile";
 
 const listItemsEl = document.querySelector(".ListItems") as HTMLSelectElement;

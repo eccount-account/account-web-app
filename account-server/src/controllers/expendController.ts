@@ -1,17 +1,21 @@
 import { Controller } from "./commonAPI.js";
+import express from "express";
+
+type req = express.Request;
+type res = express.Response;
 
 const expendGetApi = new Controller("expend");
 
 export const api = {
-    insertData: (req: any, res: any) => { expendGetApi.insertData(req, res) },
-    getAllData: (req: any, res: any) => { expendGetApi.getAllData(req, res) },
-    deleteAllData: (req: any, res: any) => { expendGetApi.deleteAllData(req, res) },
-    modifyDataById: (req: any, res: any) => { expendGetApi.modifyDataById(req, res) },
-    deleteDataById: (req: any, res: any) => { expendGetApi.deleteDataById(req, res) },
-    getDataById: (req: any, res: any) => { expendGetApi.getDataById(req, res) },
+    insertData: (req: req, res: res) => { expendGetApi.insertData(req, res) },
+    getAllData: (req: req, res: res) => { expendGetApi.getAllData(req, res) },
+    deleteAllData: (req: req, res: res) => { expendGetApi.deleteAllData(req, res) },
+    modifyDataById: (req: req, res: res) => { expendGetApi.modifyDataById(req, res) },
+    deleteDataById: (req: req, res: res) => { expendGetApi.deleteDataById(req, res) },
+    getDataById: (req: req, res: res) => { expendGetApi.getDataById(req, res) },
 
 
-    // getYearData: (req: any, res: any) => { expendGetApi.getYearData(req, res) },
-    getMonthData: (req: any, res: any) => { expendGetApi.getMonthData(req, res) },
-    // getDayData: (req: any, res: any) => { expendGetApi.getDayData(req, res) }
+    // getYearData: (req: req, res: res) => { expendGetApi.getYearData(req, res) },
+    getMonthData: (req: req, res: res) => { expendGetApi.getMonthData(req, res) },
+    // getDayData: (req: req, res: res) => { expendGetApi.getDayData(req, res) }
 }

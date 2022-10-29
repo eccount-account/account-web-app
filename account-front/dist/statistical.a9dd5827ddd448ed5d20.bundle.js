@@ -556,7 +556,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "header {\r\n    /* position: fixed; */\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/navigation.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;IACrB,gBAAgB;IAChB,WAAW;IACX,YAAY;IACZ,YAAY;IACZ,YAAY;IACZ,gCAAgC;AACpC;;AAEA;IACI,WAAW;IACX,eAAe;IACf,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,mBAAmB;IACnB,UAAU;IACV,qBAAqB;AACzB;;AAEA;IACI,WAAW;IACX,eAAe;IACf,WAAW;AACf;;AAEA;IACI,qBAAqB;IACrB,eAAe;IACf,eAAe;IACf,gBAAgB;IAChB,iBAAiB;AACrB","sourcesContent":["header {\r\n    /* position: fixed; */\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "header {\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/navigation.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;IAChB,WAAW;IACX,YAAY;IACZ,YAAY;IACZ,YAAY;IACZ,gCAAgC;AACpC;;AAEA;IACI,WAAW;IACX,eAAe;IACf,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,mBAAmB;IACnB,UAAU;IACV,qBAAqB;AACzB;;AAEA;IACI,WAAW;IACX,eAAe;IACf,WAAW;AACf;;AAEA;IACI,qBAAqB;IACrB,eAAe;IACf,eAAe;IACf,gBAAgB;IAChB,iBAAiB;AACrB","sourcesContent":["header {\r\n    background: #fff;\r\n    width: 100%;\r\n    z-index: 100;\r\n    height: 60px;\r\n    z-index: 110;\r\n    border-bottom: 1px solid #e6e6e6;\r\n}\r\n\r\n.logo {\r\n    float: left;\r\n    font-size: 24px;\r\n    font-weight: 700;\r\n    padding: 16px 23px;\r\n}\r\n\r\n.nav-area {\r\n    margin: 0 0 0 200px;\r\n    padding: 0;\r\n    display: inline-block;\r\n}\r\n\r\n.nav-item {\r\n    float: left;\r\n    cursor: pointer;\r\n    color: #444;\r\n}\r\n\r\n.nav-item a {\r\n    display: inline-block;\r\n    padding: 0 25px;\r\n    font-size: 15px;\r\n    font-weight: 300;\r\n    line-height: 60px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -564,14 +564,34 @@ ___CSS_LOADER_EXPORT___.push([module.id, "header {\r\n    /* position: fixed; */
 /***/ }),
 /* 13 */,
 /* 14 */,
-/* 15 */,
+/* 15 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createEl": () => (/* binding */ createEl)
+/* harmony export */ });
+//엘리먼트 생성, 클래스 이름 부여
+function createEl(elKind, className = "") {
+    const el = document.createElement(elKind);
+    el.className = className;
+    return el;
+}
+
+
+/***/ }),
 /* 16 */,
 /* 17 */,
 /* 18 */,
 /* 19 */,
 /* 20 */,
 /* 21 */,
-/* 22 */
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -590,7 +610,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_inputBox_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(23);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(28);
 
       
       
@@ -612,16 +632,16 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_inputBox_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_inputBox_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_inputBox_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_inputBox_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
-/* 23 */
+/* 28 */
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -637,79 +657,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".user-input-area {\r\n    margin: 150px auto;\r\n    width: 435px;\r\n    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\r\n    border-radius: 12px;\r\n    padding: 40px;\r\n}\r\n\r\n.input-item {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.input-item input,\r\n.input-item select {\r\n    width: 100%;\r\n    height: 40px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-item p {\r\n    width: 180px;\r\n    font-size: 16px;\r\n    color: rgb(102, 108, 119);\r\n}\r\n\r\n.input-item textarea {\r\n    width: 100%;\r\n    height: 80px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    resize: none;\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-title {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.input-title p {\r\n    font-size: 24px;\r\n    letter-spacing: 0px;\r\n    font-weight: 700;\r\n    display: -webkit-box;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    -webkit-line-clamp: 2;\r\n    -webkit-box-orient: vertical;\r\n    word-break: break-all;\r\n    line-height: 34px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] {\r\n    display: none;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] + span {\r\n    display: inline-block;\r\n    background: none;\r\n    border: 1px solid #dfdfdf;\r\n    padding: 0px 10px;\r\n    text-align: center;\r\n    height: 35px;\r\n    line-height: 33px;\r\n    font-weight: 500;\r\n    cursor: pointer;\r\n    width: 124px;\r\n    border-radius: 6px;\r\n    border: 1px solid #e4edf2;\r\n    margin: 0 5px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"]:checked + span {\r\n    border: 1px solid #e4edf2;\r\n    background: #e7f8f2;\r\n    color: #09b7c8;\r\n}\r\n\r\n.user-income-input-modal,\r\n.user-expense-input-modal {\r\n    width: 500px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/inputBox.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,YAAY;IACZ,qDAAqD;IACrD,mBAAmB;IACnB,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;;IAEnB,mBAAmB;AACvB;;AAEA;;IAEI,WAAW;IACX,YAAY;IACZ,6BAA6B;IAC7B,iBAAiB;IACjB,mBAAmB;IACnB,mBAAmB;IACnB,yCAAyC;IACzC,yBAAyB;AAC7B;;AAEA;IACI,YAAY;IACZ,eAAe;IACf,yBAAyB;AAC7B;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,6BAA6B;IAC7B,iBAAiB;IACjB,mBAAmB;IACnB,mBAAmB;IACnB,yCAAyC;IACzC,YAAY;IACZ,yBAAyB;AAC7B;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,eAAe;IACf,mBAAmB;IACnB,gBAAgB;IAChB,oBAAoB;IACpB,gBAAgB;IAChB,uBAAuB;IACvB,qBAAqB;IACrB,4BAA4B;IAC5B,qBAAqB;IACrB,iBAAiB;AACrB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,qBAAqB;IACrB,gBAAgB;IAChB,yBAAyB;IACzB,iBAAiB;IACjB,kBAAkB;IAClB,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;IAChB,eAAe;IACf,YAAY;IACZ,kBAAkB;IAClB,yBAAyB;IACzB,aAAa;AACjB;;AAEA;IACI,yBAAyB;IACzB,mBAAmB;IACnB,cAAc;AAClB;;AAEA;;IAEI,YAAY;AAChB","sourcesContent":[".user-input-area {\r\n    margin: 150px auto;\r\n    width: 435px;\r\n    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\r\n    border-radius: 12px;\r\n    padding: 40px;\r\n}\r\n\r\n.input-item {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.input-item input,\r\n.input-item select {\r\n    width: 100%;\r\n    height: 40px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-item p {\r\n    width: 180px;\r\n    font-size: 16px;\r\n    color: rgb(102, 108, 119);\r\n}\r\n\r\n.input-item textarea {\r\n    width: 100%;\r\n    height: 80px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    resize: none;\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-title {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.input-title p {\r\n    font-size: 24px;\r\n    letter-spacing: 0px;\r\n    font-weight: 700;\r\n    display: -webkit-box;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    -webkit-line-clamp: 2;\r\n    -webkit-box-orient: vertical;\r\n    word-break: break-all;\r\n    line-height: 34px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] {\r\n    display: none;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] + span {\r\n    display: inline-block;\r\n    background: none;\r\n    border: 1px solid #dfdfdf;\r\n    padding: 0px 10px;\r\n    text-align: center;\r\n    height: 35px;\r\n    line-height: 33px;\r\n    font-weight: 500;\r\n    cursor: pointer;\r\n    width: 124px;\r\n    border-radius: 6px;\r\n    border: 1px solid #e4edf2;\r\n    margin: 0 5px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"]:checked + span {\r\n    border: 1px solid #e4edf2;\r\n    background: #e7f8f2;\r\n    color: #09b7c8;\r\n}\r\n\r\n.user-income-input-modal,\r\n.user-expense-input-modal {\r\n    width: 500px;\r\n}\r\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-/* 24 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(25);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
-
-
-/***/ }),
-/* 25 */
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".submitBtn {\r\n    width: 100%;\r\n    height: 50px;\r\n    left: 0px;\r\n    top: 0px;\r\n    content: \"\";\r\n    background: #13bd7e;\r\n    border-radius: inherit;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    cursor: pointer;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/button.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,SAAS;IACT,QAAQ;IACR,WAAW;IACX,mBAAmB;IACnB,sBAAsB;IACtB,yCAAyC;IACzC,YAAY;IACZ,cAAc;IACd,eAAe;IACf,eAAe;AACnB","sourcesContent":[".submitBtn {\r\n    width: 100%;\r\n    height: 50px;\r\n    left: 0px;\r\n    top: 0px;\r\n    content: \"\";\r\n    background: #13bd7e;\r\n    border-radius: inherit;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".reportArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n/*테이블 스타일 시작*/\r\n\r\n.styled-table {\r\n    width: 400px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:nth-of-type(even) {\r\n    background-color: #f3f3f3;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n/*테이블 스타일 끝*/\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/statistical.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,mBAAmB;AACvB;AACA,aAAa;;AAEb;IACI,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;IAChB,uBAAuB;IACvB,gBAAgB;IAChB,wCAAwC;AAC5C;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB;;AAEA;;IAEI,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA,YAAY;;AAEZ;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,8BAA8B;IAC9B,YAAY;IACZ,wBAAwB;AAC5B","sourcesContent":[".reportArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n/*테이블 스타일 시작*/\r\n\r\n.styled-table {\r\n    width: 400px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:nth-of-type(even) {\r\n    background-color: #f3f3f3;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n/*테이블 스타일 끝*/\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -794,8 +742,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _css_navigation_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
-/* harmony import */ var _css_inputBox_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
-/* harmony import */ var _css_button_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
+/* harmony import */ var _css_statistical_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(27);
+/* harmony import */ var _utile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -809,47 +757,102 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-function saveInputData(payedMoney, category, memo, payYear, payMonth, payDay, payTime) {
+function createTableHeader() { }
+function createTableItem(targetEl, categoryName, categoryAcc, categorySum) {
+    const listItemEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("tr", "listItem");
+    const categoryNameEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "categoryName");
+    const categoryAccEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "categoryAcc");
+    const categoryPercentEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "ategoryPercent");
+    categoryNameEl.innerText = categoryName;
+    categoryAccEl.innerText = `${categoryAcc.toLocaleString()}원`;
+    categoryPercentEl.innerText = `${Math.ceil((categoryAcc / categorySum) * 100)}%`;
+    listItemEl.appendChild(categoryNameEl);
+    listItemEl.appendChild(categoryAccEl);
+    listItemEl.appendChild(categoryPercentEl);
+    targetEl.appendChild(listItemEl);
+}
+function renderReport(targetEl, accData, accSum) {
+    targetEl.innerText = "";
+    for (const [name, acc] of Object.entries(accData)) {
+        createTableItem(targetEl, name, acc, accSum);
+    }
+}
+function calculateCategoryCost(data) {
+    const incomeObj = {};
+    const expendObj = {};
+    let allMonthCost = 0;
+    let incomeMonthTotal = 0;
+    let expendMonthTotal = 0;
+    for (let item in data) {
+        if (data[item].classify === "수입") {
+            allMonthCost += data[item].payedMoney;
+            incomeMonthTotal += data[item].payedMoney;
+            if (!incomeObj[data[item].category]) {
+                incomeObj[data[item].category] = data[item].payedMoney;
+            }
+            else {
+                incomeObj[data[item].category] += data[item].payedMoney;
+            }
+        }
+        else {
+            allMonthCost -= data[item].payedMoney;
+            expendMonthTotal += data[item].payedMoney;
+            if (!expendObj[data[item].category]) {
+                expendObj[data[item].category] = data[item].payedMoney;
+            }
+            else {
+                expendObj[data[item].category] += data[item].payedMoney;
+            }
+        }
+    }
+    return {
+        totalAcc: allMonthCost,
+        incomeCategoryAcc: incomeObj,
+        expendCategoryAcc: expendObj,
+        incomeMonthTotal: incomeMonthTotal,
+        expendMonthTotal: expendMonthTotal,
+    };
+}
+function renderMonthList(year, month) {
     return __awaiter(this, void 0, void 0, function* () {
-        const bodyData = JSON.stringify({
-            content: {
-                payedMoney: payedMoney,
-                category: category,
-                memo: memo,
-                payYear: payYear,
-                payMonth: payMonth,
-                payDay: payDay,
-                payTime: payTime,
-            },
-        });
-        const requstOption = {
+        const response = yield fetch(`/api/monthtotal`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: bodyData,
-        };
-        const response = yield fetch("/api/expend", requstOption);
-        if (response.status === 200) {
-            alert("입력이완료 되었습니다.");
+            body: JSON.stringify({
+                content: {
+                    payMonth: month,
+                    payYear: year,
+                },
+            }),
+        });
+        const data = yield response.json();
+        if (!data) {
+            return;
         }
+        const incomeReportEl = document.querySelector(".incomeReort");
+        const expendseReortEl = document.querySelector(".expendseReort");
+        const accData = calculateCategoryCost(data);
+        renderReport(incomeReportEl, accData.incomeCategoryAcc, accData.incomeMonthTotal);
+        renderReport(expendseReortEl, accData.expendCategoryAcc, accData.expendMonthTotal);
     });
 }
-const submitBtnEl = document.querySelector(".submitBtn");
-function submitInputData() {
-    const payedCategoryEl = document.querySelector(".payedCategory");
-    const payedMoneyEl = document.querySelector(".payedMoney");
-    const payedDateEl = document.querySelector("input[type='date']");
-    const memoEl = document.querySelector(".payedMemo");
-    const [year, month, day] = payedDateEl.value.split("-");
-    let today = new Date();
-    let time = `${today.getHours()}${today.getMinutes()}`;
-    saveInputData(Number(payedMoneyEl.value), payedCategoryEl.options[payedCategoryEl.selectedIndex].value, memoEl.value, Number(year), Number(month), Number(day), Number(time));
+function init() {
+    const selectMonthEl = document.querySelector('input[type="month"]');
+    selectMonthEl.value = new Date().toISOString().slice(0, 7);
+    const [intYear, initMonth] = selectMonthEl.value.split("-");
+    renderMonthList(intYear, initMonth);
+    selectMonthEl.addEventListener("change", () => {
+        const [year, month] = selectMonthEl.value.split("-");
+        renderMonthList(year, month);
+    });
 }
-submitBtnEl === null || submitBtnEl === void 0 ? void 0 : submitBtnEl.addEventListener("click", submitInputData);
+//윈도우 열리면 바로 init() 함수 실행
+window.addEventListener("DOMContentLoaded", init);
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=expense.081170b467cbe1c7a1cb.bundle.js.map
+//# sourceMappingURL=statistical.a9dd5827ddd448ed5d20.bundle.js.map

@@ -1,4 +1,7 @@
 import { connectionCreated } from "../config/db.js";
+import express from "express";
+
+type res = express.Response;
 
 export class monthModel {
     connection: any;
@@ -6,7 +9,7 @@ export class monthModel {
         this.connection = connectionCreated;
     }
 
-    getUnionQuery(payYear: number, payMonth: number, res: any){
+    getUnionQuery(payYear: number, payMonth: number, res: res){
         this.connection.query(
             `(select id, payedMoney, payYear, payMonth, payDay, payTime, '수입' as classify, category, memo
                 from income
