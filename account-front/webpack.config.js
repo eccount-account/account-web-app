@@ -16,7 +16,6 @@ module.exports = {
     entry: {
         // 최초 진입점
         main: "./src/ts/index.ts", // 청크네임
-        cssLoader: "./src/ts/cssLoader.ts",
         income: "./src/ts/income.ts",
         statistical: "./src/ts/statistical.ts",
         api: "./src/ts/api.ts",
@@ -53,11 +52,6 @@ module.exports = {
             filename: "index.html",
             template: "./src/index.html",
             chunks: ["main"],
-        }),
-        new HtmlWebpackPlugin({
-            filename: "cssLoader.html",
-            template: "./src/cssLoader.html",
-            chunks: ["cssLoader"],
         }),
         new HtmlWebpackPlugin({
             filename: "income.html",
