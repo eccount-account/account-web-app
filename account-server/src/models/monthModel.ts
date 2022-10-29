@@ -25,7 +25,8 @@ export class monthModel {
             `,[payYear, payMonth, payYear, payMonth],
             (err: any, rows: any) => {
                 if (err) {
-                    throw err;
+                    res.sendStatus(400);
+                    return;
                 }
                 res.send(rows);
             }

@@ -10,7 +10,5 @@ exports.api = {
     modifyDataById: (req, res) => { expendGetApi.modifyDataById(req, res); },
     deleteDataById: (req, res) => { expendGetApi.deleteDataById(req, res); },
     getDataById: (req, res) => { expendGetApi.getDataById(req, res); },
-    // getYearData: (req: req, res: res) => { expendGetApi.getYearData(req, res) },
     getMonthData: (req, res) => { expendGetApi.getMonthData(req, res); },
-    // getDayData: (req: req, res: res) => { expendGetApi.getDayData(req, res) }
 };

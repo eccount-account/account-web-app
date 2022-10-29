@@ -13,6 +13,4 @@ exports.incomeRouter.delete('/', incomeController_js_1.api.deleteAllData);
 exports.incomeRouter.put("/id/:id", incomeController_js_1.api.modifyDataById);
 exports.incomeRouter.delete("/id/:id", incomeController_js_1.api.deleteDataById);
 exports.incomeRouter.get("/id/:id", incomeController_js_1.api.getDataById);
-// incomeRouter.get("/payyear/:payyear", incomeController.getYearData);
 exports.incomeRouter.get("/paymonth/:paymonth", incomeController_js_1.api.getMonthData);
-// incomeRouter.get("/payday/:payday", incomeController.getDayData);

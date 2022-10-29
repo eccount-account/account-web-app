@@ -16,7 +16,8 @@ export class Model {
             values (?) `, [inputValues], 
             (err: any, rows: any) => {
             if (err) {
-                throw err;
+                res.sendStatus(400);
+                return;
             }
             res.sendStatus(200);
         });
@@ -27,7 +28,8 @@ export class Model {
             `select * from ${table} `, 
             (err: any, rows: any) => {
                 if (err) {
-                    throw err;
+                    res.sendStatus(400);
+                    return;
                 }
                 res.send(rows);
         });
@@ -36,45 +38,52 @@ export class Model {
     removeAllFromDB(table: string, res: res) {
         this.connection.query(`delete * from ${table} `, (err: any, rows: any) => {
             if (err) {
-                throw err;
+                res.sendStatus(400);
+                return;
             }
             res.sendStatus(200);
         });
     }
 
-    modifyDB(table: string, updateValues: string, id: string, res: res) {
+    modifyDB(table: string, updateValues: string, id: number, res: res) {
+        console.log(table);
+        console.log(updateValues);
         this.connection.query(
             `update ${table} set ${updateValues} where id = ?`,
             [id],
             (err: any, rows: any) => {
                 if (err) {
-                    throw err;
+                    res.sendStatus(400);
+                    console.log(err);
+                    return;
                 }
                 res.sendStatus(200);
             }
         );
     }
     
-    deleteFromDBById (table: string, id: string, res: res) {
+    deleteFromDBById (table: string, id: number, res: res) {
         this.connection.query(
             `delete from ${table} where id = ? `,
             [id],
             (err: any, rows: any) => {
                 if (err) {
-                    throw err;
+                    res.sendStatus(400);
+                    return;
                 }
                 res.sendStatus(200);
             }
         );
     }
 
-    getDataFromDBById(table: string, id: string, res: res) {
+    getDataFromDBById(table: string, id: number, res: res) {
         this.connection.query(
             `select * from ${table} where id = ? `,
             [id],
             (err: any, rows: any) => {
                 if (err) {
-                    throw err;
+                    res.sendStatus(400);
+                    return;
                 }
                 res.send(rows);
             }
@@ -87,7 +96,8 @@ export class Model {
             [payMonth],
             (err: any, rows: any) => {
                 if (err) {
-                    throw err;
+                    res.sendStatus(400);
+                    return;
                 }
                 res.sendStatus(200);
             }

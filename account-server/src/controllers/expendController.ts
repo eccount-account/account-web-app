@@ -13,9 +13,5 @@ export const api = {
     modifyDataById: (req: req, res: res) => { expendGetApi.modifyDataById(req, res) },
     deleteDataById: (req: req, res: res) => { expendGetApi.deleteDataById(req, res) },
     getDataById: (req: req, res: res) => { expendGetApi.getDataById(req, res) },
-
-
-    // getYearData: (req: req, res: res) => { expendGetApi.getYearData(req, res) },
     getMonthData: (req: req, res: res) => { expendGetApi.getMonthData(req, res) },
-    // getDayData: (req: req, res: res) => { expendGetApi.getDayData(req, res) }
 }

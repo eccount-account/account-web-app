@@ -20,7 +20,8 @@ class monthModel {
             );
             `, [payYear, payMonth, payYear, payMonth], (err, rows) => {
             if (err) {
-                throw err;
+                res.sendStatus(400);
+                return;
             }
             res.send(rows);
         });

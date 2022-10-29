@@ -11,7 +11,8 @@ class Model {
             (${dataColumn.join(", ")})
             values (?) `, [inputValues], (err, rows) => {
             if (err) {
-                throw err;
+                res.sendStatus(400);
+                return;
             }
             res.sendStatus(200);
         });
@@ -19,7 +20,8 @@ class Model {
     getAllFromDB(table, res) {
         const rows = this.connection.query(`select * from ${table} `, (err, rows) => {
             if (err) {
-                throw err;
+                res.sendStatus(400);
+                return;
             }
             res.send(rows);
         });
@@ -27,15 +29,20 @@ class Model {
     removeAllFromDB(table, res) {
         this.connection.query(`delete * from ${table} `, (err, rows) => {
             if (err) {
-                throw err;
+                res.sendStatus(400);
+                return;
             }
             res.sendStatus(200);
         });
     }
     modifyDB(table, updateValues, id, res) {
+        console.log(table);
+        console.log(updateValues);
         this.connection.query(`update ${table} set ${updateValues} where id = ?`, [id], (err, rows) => {
             if (err) {
-                throw err;
+                res.sendStatus(400);
+                console.log(err);
+                return;
             }
             res.sendStatus(200);
         });
@@ -43,7 +50,8 @@ class Model {
     deleteFromDBById(table, id, res) {
         this.connection.query(`delete from ${table} where id = ? `, [id], (err, rows) => {
             if (err) {
-                throw err;
+                res.sendStatus(400);
+                return;
             }
             res.sendStatus(200);
         });
@@ -51,7 +59,8 @@ class Model {
     getDataFromDBById(table, id, res) {
         this.connection.query(`select * from ${table} where id = ? `, [id], (err, rows) => {
             if (err) {
-                throw err;
+                res.sendStatus(400);
+                return;
             }
             res.send(rows);
         });
@@ -59,7 +68,8 @@ class Model {
     getMonthDataFromDB(table, payMonth, res) {
         this.connection.query(`select * from ${table} where payMonth = ? `, [payMonth], (err, rows) => {
             if (err) {
-                throw err;
+                res.sendStatus(400);
+                return;
             }
             res.sendStatus(200);
         });

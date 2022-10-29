@@ -20,30 +20,18 @@ export class Controller {
         const dataColumn = Object.keys(req.body.content);
         const inputValues = Object.values(req.body.content);
 
-        try {
-            this.model.insertToDB(this.table, dataColumn, inputValues, res);
-        } catch(err: any) {
-            res.sendStatus(400);
-        }
+
+        this.model.insertToDB(this.table, dataColumn, inputValues, res);
+
 
     }
 
     getAllData (req: req, res: res)  {
-        try { 
-            this.model.getAllFromDB(this.table, res);
-        } catch {
-            res.sendStatus(400);
-        }
-
+        this.model.getAllFromDB(this.table, res);
     }
 
     deleteAllData (req: req, res: res) {
-        try {
-            this.model.removeAllFromDB(this.table, res);
-        } catch {
-            res.sendStatus(400);
-        }
-
+        this.model.removeAllFromDB(this.table, res);
     }
 
     modifyDataById (req: req, res: res) {
@@ -54,49 +42,27 @@ export class Controller {
         let updateValues: string = "";
         let updateArray: string[] = [];
         for (let key in req.body.content) {
+            if (typeof req.body.content[key] == "number"){
+                updateArray.push(`${key} = ${req.body.content[key]} `);
+            }
+            else if (typeof req.body.content[key] == "string")
             updateArray.push(`${key} = '${req.body.content[key]}' `);
         }
         updateValues = updateArray.join(" , ");
 
-        try {
-            this.model.modifyDB(this.table, updateValues, req.params.id, res);
-        } catch {
-            res.sendStatus(400);
-        }
+
+        this.model.modifyDB(this.table, updateValues, +req.params.id, res);
+
 
     }
 
     deleteDataById (req: req, res: res) {
-        try {
-            this.model.deleteFromDBById(this.table, req.params.id, res);
-        } catch {
-            res.sendStatus(400);
-        }
-
+        this.model.deleteFromDBById(this.table, +req.params.id, res);
     }
 
     getDataById (req: req, res: res) {
-        try {
-            const rows: any = this.model.getDataFromDBById(this.table, req.params.id, res);
-        } catch {
-            res.sendStatus(400);
-        }
-
+        const rows: any = this.model.getDataFromDBById(this.table, +req.params.id, res);
     }
-
-    // getYearData (req: req, res: res) {
-    //     connection.query(
-    //         `select * from ${this.table} where payYear = ? `,
-    //         [req.params.payyear],
-    //         (err: any, rows: any) => {
-    //             if (err) {
-    //                 throw err;
-    //             }
-    //             res.send(rows);
-    //         }
-    //     );
-    // }
-
 
     getMonthData (req: req, res: res) {
         if (!req.body?.payMonth) {
@@ -104,35 +70,7 @@ export class Controller {
             return;
         }
 
-        try {
-            this.model.getMonthDataFromDB (this.table, +req.params.paymonth, res);
-        } catch {
-            res.sendStatus(400);
-        }
-        // getMonthDataFromDB
-        // connection.query(
-        //     `select * from ${this.table} where payMonth = ? `,
-        //     [req.params.paymonth],
-        //     (err: any, rows: any) => {
-        //         if (err) {
-        //             throw err;
-        //         }
-        //         res.send(rows);
-        //     }
-        // );
+        this.model.getMonthDataFromDB (this.table, +req.params.paymonth, res);
     }
-
-    // getDayData (req: req, res: res) {
-    //     connection.query(
-    //         `select * from ${this.table} where payDay = ? `,
-    //         [req.params.payday],
-    //         (err: any, rows: any) => {
-    //             if (err) {
-    //                 throw err;
-    //             }
-    //             res.send(rows);
-    //         }
-    //     );
-    // }
     
 }

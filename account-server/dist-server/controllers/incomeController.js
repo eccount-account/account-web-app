@@ -10,7 +10,5 @@ exports.api = {
     modifyDataById: (req, res) => { incomeGetApi.modifyDataById(req, res); },
     deleteDataById: (req, res) => { incomeGetApi.deleteDataById(req, res); },
     getDataById: (req, res) => { incomeGetApi.getDataById(req, res); },
-    // getYearData: (req: req, res: res) => { incomeGetApi.getYearData(req, res) },
     getMonthData: (req, res) => { incomeGetApi.getMonthData(req, res); },
-    // getDayData: (req: req, res: res) => { incomeGetApi.getDayData(req, res) }
 };

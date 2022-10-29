@@ -14,8 +14,4 @@ incomeRouter.delete("/id/:id", incomeController.deleteDataById);
 
 incomeRouter.get("/id/:id", incomeController.getDataById);
 
-// incomeRouter.get("/payyear/:payyear", incomeController.getYearData);
-
 incomeRouter.get("/paymonth/:paymonth", incomeController.getMonthData);
-
-// incomeRouter.get("/payday/:payday", incomeController.getDayData);
