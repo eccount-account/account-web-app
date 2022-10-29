@@ -24,15 +24,15 @@ async function renderMonthList(year, month) {
 
     //Object.values(data).forEach((item) => console.log(item));
 
-    // for (let item in data) {
-    //     console.log(data[item]);
-    //     console.log(data[item].classify);
-    //     if (data[item].classify === "수입") {
-    //         console.log(data[item].payedMoney);
-    //     } else {
-    //         console.log(data[item].payedMoney);
-    //     }
-    // }
+    for (let item in data) {
+        console.log(data[item]);
+        console.log(data[item].classify);
+        if (data[item].classify === "수입") {
+            console.log(data[item].payedMoney);
+        } else {
+            console.log(data[item].payedMoney);
+        }
+    }
 }
 
 function init() {

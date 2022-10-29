@@ -1,4 +1,4 @@
 body {
     color: red;
-    background: url('../img/sample.png');
+    background: url("../img/sample.png");
 }

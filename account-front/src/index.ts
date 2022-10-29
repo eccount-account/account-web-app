@@ -179,6 +179,7 @@ class CostItem {
         const detailBoardMomoEl = createEl("input", "detailBoardMomo");
         const detailBoardMomoP = createEl("p", "input-label");
 
+        const boardBtnArea = createEl("div", "boardBtnArea");
         const modifyBtn = createEl("button", "submit");
         const deleteBtn = createEl("button", "submit");
 
@@ -213,8 +214,9 @@ class CostItem {
         detailBoardBoxEl.appendChild(detailBoardDateP);
         detailBoardBoxEl.appendChild(detailBoardDateEl);
 
-        detailBoardBoxEl.appendChild(modifyBtn);
-        detailBoardBoxEl.appendChild(deleteBtn);
+        boardBtnArea.appendChild(modifyBtn);
+        boardBtnArea.appendChild(deleteBtn);
+        detailBoardBoxEl.appendChild(boardBtnArea);
 
         modifyBtn.addEventListener("click", () => {
             const [year, month, day] = detailBoardDateEl.value.split("-");
