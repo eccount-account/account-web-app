@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>지출</title>
-    <script defer src="vendors.ad1e80883698f970753c.bundle.js"></script><script defer src="expense.38a977134cbde0c7b853.bundle.js"></script></head>
+    <script defer src="expense.081170b467cbe1c7a1cb.bundle.js"></script></head>
     <body>
         <div id="root">
             <header class="navigation">
@@ -43,7 +43,12 @@
                         </div>
                         <div class="input-item">
                             <p class="input-label">수입금액</p>
-                            <input type="number" class="payedMoney" />
+                            <input
+                                type="number"
+                                class="payedMoney"
+                                min="0"
+                                max="99999999999"
+                            />
                         </div>
                         <div class="input-item">
                             <p class="input-label">날짜</p>

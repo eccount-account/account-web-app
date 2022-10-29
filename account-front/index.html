@@ -24,6 +24,49 @@
                     </li>
                 </ul>
             </header>
+            <section class="contents">
+                <div class="selectDate">
+                    <input type="month" class="selectMonth" />
+                    <button class="allIncomeHistory">전체수입</button>
+                    <button class="allExpendHistory">전체지출</button>
+                </div>
+                <div class="statisticMony">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>합계</th>
+                                <th>수입</th>
+                                <th>지출</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <th class="monySum">2,950,000원</th>
+                            <th class="monyIncome">3,000,000원</th>
+                            <th class="monyExpense">50,000원</th>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table class="styled-table">
+                        <thead>
+                            <th>구분</th>
+                            <th>카테고리</th>
+                            <th>금액</th>
+                            <th>메모</th>
+                            <th>날짜</th>
+                        </thead>
+                        <tbody class="ListItems tableRow"></tbody>
+                    </table>
+                </div>
+            </section>
         </div>
+        
+        <div class="overlay" id="modal-overlay">
+        <div id="modal-overlay-backgroud"></div>
+            <div class="modal-overlay-content">
+                <div class="detailBoard"></div>
+        </div>
+        </div>
+    </div>
     </body>
 </html>

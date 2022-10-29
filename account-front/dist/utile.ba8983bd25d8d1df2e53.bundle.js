@@ -36,42 +36,15 @@
 var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "fetchData": () => (/* binding */ fetchData),
-/* harmony export */   "saveData": () => (/* binding */ saveData)
+/* harmony export */   "createEl": () => (/* binding */ createEl)
 /* harmony export */ });
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-function fetchData(url) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const response = yield fetch(url);
-        const dataList = yield response.json();
-        if (!dataList) {
-            return dataList;
-        }
-        return dataList;
-    });
-}
-//클라이언트에서 서버로 데이터 전송
-function saveData(url, bodyData) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const requstOption = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: bodyData,
-        };
-        yield fetch(url, requstOption);
-    });
+//엘리먼트 생성, 클래스 이름 부여
+function createEl(elKind, className = "") {
+    const el = document.createElement(elKind);
+    el.className = className;
+    return el;
 }
 
 /******/ })()
 ;
-//# sourceMappingURL=api.076c85541948584f80c8.bundle.js.map
+//# sourceMappingURL=utile.ba8983bd25d8d1df2e53.bundle.js.map

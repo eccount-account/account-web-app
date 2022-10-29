@@ -39,7 +39,9 @@ async function saveInputData(
     };
 
     const response = await fetch("/api/expend", requstOption);
-    console.log(response.status);
+    if (response.status === 200) {
+        alert("입력이완료 되었습니다.");
+    }
 }
 
 const submitBtnEl = document.querySelector(".submitBtn");

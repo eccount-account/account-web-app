@@ -40,9 +40,11 @@ async function saveInputData(
 
     const response = await fetch("/api/income", requstOption);
     console.log(response.status);
-}
 
-const submitBtnEl = document.querySelector(".submitBtn");
+    if (response.status === 200) {
+        alert("입력이 완료되었습니다.");
+    }
+}
 
 function submitInputData(): any {
     const payedCategoryEl = document.querySelector(
@@ -72,4 +74,17 @@ function submitInputData(): any {
     );
 }
 
-submitBtnEl?.addEventListener("click", submitInputData);
+function init() {
+    const submitBtnEl = document.querySelector(
+        ".submitBtn"
+    ) as HTMLSelectElement;
+    const payedMoneyEl = document.querySelector(
+        "input[type='date']"
+    ) as HTMLSelectElement;
+    payedMoneyEl.value = new Date().toISOString().substring(0, 10);
+
+    submitBtnEl.addEventListener("click", submitInputData);
+}
+
+//윈도우 열리면 바로 init() 함수 실행
+window.addEventListener("DOMContentLoaded", init);
