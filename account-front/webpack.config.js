@@ -19,7 +19,6 @@ module.exports = {
         cssLoader: "./src/ts/cssLoader.ts",
         income: "./src/ts/income.ts",
         statistical: "./src/ts/statistical.ts",
-        expense: "./src/ts/expense.ts",
         api: "./src/ts/api.ts",
         utile: "./src/ts/utile.ts",
     },
@@ -64,11 +63,6 @@ module.exports = {
             filename: "income.html",
             template: "./src/income.html",
             chunks: ["income"],
-        }),
-        new HtmlWebpackPlugin({
-            filename: "expense.html",
-            template: "./src/expense.html",
-            chunks: ["expense"],
         }),
         new HtmlWebpackPlugin({
             filename: "statistical.html",

@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>수입</title>
+        <title>입력</title>
     </head>
     <body>
         <div id="root">
@@ -14,10 +14,10 @@
                 </div>
                 <ul class="nav-area">
                     <li class="nav-item">
-                        <a href="income.html">수입입력</a>
+                        <a href="index.html">홈</a>
                     </li>
                     <li class="nav-item">
-                        <a href="expense.html">지출입력</a>
+                        <a href="income.html">입력</a>
                     </li>
                     <li class="nav-item">
                         <a href="statistical.html">통계</a>
@@ -28,10 +28,28 @@
                 <div class="income-area">
                     <div class="user-input-area">
                         <div class="input-title">
-                            <p>수입을 입력해주세요</p>
+                            <p>내용을 입력해주세요</p>
                         </div>
                         <div class="input-item">
-                            <p class="input-label">수입방법</p>
+                            <p class="input-label">입력구분</p>
+                            <label class="box-radio-input"
+                                ><input
+                                    type="radio"
+                                    name="payment"
+                                    value="income"
+                                    checked="checked"
+                                /><span>수입</span></label
+                            >
+                            <label class="box-radio-input"
+                                ><input
+                                    type="radio"
+                                    name="payment"
+                                    value="expend"
+                                /><span>지출</span></label
+                            >
+                        </div>
+                        <div class="input-item">
+                            <p class="input-label">카테고리</p>
                             <select class="payedCategory">
                                 <option value="금융소득" selected>
                                     금융소득
@@ -42,12 +60,12 @@
                             </select>
                         </div>
                         <div class="input-item">
-                            <p class="input-label">수입금액</p>
-                            <input type="number" class="payedMoney" />
+                            <p class="input-label">금액</p>
+                            <input type="number" class="payedMoney" required />
                         </div>
                         <div class="input-item">
                             <p class="input-label">날짜</p>
-                            <input type="date" />
+                            <input type="date" required />
                         </div>
                         <div class="input-item">
                             <p>메모</p>

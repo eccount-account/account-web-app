@@ -637,79 +637,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".user-input-area {\r\n    margin: 150px auto;\r\n    width: 435px;\r\n    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\r\n    border-radius: 12px;\r\n    padding: 40px;\r\n}\r\n\r\n.input-item {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.input-item input,\r\n.input-item select {\r\n    width: 100%;\r\n    height: 40px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-item p {\r\n    width: 180px;\r\n    font-size: 16px;\r\n    color: rgb(102, 108, 119);\r\n}\r\n\r\n.input-item textarea {\r\n    width: 100%;\r\n    height: 80px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    resize: none;\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-title {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.input-title p {\r\n    font-size: 24px;\r\n    letter-spacing: 0px;\r\n    font-weight: 700;\r\n    display: -webkit-box;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    -webkit-line-clamp: 2;\r\n    -webkit-box-orient: vertical;\r\n    word-break: break-all;\r\n    line-height: 34px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] {\r\n    display: none;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] + span {\r\n    display: inline-block;\r\n    background: none;\r\n    border: 1px solid #dfdfdf;\r\n    padding: 0px 10px;\r\n    text-align: center;\r\n    height: 35px;\r\n    line-height: 33px;\r\n    font-weight: 500;\r\n    cursor: pointer;\r\n    width: 124px;\r\n    border-radius: 6px;\r\n    border: 1px solid #e4edf2;\r\n    margin: 0 5px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"]:checked + span {\r\n    border: 1px solid #e4edf2;\r\n    background: #e7f8f2;\r\n    color: #09b7c8;\r\n}\r\n\r\n.user-income-input-modal,\r\n.user-expense-input-modal {\r\n    width: 500px;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/inputBox.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,YAAY;IACZ,qDAAqD;IACrD,mBAAmB;IACnB,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;;IAEnB,mBAAmB;AACvB;;AAEA;;IAEI,WAAW;IACX,YAAY;IACZ,6BAA6B;IAC7B,iBAAiB;IACjB,mBAAmB;IACnB,mBAAmB;IACnB,yCAAyC;IACzC,yBAAyB;AAC7B;;AAEA;IACI,YAAY;IACZ,eAAe;IACf,yBAAyB;AAC7B;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,6BAA6B;IAC7B,iBAAiB;IACjB,mBAAmB;IACnB,mBAAmB;IACnB,yCAAyC;IACzC,YAAY;IACZ,yBAAyB;AAC7B;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,eAAe;IACf,mBAAmB;IACnB,gBAAgB;IAChB,oBAAoB;IACpB,gBAAgB;IAChB,uBAAuB;IACvB,qBAAqB;IACrB,4BAA4B;IAC5B,qBAAqB;IACrB,iBAAiB;AACrB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,qBAAqB;IACrB,gBAAgB;IAChB,yBAAyB;IACzB,iBAAiB;IACjB,kBAAkB;IAClB,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;IAChB,eAAe;IACf,YAAY;IACZ,kBAAkB;IAClB,yBAAyB;IACzB,aAAa;AACjB;;AAEA;IACI,yBAAyB;IACzB,mBAAmB;IACnB,cAAc;AAClB;;AAEA;;IAEI,YAAY;AAChB","sourcesContent":[".user-input-area {\r\n    margin: 150px auto;\r\n    width: 435px;\r\n    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\r\n    border-radius: 12px;\r\n    padding: 40px;\r\n}\r\n\r\n.input-item {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.input-item input,\r\n.input-item select {\r\n    width: 100%;\r\n    height: 40px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-item p {\r\n    width: 180px;\r\n    font-size: 16px;\r\n    color: rgb(102, 108, 119);\r\n}\r\n\r\n.input-item textarea {\r\n    width: 100%;\r\n    height: 80px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    resize: none;\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-title {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.input-title p {\r\n    font-size: 24px;\r\n    letter-spacing: 0px;\r\n    font-weight: 700;\r\n    display: -webkit-box;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    -webkit-line-clamp: 2;\r\n    -webkit-box-orient: vertical;\r\n    word-break: break-all;\r\n    line-height: 34px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] {\r\n    display: none;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] + span {\r\n    display: inline-block;\r\n    background: none;\r\n    border: 1px solid #dfdfdf;\r\n    padding: 0px 10px;\r\n    text-align: center;\r\n    height: 35px;\r\n    line-height: 33px;\r\n    font-weight: 500;\r\n    cursor: pointer;\r\n    width: 124px;\r\n    border-radius: 6px;\r\n    border: 1px solid #e4edf2;\r\n    margin: 0 5px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"]:checked + span {\r\n    border: 1px solid #e4edf2;\r\n    background: #e7f8f2;\r\n    color: #09b7c8;\r\n}\r\n\r\n.user-income-input-modal,\r\n.user-expense-input-modal {\r\n    width: 500px;\r\n}\r\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-/* 24 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(25);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_button_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
-
-
-/***/ }),
-/* 25 */
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".submitBtn {\r\n    width: 100%;\r\n    height: 50px;\r\n    left: 0px;\r\n    top: 0px;\r\n    content: \"\";\r\n    background: #13bd7e;\r\n    border-radius: inherit;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    cursor: pointer;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/button.css"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,SAAS;IACT,QAAQ;IACR,WAAW;IACX,mBAAmB;IACnB,sBAAsB;IACtB,yCAAyC;IACzC,YAAY;IACZ,cAAc;IACd,eAAe;IACf,eAAe;AACnB","sourcesContent":[".submitBtn {\r\n    width: 100%;\r\n    height: 50px;\r\n    left: 0px;\r\n    top: 0px;\r\n    content: \"\";\r\n    background: #13bd7e;\r\n    border-radius: inherit;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".user-input-area {\r\n    margin: 150px auto;\r\n    width: 435px;\r\n    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\r\n    border-radius: 12px;\r\n    padding: 40px;\r\n}\r\n\r\n.input-item {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.input-item input,\r\n.input-item select {\r\n    width: 100%;\r\n    height: 40px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-item p {\r\n    width: 180px;\r\n    font-size: 16px;\r\n    color: rgb(102, 108, 119);\r\n}\r\n\r\n.input-item textarea {\r\n    width: 100%;\r\n    height: 80px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    resize: none;\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-title {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.input-title p {\r\n    font-size: 24px;\r\n    letter-spacing: 0px;\r\n    font-weight: 700;\r\n    display: -webkit-box;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    -webkit-line-clamp: 2;\r\n    -webkit-box-orient: vertical;\r\n    word-break: break-all;\r\n    line-height: 34px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] {\r\n    display: none;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] + span {\r\n    display: inline-block;\r\n    background: none;\r\n    border: 1px solid #dfdfdf;\r\n    padding: 0px 10px;\r\n    text-align: center;\r\n    height: 35px;\r\n    line-height: 33px;\r\n    font-weight: 500;\r\n    cursor: pointer;\r\n    width: 124px;\r\n    border-radius: 6px;\r\n    border: 1px solid #e4edf2;\r\n    margin: 0 5px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"]:checked + span {\r\n    border: 1px solid #e4edf2;\r\n    background: #e7f8f2;\r\n    color: #09b7c8;\r\n}\r\n\r\n.user-income-input-modal,\r\n.user-expense-input-modal {\r\n    width: 500px;\r\n}\r\n\r\n.submitBtn {\r\n    width: 100%;\r\n    height: 50px;\r\n    left: 0px;\r\n    top: 0px;\r\n    content: \"\";\r\n    background: #13bd7e;\r\n    border-radius: inherit;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    cursor: pointer;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/inputBox.css"],"names":[],"mappings":"AAAA;IACI,kBAAkB;IAClB,YAAY;IACZ,qDAAqD;IACrD,mBAAmB;IACnB,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;;IAEnB,mBAAmB;AACvB;;AAEA;;IAEI,WAAW;IACX,YAAY;IACZ,6BAA6B;IAC7B,iBAAiB;IACjB,mBAAmB;IACnB,mBAAmB;IACnB,yCAAyC;IACzC,yBAAyB;AAC7B;;AAEA;IACI,YAAY;IACZ,eAAe;IACf,yBAAyB;AAC7B;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,6BAA6B;IAC7B,iBAAiB;IACjB,mBAAmB;IACnB,mBAAmB;IACnB,yCAAyC;IACzC,YAAY;IACZ,yBAAyB;AAC7B;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,eAAe;IACf,mBAAmB;IACnB,gBAAgB;IAChB,oBAAoB;IACpB,gBAAgB;IAChB,uBAAuB;IACvB,qBAAqB;IACrB,4BAA4B;IAC5B,qBAAqB;IACrB,iBAAiB;AACrB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,qBAAqB;IACrB,gBAAgB;IAChB,yBAAyB;IACzB,iBAAiB;IACjB,kBAAkB;IAClB,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;IAChB,eAAe;IACf,YAAY;IACZ,kBAAkB;IAClB,yBAAyB;IACzB,aAAa;AACjB;;AAEA;IACI,yBAAyB;IACzB,mBAAmB;IACnB,cAAc;AAClB;;AAEA;;IAEI,YAAY;AAChB;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,SAAS;IACT,QAAQ;IACR,WAAW;IACX,mBAAmB;IACnB,sBAAsB;IACtB,yCAAyC;IACzC,YAAY;IACZ,cAAc;IACd,eAAe;IACf,eAAe;AACnB","sourcesContent":[".user-input-area {\r\n    margin: 150px auto;\r\n    width: 435px;\r\n    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;\r\n    border-radius: 12px;\r\n    padding: 40px;\r\n}\r\n\r\n.input-item {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n\r\n    margin-bottom: 16px;\r\n}\r\n\r\n.input-item input,\r\n.input-item select {\r\n    width: 100%;\r\n    height: 40px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-item p {\r\n    width: 180px;\r\n    font-size: 16px;\r\n    color: rgb(102, 108, 119);\r\n}\r\n\r\n.input-item textarea {\r\n    width: 100%;\r\n    height: 80px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    resize: none;\r\n    border: 1px solid #e4edf2;\r\n}\r\n\r\n.input-title {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.input-title p {\r\n    font-size: 24px;\r\n    letter-spacing: 0px;\r\n    font-weight: 700;\r\n    display: -webkit-box;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    -webkit-line-clamp: 2;\r\n    -webkit-box-orient: vertical;\r\n    word-break: break-all;\r\n    line-height: 34px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] {\r\n    display: none;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"] + span {\r\n    display: inline-block;\r\n    background: none;\r\n    border: 1px solid #dfdfdf;\r\n    padding: 0px 10px;\r\n    text-align: center;\r\n    height: 35px;\r\n    line-height: 33px;\r\n    font-weight: 500;\r\n    cursor: pointer;\r\n    width: 124px;\r\n    border-radius: 6px;\r\n    border: 1px solid #e4edf2;\r\n    margin: 0 5px;\r\n}\r\n\r\n.box-radio-input input[type=\"radio\"]:checked + span {\r\n    border: 1px solid #e4edf2;\r\n    background: #e7f8f2;\r\n    color: #09b7c8;\r\n}\r\n\r\n.user-income-input-modal,\r\n.user-expense-input-modal {\r\n    width: 500px;\r\n}\r\n\r\n.submitBtn {\r\n    width: 100%;\r\n    height: 50px;\r\n    left: 0px;\r\n    top: 0px;\r\n    content: \"\";\r\n    background: #13bd7e;\r\n    border-radius: inherit;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    color: #ffffff;\r\n    font-size: 16px;\r\n    cursor: pointer;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -795,7 +723,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _css_navigation_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 /* harmony import */ var _css_inputBox_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
-/* harmony import */ var _css_button_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -808,8 +735,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-
-function saveInputData(payedMoney, category, memo, payYear, payMonth, payDay, payTime) {
+function saveInputData(payedWay, payedMoney, category, memo, payYear, payMonth, payDay, payTime) {
     return __awaiter(this, void 0, void 0, function* () {
         const bodyData = JSON.stringify({
             content: {
@@ -829,10 +755,13 @@ function saveInputData(payedMoney, category, memo, payYear, payMonth, payDay, pa
             },
             body: bodyData,
         };
-        const response = yield fetch("/api/income", requstOption);
+        const response = yield fetch(`/api/${payedWay === "income" ? "income" : "expend"}`, requstOption);
         console.log(response.status);
         if (response.status === 200) {
-            alert("입력이 완료되었습니다.");
+            alert(`${payedWay === "income" ? "수입" : "지출"} 입력이 완료 되었습니다.`);
+        }
+        else {
+            alert(`입력에 실패하였습니다.`);
         }
     });
 }
@@ -840,16 +769,61 @@ function submitInputData() {
     const payedCategoryEl = document.querySelector(".payedCategory");
     const payedMoneyEl = document.querySelector(".payedMoney");
     const payedDateEl = document.querySelector("input[type='date']");
+    const payedWayEl = document.querySelector("input[name='payment']:checked");
     const memoEl = document.querySelector(".payedMemo");
     const [year, month, day] = payedDateEl.value.split("-");
     let today = new Date();
     let time = `${today.getHours()}${today.getMinutes()}`;
-    saveInputData(Number(payedMoneyEl.value), payedCategoryEl.options[payedCategoryEl.selectedIndex].value, memoEl.value, Number(year), Number(month), Number(day), Number(time));
+    if (!payedMoneyEl.value || Number(payedMoneyEl.value) === 0) {
+        alert("금액을 입력해주세요");
+        return;
+    }
+    saveInputData(payedWayEl.value, Number(payedMoneyEl.value), payedCategoryEl.options[payedCategoryEl.selectedIndex].value, memoEl.value, Number(year), Number(month), Number(day), Number(time));
+    payedMoneyEl.value = "";
+    payedDateEl.value = new Date().toISOString().substring(0, 10);
+    memoEl.value = "";
+}
+function changeCategory(classify) {
+    const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
+    const EXPEND_SELECT = [
+        "식비",
+        "교통비",
+        "주거비",
+        "유흥비",
+        "저축",
+        "기타",
+    ];
+    const selectEL = document.querySelector(".payedCategory");
+    selectEL.innerText = "";
+    if (classify === "income") {
+        INCOME_SELECT.forEach((item) => {
+            const optionEl = document.createElement("option");
+            optionEl.value = item;
+            optionEl.innerText = item;
+            selectEL.append(optionEl);
+        });
+    }
+    else {
+        EXPEND_SELECT.forEach((item) => {
+            const optionEl = document.createElement("option");
+            optionEl.value = item;
+            optionEl.innerText = item;
+            selectEL.append(optionEl);
+        });
+    }
 }
 function init() {
     const submitBtnEl = document.querySelector(".submitBtn");
     const payedMoneyEl = document.querySelector("input[type='date']");
     payedMoneyEl.value = new Date().toISOString().substring(0, 10);
+    const payedWayEl = document.querySelector("input[name='payment']:checked");
+    const unPayedWayEl = document.querySelector("input[name='payment']:not(:checked)");
+    payedWayEl.addEventListener("change", () => {
+        changeCategory(payedWayEl.value);
+    });
+    unPayedWayEl.addEventListener("change", () => {
+        changeCategory(unPayedWayEl.value);
+    });
     submitBtnEl.addEventListener("click", submitInputData);
 }
 //윈도우 열리면 바로 init() 함수 실행
@@ -859,4 +833,4 @@ window.addEventListener("DOMContentLoaded", init);
 
 /******/ })()
 ;
-//# sourceMappingURL=income.6979ba0dd14b4a6d4eb3.bundle.js.map
+//# sourceMappingURL=income.b3d7062b3690c03b9b65.bundle.js.map
