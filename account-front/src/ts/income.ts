@@ -4,12 +4,6 @@ import "../css/inputBox.css";
 import { cutDateFull } from "./utile";
 import { changeCategory } from "./createSelect";
 
-interface PostOption {
-    method: string;
-    headers: object | any;
-    body: string;
-}
-
 async function saveInputData(
     payedWay: string,
     payedMoney: number,
@@ -20,31 +14,26 @@ async function saveInputData(
     payDay: number,
     payTime: number
 ) {
-    const bodyData = JSON.stringify({
-        content: {
-            payedMoney: payedMoney,
-            category: category,
-            memo: memo,
-            payYear: payYear,
-            payMonth: payMonth,
-            payDay: payDay,
-            payTime: payTime,
-        },
-    });
-
-    const requstOption: PostOption = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: bodyData,
-    };
-
     const response = await fetch(
         `/api/${payedWay === "수입" ? "income" : "expend"}`,
-        requstOption
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                content: {
+                    payedMoney: payedMoney,
+                    category: category,
+                    memo: memo,
+                    payYear: payYear,
+                    payMonth: payMonth,
+                    payDay: payDay,
+                    payTime: payTime,
+                },
+            }),
+        }
     );
-    console.log(response.status);
 
     if (response.status === 200) {
         alert(
@@ -78,6 +67,11 @@ function submitInputData(): void {
 
     if (!payedMoneyEl.value || Number(payedMoneyEl.value) === 0) {
         alert("금액을 입력해주세요");
+        return;
+    }
+
+    if (!payedDateEl.value) {
+        alert("날짜를 입력해주세요");
         return;
     }
 

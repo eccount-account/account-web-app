@@ -217,6 +217,19 @@ class CostItem {
 
         //수정버튼 클릭
         modifyBtn.addEventListener("click", () => {
+            if (
+                !detailBoardMonyEl.value ||
+                Number(detailBoardMonyEl.value) === 0
+            ) {
+                alert("금액을 입력해주세요");
+                return;
+            }
+
+            if (!detailBoardDateEl.value) {
+                alert("날짜를 입력해주세요");
+                return;
+            }
+
             const [year, month, day] = cutDateFull(detailBoardDateEl.value);
             this.requestModify(
                 selectItem.id,
