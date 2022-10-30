@@ -2,6 +2,7 @@ import "../css/reset.css";
 import "../css/navigation.css";
 import "../css/inputBox.css";
 import { cutDateFull } from "./utile";
+import { changeCategory } from "./createSelect";
 
 interface PostOption {
     method: string;
@@ -94,36 +95,6 @@ function submitInputData(): void {
     payedMoneyEl.value = "";
     payedDateEl.value = new Date().toISOString().substring(0, 10);
     memoEl.value = "";
-}
-
-function changeCategory(selectEL: HTMLSelectElement, classify: string): void {
-    const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
-    const EXPEND_SELECT = [
-        "식비",
-        "교통비",
-        "주거비",
-        "유흥비",
-        "저축",
-        "기타",
-    ];
-
-    selectEL.innerText = "";
-
-    if (classify === "수입") {
-        INCOME_SELECT.forEach((item) => {
-            const optionEl = document.createElement("option");
-            optionEl.value = item;
-            optionEl.innerText = item;
-            selectEL.append(optionEl);
-        });
-    } else {
-        EXPEND_SELECT.forEach((item) => {
-            const optionEl = document.createElement("option");
-            optionEl.value = item;
-            optionEl.innerText = item;
-            selectEL.append(optionEl);
-        });
-    }
 }
 
 function init(): void {

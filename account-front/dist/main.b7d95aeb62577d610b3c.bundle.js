@@ -820,7 +820,6 @@ function fetchData(url) {
         if (!dataList) {
             return dataList;
         }
-        console.log(dataList);
         return dataList;
     });
 }
@@ -1081,4 +1080,4 @@ window.addEventListener("DOMContentLoaded", init);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.a8b07e5adc91e13c7069.bundle.js.map
+//# sourceMappingURL=main.b7d95aeb62577d610b3c.bundle.js.map

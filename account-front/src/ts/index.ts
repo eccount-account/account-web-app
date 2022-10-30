@@ -16,7 +16,6 @@ async function fetchData(url: string): Promise<EssentialData[]> {
         return dataList;
     }
 
-    console.log(dataList);
     return dataList;
 }
 

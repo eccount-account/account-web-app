@@ -591,7 +591,37 @@ function cutDateMonth(date) {
 
 /***/ }),
 /* 16 */,
-/* 17 */,
+/* 17 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "changeCategory": () => (/* binding */ changeCategory)
+/* harmony export */ });
+const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
+const EXPEND_SELECT = ["식비", "교통비", "주거비", "유흥비", "저축", "기타"];
+function changeCategory(selectEL, classify) {
+    selectEL.innerText = "";
+    if (classify === "수입") {
+        INCOME_SELECT.forEach((item) => {
+            const optionEl = document.createElement("option");
+            optionEl.value = item;
+            optionEl.innerText = item;
+            selectEL.append(optionEl);
+        });
+    }
+    else {
+        EXPEND_SELECT.forEach((item) => {
+            const optionEl = document.createElement("option");
+            optionEl.value = item;
+            optionEl.innerText = item;
+            selectEL.append(optionEl);
+        });
+    }
+}
+
+
+/***/ }),
 /* 18 */,
 /* 19 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -746,6 +776,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_navigation_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 /* harmony import */ var _css_inputBox_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(19);
 /* harmony import */ var _utile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
+/* harmony import */ var _createSelect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(17);
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -755,6 +786,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+
 
 
 
@@ -807,34 +839,6 @@ function submitInputData() {
     payedDateEl.value = new Date().toISOString().substring(0, 10);
     memoEl.value = "";
 }
-function changeCategory(selectEL, classify) {
-    const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
-    const EXPEND_SELECT = [
-        "식비",
-        "교통비",
-        "주거비",
-        "유흥비",
-        "저축",
-        "기타",
-    ];
-    selectEL.innerText = "";
-    if (classify === "수입") {
-        INCOME_SELECT.forEach((item) => {
-            const optionEl = document.createElement("option");
-            optionEl.value = item;
-            optionEl.innerText = item;
-            selectEL.append(optionEl);
-        });
-    }
-    else {
-        EXPEND_SELECT.forEach((item) => {
-            const optionEl = document.createElement("option");
-            optionEl.value = item;
-            optionEl.innerText = item;
-            selectEL.append(optionEl);
-        });
-    }
-}
 function init() {
     const submitBtnEl = document.querySelector(".submitBtn");
     const payedMoneyEl = document.querySelector("input[type='date']");
@@ -843,10 +847,10 @@ function init() {
     const unPayedWayEl = document.querySelector("input[name='payment']:not(:checked)");
     const selectEL = document.querySelector(".payedCategory");
     payedWayEl.addEventListener("change", () => {
-        changeCategory(selectEL, payedWayEl.value);
+        (0,_createSelect__WEBPACK_IMPORTED_MODULE_4__.changeCategory)(selectEL, payedWayEl.value);
     });
     unPayedWayEl.addEventListener("change", () => {
-        changeCategory(selectEL, unPayedWayEl.value);
+        (0,_createSelect__WEBPACK_IMPORTED_MODULE_4__.changeCategory)(selectEL, unPayedWayEl.value);
     });
     submitBtnEl.addEventListener("click", submitInputData);
 }
@@ -857,4 +861,4 @@ window.addEventListener("DOMContentLoaded", init);
 
 /******/ })()
 ;
-//# sourceMappingURL=income.e89b9a14c43e9d58e24b.bundle.js.map
+//# sourceMappingURL=income.d575281e79403e72619b.bundle.js.map
