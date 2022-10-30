@@ -201,7 +201,6 @@ async function renderMonthList(year: number, month: number) {
     }
 
     const accData = calculateCategoryCost(data); //api로 계산된 기격 받아오기
-    console.log("데이터 ㅜㅜ", accData);
 
     //지출 카테고리 내역 렌더링
     renderIncomeReport(incomeReportEl, incomeTotalReortEl, accData);

@@ -1,6 +1,7 @@
 import "../css/reset.css";
 import "../css/navigation.css";
 import "../css/inputBox.css";
+import { cutDateFull } from "./utile";
 
 interface PostOption {
     method: string;
@@ -39,14 +40,14 @@ async function saveInputData(
     };
 
     const response = await fetch(
-        `/api/${payedWay === "income" ? "income" : "expend"}`,
+        `/api/${payedWay === "수입" ? "income" : "expend"}`,
         requstOption
     );
     console.log(response.status);
 
     if (response.status === 200) {
         alert(
-            `${payedWay === "income" ? "수입" : "지출"} 입력이 완료 되었습니다.`
+            `${payedWay === "수입" ? "수입" : "지출"} 입력이 완료 되었습니다.`
         );
     } else {
         alert(`입력에 실패하였습니다.`);
@@ -69,7 +70,7 @@ function submitInputData(): void {
 
     const memoEl = document.querySelector(".payedMemo") as HTMLSelectElement;
 
-    const [year, month, day] = payedDateEl.value.split("-");
+    const [year, month, day] = cutDateFull(payedDateEl.value);
 
     let today = new Date();
     let time = `${today.getHours()}${today.getMinutes()}`;
@@ -84,9 +85,9 @@ function submitInputData(): void {
         Number(payedMoneyEl.value),
         payedCategoryEl.options[payedCategoryEl.selectedIndex].value,
         memoEl.value,
-        Number(year),
-        Number(month),
-        Number(day),
+        year,
+        month,
+        day,
         Number(time)
     );
 
@@ -95,7 +96,7 @@ function submitInputData(): void {
     memoEl.value = "";
 }
 
-function changeCategory(classify: string): void {
+function changeCategory(selectEL: HTMLSelectElement, classify: string): void {
     const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
     const EXPEND_SELECT = [
         "식비",
@@ -106,12 +107,9 @@ function changeCategory(classify: string): void {
         "기타",
     ];
 
-    const selectEL = document.querySelector(
-        ".payedCategory"
-    ) as HTMLSelectElement;
     selectEL.innerText = "";
 
-    if (classify === "income") {
+    if (classify === "수입") {
         INCOME_SELECT.forEach((item) => {
             const optionEl = document.createElement("option");
             optionEl.value = item;
@@ -144,12 +142,16 @@ function init(): void {
         "input[name='payment']:not(:checked)"
     ) as HTMLSelectElement;
 
+    const selectEL = document.querySelector(
+        ".payedCategory"
+    ) as HTMLSelectElement;
+
     payedWayEl.addEventListener("change", () => {
-        changeCategory(payedWayEl.value);
+        changeCategory(selectEL, payedWayEl.value);
     });
 
     unPayedWayEl.addEventListener("change", () => {
-        changeCategory(unPayedWayEl.value);
+        changeCategory(selectEL, unPayedWayEl.value);
     });
 
     submitBtnEl.addEventListener("click", submitInputData);

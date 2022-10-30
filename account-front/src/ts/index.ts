@@ -4,13 +4,13 @@ import "../css/home.css";
 import { createEl, cutDateFull, cutDateMonth } from "./utile";
 import { showModal, closeModal } from "./modal";
 import { EssentialData, CostFullData } from "./interface";
+import { changeCategory } from "./createSelect";
 
 const listItemsEl = document.querySelector(".ListItems") as HTMLSelectElement;
 
 async function fetchData(url: string): Promise<EssentialData[]> {
     const response = await fetch(url);
     const dataList = await response.json();
-    console.log(dataList);
 
     if (!dataList) {
         return dataList;
@@ -18,36 +18,6 @@ async function fetchData(url: string): Promise<EssentialData[]> {
 
     console.log(dataList);
     return dataList;
-}
-
-function changeCategory(targetEl: HTMLSelectElement, classify: string): void {
-    const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
-    const EXPEND_SELECT = [
-        "식비",
-        "교통비",
-        "주거비",
-        "유흥비",
-        "저축",
-        "기타",
-    ];
-
-    targetEl.innerText = "";
-
-    if (classify === "수입") {
-        INCOME_SELECT.forEach((item) => {
-            const optionEl = document.createElement("option");
-            optionEl.value = item;
-            optionEl.innerText = item;
-            targetEl.append(optionEl);
-        });
-    } else {
-        EXPEND_SELECT.forEach((item) => {
-            const optionEl = document.createElement("option");
-            optionEl.value = item;
-            optionEl.innerText = item;
-            targetEl.append(optionEl);
-        });
-    }
 }
 
 class CostItem {

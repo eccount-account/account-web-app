@@ -20,6 +20,7 @@ module.exports = {
         statistical: "./src/ts/statistical.ts",
         utile: "./src/ts/utile.ts",
         interface: "./src/ts/interface.ts",
+        createSelect: "./src/ts/createSelect.ts",
     },
     output: {
         // 출력
