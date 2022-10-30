@@ -562,78 +562,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, "header {\r\n    background: #fff;\r\n 
 
 
 /***/ }),
-/* 13 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
-/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_home_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(14);
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-var options = {};
-
-options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
-options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
-
-      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
-    
-options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
-options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_home_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
-
-
-
-
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_home_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_home_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_home_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
-
-
-/***/ }),
-/* 14 */
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
-// Imports
-
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".statisticMony {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n.style-imcome {\r\n    color: #ff6677;\r\n    font-weight: 800;\r\n}\r\n\r\n.style-expend {\r\n    color: #4a88e5;\r\n    font-weight: 800;\r\n}\r\n\r\n.overlay {\r\n    display: none;\r\n    position: fixed;\r\n    z-index: 10;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(16, 16, 16, 0.5);\r\n}\r\n\r\n#modal-overlay-backgroud {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.overlay.active {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: #fff;\r\n}\r\n\r\n/* z-index를 .overlay보다 높게해주면, modal-overlay-backgroud보다 위에 있으므로 클릭해도 꺼지지 않는다. */\r\n.overlay .modal-overlay-content {\r\n    background-color: #fff;\r\n    color: #000;\r\n    border-radius: 0.5rem;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    max-width: 40rem;\r\n    z-index: 11;\r\n}\r\n\r\n.overlay .modal-overlay-content > * {\r\n    margin: 2rem;\r\n}\r\n\r\n.detailBoardBox {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n\r\nbutton {\r\n    background: #13bd7e;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    padding: 4px 12px;\r\n    color: #ffffff;\r\n    font-size: 14px;\r\n    cursor: pointer;\r\n    border-radius: 8px;\r\n}\r\n\r\n.detailBoard {\r\n    width: 280px;\r\n    height: 300px;\r\n}\r\n\r\n.detailBoardBox input,\r\n.detailBoardBox select {\r\n    width: 100%;\r\n    height: 40px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    border: 1px solid #e4edf2;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n.detailBoardBox p {\r\n    margin-bottom: 4px;\r\n    font-size: 16px;\r\n    color: rgb(102, 108, 119);\r\n}\r\n\r\n.detailBoardBox .boardBtnArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-around;\r\n}\r\n\r\n.detailBoardBox button {\r\n    width: 45%;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/home.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;IAChB,uBAAuB;IACvB,gBAAgB;IAChB,wCAAwC;AAC5C;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB;;AAEA;;IAEI,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,cAAc;IACd,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,eAAe;IACf,WAAW;IACX,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;IACZ,uCAAuC;AAC3C;;AAEA;IACI,eAAe;IACf,MAAM;IACN,OAAO;IACP,WAAW;IACX,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,WAAW;AACf;;AAEA,+EAA+E;AAC/E;IACI,sBAAsB;IACtB,WAAW;IACX,qBAAqB;IACrB,aAAa;IACb,sBAAsB;IACtB,6BAA6B;IAC7B,gBAAgB;IAChB,WAAW;AACf;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,8BAA8B;IAC9B,YAAY;IACZ,wBAAwB;AAC5B;;AAEA;IACI,mBAAmB;IACnB,yCAAyC;IACzC,YAAY;IACZ,iBAAiB;IACjB,cAAc;IACd,eAAe;IACf,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,aAAa;AACjB;;AAEA;;IAEI,WAAW;IACX,YAAY;IACZ,6BAA6B;IAC7B,iBAAiB;IACjB,mBAAmB;IACnB,mBAAmB;IACnB,yCAAyC;IACzC,yBAAyB;IACzB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,eAAe;IACf,yBAAyB;AAC7B;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,6BAA6B;AACjC;;AAEA;IACI,UAAU;AACd","sourcesContent":[".statisticMony {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n.style-imcome {\r\n    color: #ff6677;\r\n    font-weight: 800;\r\n}\r\n\r\n.style-expend {\r\n    color: #4a88e5;\r\n    font-weight: 800;\r\n}\r\n\r\n.overlay {\r\n    display: none;\r\n    position: fixed;\r\n    z-index: 10;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(16, 16, 16, 0.5);\r\n}\r\n\r\n#modal-overlay-backgroud {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.overlay.active {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: #fff;\r\n}\r\n\r\n/* z-index를 .overlay보다 높게해주면, modal-overlay-backgroud보다 위에 있으므로 클릭해도 꺼지지 않는다. */\r\n.overlay .modal-overlay-content {\r\n    background-color: #fff;\r\n    color: #000;\r\n    border-radius: 0.5rem;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-around;\r\n    max-width: 40rem;\r\n    z-index: 11;\r\n}\r\n\r\n.overlay .modal-overlay-content > * {\r\n    margin: 2rem;\r\n}\r\n\r\n.detailBoardBox {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n\r\nbutton {\r\n    background: #13bd7e;\r\n    transition: opacity 100ms ease-in-out 0ms;\r\n    border: none;\r\n    padding: 4px 12px;\r\n    color: #ffffff;\r\n    font-size: 14px;\r\n    cursor: pointer;\r\n    border-radius: 8px;\r\n}\r\n\r\n.detailBoard {\r\n    width: 280px;\r\n    height: 300px;\r\n}\r\n\r\n.detailBoardBox input,\r\n.detailBoardBox select {\r\n    width: 100%;\r\n    height: 40px;\r\n    background-color: transparent;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-radius: 12px;\r\n    border-color: rgba(228, 237, 242, 0.3, 1);\r\n    border: 1px solid #e4edf2;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n.detailBoardBox p {\r\n    margin-bottom: 4px;\r\n    font-size: 16px;\r\n    color: rgb(102, 108, 119);\r\n}\r\n\r\n.detailBoardBox .boardBtnArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-around;\r\n}\r\n\r\n.detailBoardBox button {\r\n    width: 45%;\r\n}\r\n"],"sourceRoot":""}]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
+/* 13 */,
+/* 14 */,
 /* 15 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -660,25 +590,80 @@ function cutDateMonth(date) {
 
 
 /***/ }),
-/* 16 */
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "closeModal": () => (/* binding */ closeModal),
-/* harmony export */   "showModal": () => (/* binding */ showModal)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function showModal() {
-    document.getElementById("modal-overlay").classList.add("active");
-    document
-        .getElementById("modal-overlay-backgroud")
-        .addEventListener("click", () => {
-        document.getElementById("modal-overlay").classList.remove("active");
-    });
-}
-function closeModal() {
-    document.getElementById("modal-overlay").classList.remove("active");
-}
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(22);
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+/* 22 */
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".reportArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n}\r\n/*테이블 스타일 시작*/\r\n\r\n.reportBox {\r\n    padding: 10px;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-family: sans-serif;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n/*테이블 스타일 끝*/\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/statistical.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,mBAAmB;IACnB,uBAAuB;AAC3B;AACA,aAAa;;AAEb;IACI,aAAa;AACjB;;AAEA;IACI,YAAY;IACZ,iBAAiB;IACjB,uBAAuB;IACvB,wCAAwC;AAC5C;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB;;AAEA;;IAEI,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA,YAAY;;AAEZ;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,8BAA8B;IAC9B,YAAY;IACZ,wBAAwB;AAC5B","sourcesContent":[".reportArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n}\r\n/*테이블 스타일 시작*/\r\n\r\n.reportBox {\r\n    padding: 10px;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-family: sans-serif;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n/*테이블 스타일 끝*/\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ })
@@ -761,9 +746,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _css_navigation_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
-/* harmony import */ var _css_home_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(13);
+/* harmony import */ var _css_statistical_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(21);
 /* harmony import */ var _utile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
-/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(16);
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -777,252 +761,113 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-
-const listItemsEl = document.querySelector(".ListItems");
-//클라이언트 데이터 서버 전송
-function fetchData(url) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const response = yield fetch(url);
-        const dataList = yield response.json();
-        if (!dataList) {
-            return dataList;
-        }
-        return dataList;
-    });
+function createTableItem(targetEl, categoryName, categoryAcc, categorySum, categoryCount) {
+    const listItemEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("tr", "listItem");
+    const categoryNameEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "categoryName");
+    const categoryAccEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "categoryAcc");
+    const categoryPercentEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "ategoryPercent");
+    const categoryCountEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "ategoryPercent");
+    categoryNameEl.innerText = categoryName;
+    categoryAccEl.innerText = `${categoryAcc.toLocaleString()}원`;
+    categoryPercentEl.innerText = `${Math.round((categoryAcc / categorySum) * 100)}%`;
+    categoryCountEl.innerText = `${categoryCount}건`;
+    listItemEl.appendChild(categoryNameEl);
+    listItemEl.appendChild(categoryAccEl);
+    listItemEl.appendChild(categoryCountEl);
+    listItemEl.appendChild(categoryPercentEl);
+    targetEl.appendChild(listItemEl);
 }
-//클라이언트에서 서버로 데이터 전송
-function saveData(url, bodyData, method) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const requstOption = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: bodyData,
-        };
-        yield fetch(url, requstOption);
-    });
-}
-function changeCategory(targetEl, classify) {
-    const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
-    const EXPEND_SELECT = [
-        "식비",
-        "교통비",
-        "주거비",
-        "유흥비",
-        "저축",
-        "기타",
-    ];
+function createTotalItam(targetEl, accSum, accCount) {
     targetEl.innerText = "";
-    if (classify === "수입") {
-        INCOME_SELECT.forEach((item) => {
-            const optionEl = document.createElement("option");
-            optionEl.value = item;
-            optionEl.innerText = item;
-            targetEl.append(optionEl);
-        });
-    }
-    else {
-        EXPEND_SELECT.forEach((item) => {
-            const optionEl = document.createElement("option");
-            optionEl.value = item;
-            optionEl.innerText = item;
-            targetEl.append(optionEl);
-        });
-    }
+    const listItemEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("tr", "listItem");
+    const totalSumEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "totalSum");
+    const totalCountEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "totalCount");
+    totalSumEl.innerText = `${accSum.toLocaleString()}원`;
+    totalCountEl.innerText = `${accCount}건`;
+    listItemEl.appendChild(totalSumEl);
+    listItemEl.appendChild(totalCountEl);
+    targetEl.appendChild(listItemEl);
 }
-class CostItem {
-    constructor(id, payedMoney, payYear, payMonth, payDay, payTime, classify, category, memo) {
-        this.id = id;
-        this.payedMoney = payedMoney;
-        this.payYear = payYear;
-        this.payMonth = payMonth;
-        this.payDay = payDay;
-        this.payTime = payTime;
-        this.classify = classify;
-        this.category = category;
-        this.memo = memo;
-    }
-    //날짜 생성 함수
-    getFullDate() {
-        return `${this.payYear}-${this.payMonth}-${this.payDay}`;
-    }
-    createItem() {
-        const listItemEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("tr", "cl-listItem");
-        const payedmoneyEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-payedmoney");
-        const payedateEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-payedate");
-        const classifyEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-classify");
-        const categoryEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-category");
-        const memoEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "cl-memo");
-        payedmoneyEl.innerText = `${this.payedMoney.toLocaleString()}원`;
-        payedateEl.innerText = this.getFullDate();
-        classifyEl.innerText = this.classify;
-        categoryEl.innerText = this.category;
-        memoEl.innerText = this.memo;
-        classifyEl.classList.add(`${this.classify === "수입" ? "style-imcome" : "style-expend"}`);
-        listItemEl.appendChild(classifyEl);
-        listItemEl.appendChild(categoryEl);
-        listItemEl.appendChild(payedmoneyEl);
-        listItemEl.appendChild(memoEl);
-        listItemEl.appendChild(payedateEl);
-        listItemEl.addEventListener("click", () => {
-            this.viewDetailBoard(this.id, this.classify);
-            (0,_modal__WEBPACK_IMPORTED_MODULE_4__.showModal)();
-        });
-        return listItemEl;
-    }
-    requestModify(id, money, categor, memo, classify, year, month, day) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield fetch(`/api/${classify === "수입" ? "income" : "expend"}/id/${id}`, {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    content: {
-                        payedMoney: money,
-                        category: categor,
-                        memo: memo,
-                        payYear: year,
-                        payMonth: month,
-                        payDay: day,
-                    },
-                }),
-            });
-            const data = yield response.status;
-            console.log(data);
-            renderMonthList(year, month);
-        });
-    }
-    requestDelete(id, classify, year, month) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const response = yield fetch(`/api/${classify === "수입" ? "income" : "expend"}/id/${id}`, {
-                method: "DELETE",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            });
-            const data = yield response.status;
-            console.log(data);
-            renderMonthList(year, month);
-        });
-    }
-    viewDetailBoard(id, classify) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const detailBoardEl = document.querySelector(".detailBoard");
-            detailBoardEl.innerHTML = ""; //일단 지움
-            const response = yield fetchData(`/api/${classify === "수입" ? "income" : "expend"}/id/${id}`);
-            const selectItem = response[0];
-            const detailBoardBoxEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("div", "detailBoardBox");
-            const detailBoardMonyEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("input", "detailBoardMony");
-            const detailBoardMonyP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
-            //셀렉트 박스
-            const detailBoardCategoryEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("select", "detailBoardCategory");
-            const detailBoardCategoryP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
-            const detailBoardDateEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("input", "dateilBoard");
-            const detailBoardDateP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
-            const detailBoardMomoEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("input", "detailBoardMomo");
-            const detailBoardMomoP = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("p", "input-label");
-            const boardBtnArea = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("div", "boardBtnArea");
-            const modifyBtn = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("button", "submit");
-            const deleteBtn = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("button", "submit");
-            detailBoardMonyP.innerText = "금액";
-            detailBoardCategoryP.innerText = "카테고리";
-            detailBoardDateP.innerText = "날짜";
-            detailBoardMomoP.innerText = "메모";
-            detailBoardMonyEl.value = selectItem.payedMoney;
-            changeCategory(detailBoardCategoryEl, classify);
-            detailBoardDateEl.setAttribute("type", "date");
-            detailBoardDateEl.value = `${selectItem.payYear}-${selectItem.payMonth}-${selectItem.payDay}`; //클릭한 시간 넣어주기
-            detailBoardMomoEl.value = selectItem.memo;
-            modifyBtn.innerText = `수정`;
-            deleteBtn.innerText = `삭제`;
-            detailBoardBoxEl.appendChild(detailBoardCategoryP);
-            detailBoardBoxEl.appendChild(detailBoardCategoryEl);
-            detailBoardBoxEl.appendChild(detailBoardMonyP);
-            detailBoardBoxEl.appendChild(detailBoardMonyEl);
-            detailBoardBoxEl.appendChild(detailBoardDateP);
-            detailBoardBoxEl.appendChild(detailBoardDateEl);
-            detailBoardBoxEl.appendChild(detailBoardMomoP);
-            detailBoardBoxEl.appendChild(detailBoardMomoEl);
-            boardBtnArea.appendChild(modifyBtn);
-            boardBtnArea.appendChild(deleteBtn);
-            detailBoardBoxEl.appendChild(boardBtnArea);
-            modifyBtn.addEventListener("click", () => {
-                const [year, month, day] = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.cutDateFull)(detailBoardDateEl.value);
-                this.requestModify(selectItem.id, detailBoardMonyEl.value, detailBoardCategoryEl.value, detailBoardMomoEl.value, classify, year, month, day);
-                (0,_modal__WEBPACK_IMPORTED_MODULE_4__.closeModal)();
-            });
-            deleteBtn.addEventListener("click", () => {
-                this.requestDelete(selectItem.id, classify, selectItem.payYear, selectItem.payMonth);
-                (0,_modal__WEBPACK_IMPORTED_MODULE_4__.closeModal)();
-            });
-            detailBoardEl.appendChild(detailBoardBoxEl);
-        });
-    }
-}
-function sumAllCost(data) {
-    return data.reduce((acc, item) => (acc += item.payedMoney * (item.classify === "수입" ? 1 : -1)), 0);
-}
-function sumIncomeCost(data) {
-    let sumCost = 0;
-    data.forEach((item) => {
-        if (item.classify === "수입") {
-            sumCost += item.payedMoney;
-        }
-    });
-    return sumCost;
-}
-function sumExpenseCost(data) {
-    let sumCost = 0;
-    data.forEach((item) => {
-        if (item.classify === "지출") {
-            sumCost -= item.payedMoney;
-        }
-    });
-    return sumCost;
-}
-function renderStatisticAll(data, flag) {
-    const targetEl = document.querySelector(".monySum");
+function renderReportList(targetEl, accData, accSum, categoryCount) {
     targetEl.innerText = "";
-    if (!flag) {
-        targetEl.innerText = `${(sumAllCost(data) * -1).toLocaleString()}원`;
-        return;
+    console.log(categoryCount);
+    for (const [name, acc] of Object.entries(accData)) {
+        createTableItem(targetEl, name, acc, accSum, categoryCount[name]);
     }
-    targetEl.innerText = `${sumAllCost(data).toLocaleString()}원`;
 }
-function renderStatisticIncome(data) {
-    const targetEl = document.querySelector(".monyIncome");
-    targetEl.innerText = "";
-    targetEl.innerText = `${sumIncomeCost(data).toLocaleString()}원`;
-    targetEl.classList.add("style-imcome");
-}
-function renderStatisticExpense(data) {
-    const targetEl = document.querySelector(".monyExpense");
-    targetEl.innerText = "";
-    targetEl.innerText = `${sumExpenseCost(data).toLocaleString()}원`;
-    targetEl.classList.add("style-expend");
-}
-function renderAllList(selectClassify) {
-    return __awaiter(this, void 0, void 0, function* () {
-        listItemsEl.innerText = "";
-        const response = yield fetch(`/api/${selectClassify}`);
-        const monyList = yield response.json();
-        if (!monyList) {
-            return;
+function calculateCategoryCost(data) {
+    const incomeObj = {};
+    const expendObj = {};
+    const incomeCategoryObj = {};
+    const expendCetegoryObj = {};
+    let allMonthCost = 0;
+    let incomeMonthTotal = 0;
+    let expendMonthTotal = 0;
+    let incomeCount = 0;
+    let expendCount = 0;
+    //통계 관련 데이터 뽑아내기
+    for (let item in data) {
+        if (data[item].classify === "수입") {
+            incomeCount += 1;
+            allMonthCost += data[item].payedMoney;
+            incomeMonthTotal += data[item].payedMoney;
+            if (!incomeObj[data[item].category]) {
+                incomeObj[data[item].category] = data[item].payedMoney;
+            }
+            else {
+                incomeObj[data[item].category] += data[item].payedMoney;
+            }
+            if (!incomeCategoryObj[data[item].category]) {
+                incomeCategoryObj[data[item].category] = 1;
+            }
+            else {
+                incomeCategoryObj[data[item].category] += 1;
+            }
         }
-        monyList.map(({ id, payedMoney, payYear, payMonth, payDay, payTime, classify, category, memo, }) => {
-            const costItem = new CostItem(id, payedMoney, payYear, payMonth, payDay, payTime, selectClassify === "income" ? "수입" : "지출", category, memo);
-            listItemsEl.appendChild(costItem.createItem());
-        });
-        renderStatisticAll(monyList, false);
-        renderStatisticIncome(monyList);
-        renderStatisticExpense(monyList);
-    });
+        else {
+            expendCount += 1;
+            allMonthCost -= data[item].payedMoney;
+            expendMonthTotal += data[item].payedMoney;
+            if (!expendObj[data[item].category]) {
+                expendObj[data[item].category] = data[item].payedMoney;
+            }
+            else {
+                expendObj[data[item].category] += data[item].payedMoney;
+            }
+            if (!expendCetegoryObj[data[item].category]) {
+                expendCetegoryObj[data[item].category] = 1;
+            }
+            else {
+                expendCetegoryObj[data[item].category] += 1;
+            }
+        }
+    }
+    return {
+        totalAcc: allMonthCost,
+        incomeCategoryAcc: incomeObj,
+        expendCategoryAcc: expendObj,
+        incomeMonthTotal: incomeMonthTotal,
+        expendMonthTotal: expendMonthTotal,
+        incomeCount: incomeCount,
+        expendCount: expendCount,
+        incomeCategoryObj: incomeCategoryObj,
+        expendCetegoryObj: expendCetegoryObj,
+    };
+}
+function renderIncomeReport(incomeReportEl, incomeTotalReortEl, accData) {
+    renderReportList(incomeReportEl, accData.incomeCategoryAcc, accData.incomeMonthTotal, accData.incomeCategoryObj);
+    createTotalItam(incomeTotalReortEl, accData.incomeMonthTotal, accData.incomeCount);
+}
+function expendIncomeReport(expendseReortEl, expendTotalReortEl, accData) {
+    renderReportList(expendseReortEl, accData.expendCategoryAcc, accData.expendMonthTotal, accData.expendCetegoryObj);
+    createTotalItam(expendTotalReortEl, accData.expendMonthTotal, accData.expendCount);
 }
 function renderMonthList(year, month) {
     return __awaiter(this, void 0, void 0, function* () {
-        listItemsEl.innerText = "";
+        const incomeReportEl = document.querySelector(".incomeReort");
+        const expendseReortEl = document.querySelector(".expendseReort");
+        const incomeTotalReortEl = document.querySelector(".incomeTotalReort");
+        const expendTotalReortEl = document.querySelector(".expendTotalReort");
         const response = yield fetch(`/api/monthtotal`, {
             method: "POST",
             headers: {
@@ -1039,35 +884,20 @@ function renderMonthList(year, month) {
         if (!data) {
             return;
         }
-        data.map(({ id, payedMoney, payYear, payMonth, payDay, payTime, classify, category, memo, }) => {
-            const costItem = new CostItem(id, payedMoney, payYear, payMonth, payDay, payTime, classify, category, memo);
-            listItemsEl.appendChild(costItem.createItem());
-        });
-        renderStatisticAll(data, true);
-        renderStatisticIncome(data);
-        renderStatisticExpense(data);
+        const accData = calculateCategoryCost(data); //api로 계산된 기격 받아오기
+        //지출 카테고리 내역 렌더링
+        renderIncomeReport(incomeReportEl, incomeTotalReortEl, accData);
+        expendIncomeReport(expendseReortEl, expendTotalReortEl, accData);
     });
 }
 function init() {
     const selectMonthEl = document.querySelector('input[type="month"]');
-    const selectAllIncomeEl = document.querySelector(".allIncomeHistory");
-    const selectAllExpendEl = document.querySelector(".allExpendHistory");
     selectMonthEl.value = new Date().toISOString().slice(0, 7);
     const [intYear, initMonth] = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.cutDateMonth)(selectMonthEl.value);
     renderMonthList(intYear, initMonth);
     selectMonthEl.addEventListener("change", () => {
         const [year, month] = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.cutDateMonth)(selectMonthEl.value);
         renderMonthList(year, month);
-    });
-    selectMonthEl.addEventListener("change", () => {
-        const [year, month] = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.cutDateMonth)(selectMonthEl.value);
-        renderMonthList(year, month);
-    });
-    selectAllIncomeEl.addEventListener("click", () => {
-        renderAllList("income");
-    });
-    selectAllExpendEl.addEventListener("click", () => {
-        renderAllList("expend");
     });
 }
 //윈도우 열리면 바로 init() 함수 실행
@@ -1077,4 +907,4 @@ window.addEventListener("DOMContentLoaded", init);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.5f731ebcf198f1cbf319.bundle.js.map
+//# sourceMappingURL=statistical.901c0860997e808a1cf1.bundle.js.map

@@ -1,5 +1,5 @@
 //유틸함수
-export function createEl(elKind, className = "") {
+export function createEl(elKind: any, className = "") {
     const el = document.createElement(elKind);
     el.className = className;
     return el;

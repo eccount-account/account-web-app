@@ -95,7 +95,7 @@ function submitInputData(): void {
     memoEl.value = "";
 }
 
-function changeCategory(classify: string) {
+function changeCategory(classify: string): any {
     const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
     const EXPEND_SELECT = [
         "식비",
@@ -128,7 +128,7 @@ function changeCategory(classify: string) {
     }
 }
 
-function init() {
+function init(): any {
     const submitBtnEl = document.querySelector(
         ".submitBtn"
     ) as HTMLSelectElement;

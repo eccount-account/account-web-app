@@ -31,7 +31,7 @@ function createTableItem(
     targetEl.appendChild(listItemEl);
 }
 
-function createTotalItam(targetEl, accSum, accCount) {
+function createTotalItam(targetEl: any, accSum: any, accCount: any): any {
     targetEl.innerText = "";
 
     const listItemEl = createEl("tr", "listItem");
@@ -47,7 +47,12 @@ function createTotalItam(targetEl, accSum, accCount) {
     targetEl.appendChild(listItemEl);
 }
 
-function renderReportList(targetEl, accData, accSum, categoryCount) {
+function renderReportList(
+    targetEl: any,
+    accData: any,
+    accSum: any,
+    categoryCount: any
+): any {
     targetEl.innerText = "";
 
     console.log(categoryCount);
@@ -57,7 +62,7 @@ function renderReportList(targetEl, accData, accSum, categoryCount) {
     }
 }
 
-function calculateCategoryCost(data) {
+function calculateCategoryCost(data: any): any {
     const incomeObj = {};
     const expendObj = {};
     const incomeCategoryObj = {};
@@ -119,7 +124,11 @@ function calculateCategoryCost(data) {
     };
 }
 
-function renderIncomeReport(incomeReportEl, incomeTotalReortEl, accData) {
+function renderIncomeReport(
+    incomeReportEl: any,
+    incomeTotalReortEl: any,
+    accData: any
+) {
     renderReportList(
         incomeReportEl,
         accData.incomeCategoryAcc,
@@ -134,7 +143,11 @@ function renderIncomeReport(incomeReportEl, incomeTotalReortEl, accData) {
     );
 }
 
-function expendIncomeReport(expendseReortEl, expendTotalReortEl, accData) {
+function expendIncomeReport(
+    expendseReortEl: any,
+    expendTotalReortEl: any,
+    accData: any
+) {
     renderReportList(
         expendseReortEl,
         accData.expendCategoryAcc,
@@ -189,7 +202,7 @@ async function renderMonthList(year: number, month: number) {
     expendIncomeReport(expendseReortEl, expendTotalReortEl, accData);
 }
 
-function init() {
+function init(): any {
     const selectMonthEl = document.querySelector(
         'input[type="month"]'
     ) as HTMLSelectElement;

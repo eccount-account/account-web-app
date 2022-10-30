@@ -45,7 +45,7 @@ async function saveData(url: string, bodyData: string, method: string) {
     await fetch(url, requstOption);
 }
 
-function changeCategory(targetEl: any, classify: string) {
+function changeCategory(targetEl: any, classify: string): void {
     const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
     const EXPEND_SELECT = [
         "식비",
@@ -113,7 +113,7 @@ class CostItem {
         return `${this.payYear}-${this.payMonth}-${this.payDay}`;
     }
 
-    createItem(): any {
+    createItem() {
         const listItemEl = createEl("tr", "cl-listItem");
         const payedmoneyEl = createEl("td", "cl-payedmoney");
         const payedateEl = createEl("td", "cl-payedate");
@@ -330,7 +330,7 @@ function renderStatisticIncome(data): void {
     targetEl.classList.add("style-imcome");
 }
 
-function renderStatisticExpense(data: any) {
+function renderStatisticExpense(data: any): void {
     const targetEl = document.querySelector(
         ".monyExpense"
     ) as HTMLSelectElement;
