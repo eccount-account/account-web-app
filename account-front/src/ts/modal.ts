@@ -1,13 +1,21 @@
 export function showModal(): void {
-    document.getElementById("modal-overlay").classList.add("active");
+    const modalOverlay = document.querySelector(
+        "#modal-overlay"
+    ) as HTMLSelectElement;
+    modalOverlay.classList.add("active");
 
-    document
-        .getElementById("modal-overlay-backgroud")
-        .addEventListener("click", () => {
-            document.getElementById("modal-overlay").classList.remove("active");
-        });
+    const modalOverlayBackgroud = document.querySelector(
+        "#modal-overlay-backgroud"
+    ) as HTMLSelectElement;
+
+    modalOverlayBackgroud.addEventListener("click", () => {
+        modalOverlay.classList.remove("active");
+    });
 }
 
 export function closeModal(): void {
-    document.getElementById("modal-overlay").classList.remove("active");
+    const modalOverlay = document.querySelector(
+        "#modal-overlay"
+    ) as HTMLSelectElement;
+    modalOverlay.classList.remove("active");
 }

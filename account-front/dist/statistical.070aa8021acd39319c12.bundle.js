@@ -761,7 +761,9 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-function createTableItem(targetEl, categoryName, categoryAcc, categorySum, categoryCount) {
+// targetEl엘리먼트 유흥비 10000 23111 2
+function createTableItem(targetEl, categoryName, categorySum, categoryCount, categoryAcc) {
+    console.log("출력", targetEl, categoryName, categoryAcc, categorySum, categoryCount);
     const listItemEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("tr", "listItem");
     const categoryNameEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "categoryName");
     const categoryAccEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "categoryAcc");
@@ -777,7 +779,9 @@ function createTableItem(targetEl, categoryName, categoryAcc, categorySum, categ
     listItemEl.appendChild(categoryPercentEl);
     targetEl.appendChild(listItemEl);
 }
+//엘리먼트 23111 7
 function createTotalItam(targetEl, accSum, accCount) {
+    console.log("출력!!!@#@!#", targetEl, accSum, accCount);
     targetEl.innerText = "";
     const listItemEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("tr", "listItem");
     const totalSumEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "totalSum");
@@ -790,12 +794,25 @@ function createTotalItam(targetEl, accSum, accCount) {
 }
 function renderReportList(targetEl, accData, accSum, categoryCount) {
     targetEl.innerText = "";
-    console.log(categoryCount);
+    //{식비: 2111, 주거비: 11000, 유흥비: 10000}식비: 2111유흥비: 10000주거비: 11000[[Prototype]]: Object 23111 {식비: 2, 주거비: 3, 유흥비: 2}
+    //accData -> {금융소득: 3000}
+    console.log("ㄴㄴㄴ", targetEl, accData, accSum, categoryCount);
     for (const [name, acc] of Object.entries(accData)) {
-        createTableItem(targetEl, name, acc, accSum, categoryCount[name]);
+        //console.log("스티링", name, "숫자", acc);
+        createTableItem(targetEl, name, accSum, categoryCount[name], acc);
     }
 }
 function calculateCategoryCost(data) {
+    console.log("calculateCategoryCost", data);
+    //[{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+    // category: "식비"
+    // classify: "지출"
+    // id: 5
+    // memo: "안녕하세요5"payDay: 25
+    // payMonth: 10
+    // payTime: 1101
+    // payYear: 2022
+    // payedMoney: 2000
     const incomeObj = {};
     const expendObj = {};
     const incomeCategoryObj = {};
@@ -842,7 +859,7 @@ function calculateCategoryCost(data) {
             }
         }
     }
-    return {
+    const sendData = {
         totalAcc: allMonthCost,
         incomeCategoryAcc: incomeObj,
         expendCategoryAcc: expendObj,
@@ -853,6 +870,7 @@ function calculateCategoryCost(data) {
         incomeCategoryObj: incomeCategoryObj,
         expendCetegoryObj: expendCetegoryObj,
     };
+    return sendData;
 }
 function renderIncomeReport(incomeReportEl, incomeTotalReortEl, accData) {
     renderReportList(incomeReportEl, accData.incomeCategoryAcc, accData.incomeMonthTotal, accData.incomeCategoryObj);
@@ -885,6 +903,7 @@ function renderMonthList(year, month) {
             return;
         }
         const accData = calculateCategoryCost(data); //api로 계산된 기격 받아오기
+        console.log("데이터 ㅜㅜ", accData);
         //지출 카테고리 내역 렌더링
         renderIncomeReport(incomeReportEl, incomeTotalReortEl, accData);
         expendIncomeReport(expendseReortEl, expendTotalReortEl, accData);
@@ -907,4 +926,4 @@ window.addEventListener("DOMContentLoaded", init);
 
 /******/ })()
 ;
-//# sourceMappingURL=statistical.901c0860997e808a1cf1.bundle.js.map
+//# sourceMappingURL=statistical.070aa8021acd39319c12.bundle.js.map

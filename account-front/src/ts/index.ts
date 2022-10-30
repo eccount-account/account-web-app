@@ -12,26 +12,45 @@ interface PostOption {
     body: string;
 }
 
-interface ModifyItem {
-    payedMoney: string;
-    category: string;
-    memo: string;
+interface ModyData {
+    id: number;
+    payedMoney: number;
     payYear: number;
     payMonth: number;
     payDay: number;
+    payTime: number;
+    classify: string;
+    category: string;
+    memo: string;
+}
+
+interface FetchData {
+    category: string;
+    id: number;
+    memo: string;
+    payDay: number;
+    payMonth: number;
+    payTime: number;
+    payYear: number;
+    payedMoney: number;
 }
 
 //클라이언트 데이터 서버 전송
-async function fetchData(url: string) {
+//반환 데이터 Promise -> json 반환 [{id: 2, payedMoney: 3000, category: '교통비', memo: '안녕하세요2', payYear: 2022, …}]
+async function fetchData(url: string): Promise<FetchData[]> {
     const response = await fetch(url);
     const dataList = await response.json();
+    console.log(dataList);
 
     if (!dataList) {
         return dataList;
     }
+
+    console.log(dataList);
     return dataList;
 }
 
+//타입 못줘서 못쓰고있음
 //클라이언트에서 서버로 데이터 전송
 async function saveData(url: string, bodyData: string, method: string) {
     const requstOption: PostOption = {
@@ -42,10 +61,12 @@ async function saveData(url: string, bodyData: string, method: string) {
         body: bodyData,
     };
 
-    await fetch(url, requstOption);
+    const response = await fetch(url, requstOption);
+    console.log(response);
 }
 
-function changeCategory(targetEl: any, classify: string): void {
+//targetEl -> select엘리먼트
+function changeCategory(targetEl: HTMLSelectElement, classify: string): void {
     const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
     const EXPEND_SELECT = [
         "식비",
@@ -113,6 +134,7 @@ class CostItem {
         return `${this.payYear}-${this.payMonth}-${this.payDay}`;
     }
 
+    //반환값 -> listItemEl 엘리먼트
     createItem() {
         const listItemEl = createEl("tr", "cl-listItem");
         const payedmoneyEl = createEl("td", "cl-payedmoney");
@@ -143,16 +165,17 @@ class CostItem {
         return listItemEl;
     }
 
+    //반환은 없는듯? promise
     async requestModify(
-        id: any,
-        money: any,
-        categor: any,
-        memo: any,
-        classify: any,
-        year: any,
-        month: any,
-        day: any
-    ) {
+        id: number,
+        money: number,
+        categor: string,
+        memo: string,
+        classify: string,
+        year: number,
+        month: number,
+        day: number
+    ): Promise<void> {
         const response = await fetch(
             `/api/${classify === "수입" ? "income" : "expend"}/id/${id}`,
             {
@@ -178,7 +201,12 @@ class CostItem {
         renderMonthList(year, month);
     }
 
-    async requestDelete(id: any, classify: any, year: any, month: any) {
+    async requestDelete(
+        id: number,
+        classify: string,
+        year: number,
+        month: number
+    ): Promise<void> {
         const response = await fetch(
             `/api/${classify === "수입" ? "income" : "expend"}/id/${id}`,
             {
@@ -194,7 +222,7 @@ class CostItem {
         renderMonthList(year, month);
     }
 
-    async viewDetailBoard(id: number, classify: string) {
+    async viewDetailBoard(id: number, classify: string): Promise<void> {
         const detailBoardEl = document.querySelector(
             ".detailBoard"
         ) as HTMLSelectElement;
@@ -216,6 +244,7 @@ class CostItem {
 
         const detailBoardDateEl = createEl("input", "dateilBoard");
         const detailBoardDateP = createEl("p", "input-label");
+        console.log(detailBoardDateP);
 
         const detailBoardMomoEl = createEl("input", "detailBoardMomo");
         const detailBoardMomoP = createEl("p", "input-label");
@@ -284,7 +313,7 @@ class CostItem {
     }
 }
 
-function sumAllCost(data): number {
+function sumAllCost(data: ModyData[]): number {
     return data.reduce(
         (acc, item) =>
             (acc += item.payedMoney * (item.classify === "수입" ? 1 : -1)),
@@ -292,7 +321,7 @@ function sumAllCost(data): number {
     );
 }
 
-function sumIncomeCost(data): number {
+function sumIncomeCost(data: ModyData[]): number {
     let sumCost = 0;
     data.forEach((item) => {
         if (item.classify === "수입") {
@@ -302,7 +331,7 @@ function sumIncomeCost(data): number {
     return sumCost;
 }
 
-function sumExpenseCost(data): number {
+function sumExpenseCost(data: ModyData[]): number {
     let sumCost = 0;
     data.forEach((item) => {
         if (item.classify === "지출") {
@@ -312,7 +341,7 @@ function sumExpenseCost(data): number {
     return sumCost;
 }
 
-function renderStatisticAll(data: any, flag: boolean) {
+function renderStatisticAll(data: ModyData[], flag: boolean): void {
     const targetEl = document.querySelector(".monySum") as HTMLSelectElement;
     targetEl.innerText = "";
 
@@ -323,14 +352,14 @@ function renderStatisticAll(data: any, flag: boolean) {
     targetEl.innerText = `${sumAllCost(data).toLocaleString()}원`;
 }
 
-function renderStatisticIncome(data): void {
+function renderStatisticIncome(data: ModyData[]): void {
     const targetEl = document.querySelector(".monyIncome") as HTMLSelectElement;
     targetEl.innerText = "";
     targetEl.innerText = `${sumIncomeCost(data).toLocaleString()}원`;
     targetEl.classList.add("style-imcome");
 }
 
-function renderStatisticExpense(data: any): void {
+function renderStatisticExpense(data: ModyData[]): void {
     const targetEl = document.querySelector(
         ".monyExpense"
     ) as HTMLSelectElement;
@@ -339,49 +368,38 @@ function renderStatisticExpense(data: any): void {
     targetEl.classList.add("style-expend");
 }
 
-async function renderAllList(selectClassify: string) {
+async function renderAllList(selectClassify: string): Promise<void> {
     listItemsEl.innerText = "";
 
     const response = await fetch(`/api/${selectClassify}`);
 
-    const monyList = await response.json();
+    const monyList: ModyData[] = await response.json();
     if (!monyList) {
         return;
     }
 
-    monyList.map(
-        ({
-            id,
-            payedMoney,
-            payYear,
-            payMonth,
-            payDay,
-            payTime,
-            classify,
-            category,
-            memo,
-        }) => {
-            const costItem = new CostItem(
-                id,
-                payedMoney,
-                payYear,
-                payMonth,
-                payDay,
-                payTime,
-                selectClassify === "income" ? "수입" : "지출",
-                category,
-                memo
-            );
-            listItemsEl.appendChild(costItem.createItem());
-        }
-    );
+    monyList.map((item) => {
+        const costItem = new CostItem(
+            item.id,
+            item.payedMoney,
+            item.payYear,
+            item.payMonth,
+            item.payDay,
+            item.payTime,
+            selectClassify === "income" ? "수입" : "지출",
+            item.category,
+            item.memo
+        );
+        listItemsEl.appendChild(costItem.createItem());
+    });
 
+    //monyList 객체 반환
     renderStatisticAll(monyList, false);
     renderStatisticIncome(monyList);
     renderStatisticExpense(monyList);
 }
 
-async function renderMonthList(year: any, month: any) {
+async function renderMonthList(year: number, month: number): Promise<void> {
     listItemsEl.innerText = "";
 
     const response = await fetch(`/api/monthtotal`, {
@@ -397,37 +415,25 @@ async function renderMonthList(year: any, month: any) {
         }),
     });
 
-    const data = await response.json();
+    const data: ModyData[] = await response.json();
     if (!data) {
         return;
     }
 
-    data.map(
-        ({
-            id,
-            payedMoney,
-            payYear,
-            payMonth,
-            payDay,
-            payTime,
-            classify,
-            category,
-            memo,
-        }) => {
-            const costItem = new CostItem(
-                id,
-                payedMoney,
-                payYear,
-                payMonth,
-                payDay,
-                payTime,
-                classify,
-                category,
-                memo
-            );
-            listItemsEl.appendChild(costItem.createItem());
-        }
-    );
+    data.map((item) => {
+        const costItem = new CostItem(
+            item.id,
+            item.payedMoney,
+            item.payYear,
+            item.payMonth,
+            item.payDay,
+            item.payTime,
+            item.classify,
+            item.category,
+            item.memo
+        );
+        listItemsEl.appendChild(costItem.createItem());
+    });
 
     renderStatisticAll(data, true);
     renderStatisticIncome(data);
