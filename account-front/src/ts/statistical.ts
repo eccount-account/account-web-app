@@ -1,59 +1,78 @@
 import "../css/reset.css";
 import "../css/navigation.css";
 import "../css/statistical.css";
+import { createEl, cutDateMonth } from "./utile";
 
-//유틸함수
-function createEl(elKind, className = "") {
-    const el = document.createElement(elKind);
-    el.className = className;
-    return el;
-}
-
-function cutDateFull(date: string) {
-    const [year, month, day] = date.split("-");
-    return [Number(year), Number(month), Number(day)];
-}
-
-function cutDateMonth(date: string) {
-    const [year, month] = date.split("-");
-    return [Number(year), Number(month)];
-}
-
-function createTableItem(targetEl, categoryName, categoryAcc, categorySum) {
+function createTableItem(
+    targetEl,
+    categoryName,
+    categoryAcc,
+    categorySum,
+    categoryCount
+) {
     const listItemEl = createEl("tr", "listItem");
     const categoryNameEl = createEl("td", "categoryName");
     const categoryAccEl = createEl("td", "categoryAcc");
     const categoryPercentEl = createEl("td", "ategoryPercent");
+    const categoryCountEl = createEl("td", "ategoryPercent");
 
     categoryNameEl.innerText = categoryName;
     categoryAccEl.innerText = `${categoryAcc.toLocaleString()}원`;
-    categoryPercentEl.innerText = `${Math.ceil(
+    categoryPercentEl.innerText = `${Math.round(
         (categoryAcc / categorySum) * 100
     )}%`;
+    categoryCountEl.innerText = `${categoryCount}건`;
 
     listItemEl.appendChild(categoryNameEl);
     listItemEl.appendChild(categoryAccEl);
+    listItemEl.appendChild(categoryCountEl);
     listItemEl.appendChild(categoryPercentEl);
 
     targetEl.appendChild(listItemEl);
 }
 
-function renderReport(targetEl, accData, accSum) {
+function createTotalItam(targetEl, accSum, accCount) {
     targetEl.innerText = "";
+
+    const listItemEl = createEl("tr", "listItem");
+    const totalSumEl = createEl("td", "totalSum");
+    const totalCountEl = createEl("td", "totalCount");
+
+    totalSumEl.innerText = `${accSum.toLocaleString()}원`;
+    totalCountEl.innerText = `${accCount}건`;
+
+    listItemEl.appendChild(totalSumEl);
+    listItemEl.appendChild(totalCountEl);
+
+    targetEl.appendChild(listItemEl);
+}
+
+function renderReportList(targetEl, accData, accSum, categoryCount) {
+    targetEl.innerText = "";
+
+    console.log(categoryCount);
+
     for (const [name, acc] of Object.entries(accData)) {
-        createTableItem(targetEl, name, acc, accSum);
+        createTableItem(targetEl, name, acc, accSum, categoryCount[name]);
     }
 }
 
 function calculateCategoryCost(data) {
     const incomeObj = {};
     const expendObj = {};
+    const incomeCategoryObj = {};
+    const expendCetegoryObj = {};
+
     let allMonthCost = 0;
     let incomeMonthTotal = 0;
     let expendMonthTotal = 0;
+    let incomeCount = 0;
+    let expendCount = 0;
 
+    //통계 관련 데이터 뽑아내기
     for (let item in data) {
         if (data[item].classify === "수입") {
+            incomeCount += 1;
             allMonthCost += data[item].payedMoney;
             incomeMonthTotal += data[item].payedMoney;
 
@@ -62,7 +81,14 @@ function calculateCategoryCost(data) {
             } else {
                 incomeObj[data[item].category] += data[item].payedMoney;
             }
+
+            if (!incomeCategoryObj[data[item].category]) {
+                incomeCategoryObj[data[item].category] = 1;
+            } else {
+                incomeCategoryObj[data[item].category] += 1;
+            }
         } else {
+            expendCount += 1;
             allMonthCost -= data[item].payedMoney;
             expendMonthTotal += data[item].payedMoney;
 
@@ -70,6 +96,12 @@ function calculateCategoryCost(data) {
                 expendObj[data[item].category] = data[item].payedMoney;
             } else {
                 expendObj[data[item].category] += data[item].payedMoney;
+            }
+
+            if (!expendCetegoryObj[data[item].category]) {
+                expendCetegoryObj[data[item].category] = 1;
+            } else {
+                expendCetegoryObj[data[item].category] += 1;
             }
         }
     }
@@ -80,10 +112,58 @@ function calculateCategoryCost(data) {
         expendCategoryAcc: expendObj,
         incomeMonthTotal: incomeMonthTotal,
         expendMonthTotal: expendMonthTotal,
+        incomeCount: incomeCount,
+        expendCount: expendCount,
+        incomeCategoryObj: incomeCategoryObj,
+        expendCetegoryObj: expendCetegoryObj,
     };
 }
 
+function renderIncomeReport(incomeReportEl, incomeTotalReortEl, accData) {
+    renderReportList(
+        incomeReportEl,
+        accData.incomeCategoryAcc,
+        accData.incomeMonthTotal,
+        accData.incomeCategoryObj
+    );
+
+    createTotalItam(
+        incomeTotalReortEl,
+        accData.incomeMonthTotal,
+        accData.incomeCount
+    );
+}
+
+function expendIncomeReport(expendseReortEl, expendTotalReortEl, accData) {
+    renderReportList(
+        expendseReortEl,
+        accData.expendCategoryAcc,
+        accData.expendMonthTotal,
+        accData.expendCetegoryObj
+    );
+
+    createTotalItam(
+        expendTotalReortEl,
+        accData.expendMonthTotal,
+        accData.expendCount
+    );
+}
+
 async function renderMonthList(year: number, month: number) {
+    const incomeReportEl = document.querySelector(
+        ".incomeReort"
+    ) as HTMLSelectElement;
+    const expendseReortEl = document.querySelector(
+        ".expendseReort"
+    ) as HTMLSelectElement;
+
+    const incomeTotalReortEl = document.querySelector(
+        ".incomeTotalReort"
+    ) as HTMLSelectElement;
+    const expendTotalReortEl = document.querySelector(
+        ".expendTotalReort"
+    ) as HTMLSelectElement;
+
     const response = await fetch(`/api/monthtotal`, {
         method: "POST",
         headers: {
@@ -102,24 +182,11 @@ async function renderMonthList(year: number, month: number) {
         return;
     }
 
-    const incomeReportEl = document.querySelector(
-        ".incomeReort"
-    ) as HTMLSelectElement;
-    const expendseReortEl = document.querySelector(
-        ".expendseReort"
-    ) as HTMLSelectElement;
-    const accData = calculateCategoryCost(data);
+    const accData = calculateCategoryCost(data); //api로 계산된 기격 받아오기
 
-    renderReport(
-        incomeReportEl,
-        accData.incomeCategoryAcc,
-        accData.incomeMonthTotal
-    );
-    renderReport(
-        expendseReortEl,
-        accData.expendCategoryAcc,
-        accData.expendMonthTotal
-    );
+    //지출 카테고리 내역 렌더링
+    renderIncomeReport(incomeReportEl, incomeTotalReortEl, accData);
+    expendIncomeReport(expendseReortEl, expendTotalReortEl, accData);
 }
 
 function init() {

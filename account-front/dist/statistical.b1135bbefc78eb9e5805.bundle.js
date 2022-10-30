@@ -564,11 +564,38 @@ ___CSS_LOADER_EXPORT___.push([module.id, "header {\r\n    background: #fff;\r\n 
 /***/ }),
 /* 13 */,
 /* 14 */,
-/* 15 */,
+/* 15 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createEl": () => (/* binding */ createEl),
+/* harmony export */   "cutDateFull": () => (/* binding */ cutDateFull),
+/* harmony export */   "cutDateMonth": () => (/* binding */ cutDateMonth)
+/* harmony export */ });
+//유틸함수
+function createEl(elKind, className = "") {
+    const el = document.createElement(elKind);
+    el.className = className;
+    return el;
+}
+function cutDateFull(date) {
+    const [year, month, day] = date.split("-");
+    return [Number(year), Number(month), Number(day)];
+}
+function cutDateMonth(date) {
+    const [year, month] = date.split("-");
+    return [Number(year), Number(month)];
+}
+
+
+/***/ }),
 /* 16 */,
 /* 17 */,
 /* 18 */,
-/* 19 */
+/* 19 */,
+/* 20 */,
+/* 21 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -587,7 +614,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(20);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_statistical_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(22);
 
       
       
@@ -618,7 +645,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -634,7 +661,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".reportArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n/*테이블 스타일 시작*/\r\n\r\n.styled-table {\r\n    width: 400px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:nth-of-type(even) {\r\n    background-color: #f3f3f3;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n/*테이블 스타일 끝*/\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/statistical.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,mBAAmB;AACvB;AACA,aAAa;;AAEb;IACI,YAAY;IACZ,iBAAiB;IACjB,gBAAgB;IAChB,uBAAuB;IACvB,gBAAgB;IAChB,wCAAwC;AAC5C;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB;;AAEA;;IAEI,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA,YAAY;;AAEZ;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,8BAA8B;IAC9B,YAAY;IACZ,wBAAwB;AAC5B","sourcesContent":[".reportArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n/*테이블 스타일 시작*/\r\n\r\n.styled-table {\r\n    width: 400px;\r\n    margin: 25px auto;\r\n    font-size: 0.9em;\r\n    font-family: sans-serif;\r\n    min-width: 400px;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:nth-of-type(even) {\r\n    background-color: #f3f3f3;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n/*테이블 스타일 끝*/\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".reportArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n}\r\n/*테이블 스타일 시작*/\r\n\r\n.reportBox {\r\n    padding: 10px;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-family: sans-serif;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n/*테이블 스타일 끝*/\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/css/statistical.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,mBAAmB;IACnB,uBAAuB;AAC3B;AACA,aAAa;;AAEb;IACI,aAAa;AACjB;;AAEA;IACI,YAAY;IACZ,iBAAiB;IACjB,uBAAuB;IACvB,wCAAwC;AAC5C;;AAEA;IACI,yBAAyB;IACzB,cAAc;AAClB;;AAEA;;IAEI,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,gCAAgC;AACpC;;AAEA;IACI,iBAAiB;IACjB,cAAc;AAClB;;AAEA,YAAY;;AAEZ;IACI,aAAa;IACb,mBAAmB;IACnB,mBAAmB;IACnB,8BAA8B;IAC9B,YAAY;IACZ,wBAAwB;AAC5B","sourcesContent":[".reportArea {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n}\r\n/*테이블 스타일 시작*/\r\n\r\n.reportBox {\r\n    padding: 10px;\r\n}\r\n\r\n.styled-table {\r\n    width: 800px;\r\n    margin: 25px auto;\r\n    font-family: sans-serif;\r\n    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);\r\n}\r\n\r\n.styled-table thead tr {\r\n    background-color: #13bd7e;\r\n    color: #ffffff;\r\n}\r\n\r\n.styled-table th,\r\n.styled-table td {\r\n    padding: 12px 15px;\r\n    text-align: center;\r\n}\r\n\r\n.styled-table tbody tr {\r\n    border-bottom: 1px solid #dddddd;\r\n}\r\n\r\n.styled-table tbody tr:last-of-type {\r\n    border-bottom: 2px solid #13bd7e;\r\n}\r\n\r\n.styled-table tbody tr.active-row {\r\n    font-weight: bold;\r\n    color: #009879;\r\n}\r\n\r\n/*테이블 스타일 끝*/\r\n\r\n.selectDate {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n    width: 300px;\r\n    margin: 50px auto 0 auto;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -719,7 +746,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_reset_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _css_navigation_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
-/* harmony import */ var _css_statistical_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(19);
+/* harmony import */ var _css_statistical_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(21);
+/* harmony import */ var _utile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -732,47 +760,55 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-//유틸함수
-function createEl(elKind, className = "") {
-    const el = document.createElement(elKind);
-    el.className = className;
-    return el;
-}
-function cutDateFull(date) {
-    const [year, month, day] = date.split("-");
-    return [Number(year), Number(month), Number(day)];
-}
-function cutDateMonth(date) {
-    const [year, month] = date.split("-");
-    return [Number(year), Number(month)];
-}
-function createTableItem(targetEl, categoryName, categoryAcc, categorySum) {
-    const listItemEl = createEl("tr", "listItem");
-    const categoryNameEl = createEl("td", "categoryName");
-    const categoryAccEl = createEl("td", "categoryAcc");
-    const categoryPercentEl = createEl("td", "ategoryPercent");
+
+function createTableItem(targetEl, categoryName, categoryAcc, categorySum, categoryCount) {
+    const listItemEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("tr", "listItem");
+    const categoryNameEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "categoryName");
+    const categoryAccEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "categoryAcc");
+    const categoryPercentEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "ategoryPercent");
+    const categoryCountEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "ategoryPercent");
     categoryNameEl.innerText = categoryName;
     categoryAccEl.innerText = `${categoryAcc.toLocaleString()}원`;
-    categoryPercentEl.innerText = `${Math.ceil((categoryAcc / categorySum) * 100)}%`;
+    categoryPercentEl.innerText = `${Math.round((categoryAcc / categorySum) * 100)}%`;
+    categoryCountEl.innerText = `${categoryCount}건`;
     listItemEl.appendChild(categoryNameEl);
     listItemEl.appendChild(categoryAccEl);
+    listItemEl.appendChild(categoryCountEl);
     listItemEl.appendChild(categoryPercentEl);
     targetEl.appendChild(listItemEl);
 }
-function renderReport(targetEl, accData, accSum) {
+function createTotalItam(targetEl, accSum, accCount) {
     targetEl.innerText = "";
+    const listItemEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("tr", "listItem");
+    const totalSumEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "totalSum");
+    const totalCountEl = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.createEl)("td", "totalCount");
+    totalSumEl.innerText = `${accSum.toLocaleString()}원`;
+    totalCountEl.innerText = `${accCount}건`;
+    listItemEl.appendChild(totalSumEl);
+    listItemEl.appendChild(totalCountEl);
+    targetEl.appendChild(listItemEl);
+}
+function renderReportList(targetEl, accData, accSum, categoryCount) {
+    targetEl.innerText = "";
+    console.log(categoryCount);
     for (const [name, acc] of Object.entries(accData)) {
-        createTableItem(targetEl, name, acc, accSum);
+        createTableItem(targetEl, name, acc, accSum, categoryCount[name]);
     }
 }
 function calculateCategoryCost(data) {
     const incomeObj = {};
     const expendObj = {};
+    const incomeCategoryObj = {};
+    const expendCetegoryObj = {};
     let allMonthCost = 0;
     let incomeMonthTotal = 0;
     let expendMonthTotal = 0;
+    let incomeCount = 0;
+    let expendCount = 0;
+    //통계 관련 데이터 뽑아내기
     for (let item in data) {
         if (data[item].classify === "수입") {
+            incomeCount += 1;
             allMonthCost += data[item].payedMoney;
             incomeMonthTotal += data[item].payedMoney;
             if (!incomeObj[data[item].category]) {
@@ -781,8 +817,15 @@ function calculateCategoryCost(data) {
             else {
                 incomeObj[data[item].category] += data[item].payedMoney;
             }
+            if (!incomeCategoryObj[data[item].category]) {
+                incomeCategoryObj[data[item].category] = 1;
+            }
+            else {
+                incomeCategoryObj[data[item].category] += 1;
+            }
         }
         else {
+            expendCount += 1;
             allMonthCost -= data[item].payedMoney;
             expendMonthTotal += data[item].payedMoney;
             if (!expendObj[data[item].category]) {
@@ -790,6 +833,12 @@ function calculateCategoryCost(data) {
             }
             else {
                 expendObj[data[item].category] += data[item].payedMoney;
+            }
+            if (!expendCetegoryObj[data[item].category]) {
+                expendCetegoryObj[data[item].category] = 1;
+            }
+            else {
+                expendCetegoryObj[data[item].category] += 1;
             }
         }
     }
@@ -799,10 +848,26 @@ function calculateCategoryCost(data) {
         expendCategoryAcc: expendObj,
         incomeMonthTotal: incomeMonthTotal,
         expendMonthTotal: expendMonthTotal,
+        incomeCount: incomeCount,
+        expendCount: expendCount,
+        incomeCategoryObj: incomeCategoryObj,
+        expendCetegoryObj: expendCetegoryObj,
     };
+}
+function renderIncomeReport(incomeReportEl, incomeTotalReortEl, accData) {
+    renderReportList(incomeReportEl, accData.incomeCategoryAcc, accData.incomeMonthTotal, accData.incomeCategoryObj);
+    createTotalItam(incomeTotalReortEl, accData.incomeMonthTotal, accData.incomeCount);
+}
+function expendIncomeReport(expendseReortEl, expendTotalReortEl, accData) {
+    renderReportList(expendseReortEl, accData.expendCategoryAcc, accData.expendMonthTotal, accData.expendCetegoryObj);
+    createTotalItam(expendTotalReortEl, accData.expendMonthTotal, accData.expendCount);
 }
 function renderMonthList(year, month) {
     return __awaiter(this, void 0, void 0, function* () {
+        const incomeReportEl = document.querySelector(".incomeReort");
+        const expendseReortEl = document.querySelector(".expendseReort");
+        const incomeTotalReortEl = document.querySelector(".incomeTotalReort");
+        const expendTotalReortEl = document.querySelector(".expendTotalReort");
         const response = yield fetch(`/api/monthtotal`, {
             method: "POST",
             headers: {
@@ -819,20 +884,19 @@ function renderMonthList(year, month) {
         if (!data) {
             return;
         }
-        const incomeReportEl = document.querySelector(".incomeReort");
-        const expendseReortEl = document.querySelector(".expendseReort");
-        const accData = calculateCategoryCost(data);
-        renderReport(incomeReportEl, accData.incomeCategoryAcc, accData.incomeMonthTotal);
-        renderReport(expendseReortEl, accData.expendCategoryAcc, accData.expendMonthTotal);
+        const accData = calculateCategoryCost(data); //api로 계산된 기격 받아오기
+        //지출 카테고리 내역 렌더링
+        renderIncomeReport(incomeReportEl, incomeTotalReortEl, accData);
+        expendIncomeReport(expendseReortEl, expendTotalReortEl, accData);
     });
 }
 function init() {
     const selectMonthEl = document.querySelector('input[type="month"]');
     selectMonthEl.value = new Date().toISOString().slice(0, 7);
-    const [intYear, initMonth] = cutDateMonth(selectMonthEl.value);
+    const [intYear, initMonth] = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.cutDateMonth)(selectMonthEl.value);
     renderMonthList(intYear, initMonth);
     selectMonthEl.addEventListener("change", () => {
-        const [year, month] = cutDateMonth(selectMonthEl.value);
+        const [year, month] = (0,_utile__WEBPACK_IMPORTED_MODULE_3__.cutDateMonth)(selectMonthEl.value);
         renderMonthList(year, month);
     });
 }
@@ -843,4 +907,4 @@ window.addEventListener("DOMContentLoaded", init);
 
 /******/ })()
 ;
-//# sourceMappingURL=statistical.54da07f8f61ffebd766e.bundle.js.map
+//# sourceMappingURL=statistical.b1135bbefc78eb9e5805.bundle.js.map

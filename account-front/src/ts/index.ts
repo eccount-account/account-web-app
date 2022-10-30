@@ -1,6 +1,8 @@
 import "../css/reset.css";
 import "../css/navigation.css";
 import "../css/home.css";
+import { createEl, cutDateFull, cutDateMonth } from "./utile";
+import { showModal, closeModal } from "./modal";
 
 const listItemsEl = document.querySelector(".ListItems") as HTMLSelectElement;
 
@@ -17,23 +19,6 @@ interface ModifyItem {
     payYear: number;
     payMonth: number;
     payDay: number;
-}
-
-//유틸함수
-function createEl(elKind, className = "") {
-    const el = document.createElement(elKind);
-    el.className = className;
-    return el;
-}
-
-function cutDateFull(date: string) {
-    const [year, month, day] = date.split("-");
-    return [Number(year), Number(month), Number(day)];
-}
-
-function cutDateMonth(date: string) {
-    const [year, month] = date.split("-");
-    return [Number(year), Number(month)];
 }
 
 //클라이언트 데이터 서버 전송
@@ -60,7 +45,7 @@ async function saveData(url: string, bodyData: string, method: string) {
     await fetch(url, requstOption);
 }
 
-function changeCategory(targetEl, classify: string) {
+function changeCategory(targetEl: any, classify: string) {
     const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
     const EXPEND_SELECT = [
         "식비",
@@ -124,11 +109,11 @@ class CostItem {
     }
 
     //날짜 생성 함수
-    getFullDate() {
+    getFullDate(): string {
         return `${this.payYear}-${this.payMonth}-${this.payDay}`;
     }
 
-    createItem() {
+    createItem(): any {
         const listItemEl = createEl("tr", "cl-listItem");
         const payedmoneyEl = createEl("td", "cl-payedmoney");
         const payedateEl = createEl("td", "cl-payedate");
@@ -158,7 +143,16 @@ class CostItem {
         return listItemEl;
     }
 
-    async requestModify(id, money, categor, memo, classify, year, month, day) {
+    async requestModify(
+        id: any,
+        money: any,
+        categor: any,
+        memo: any,
+        classify: any,
+        year: any,
+        month: any,
+        day: any
+    ) {
         const response = await fetch(
             `/api/${classify === "수입" ? "income" : "expend"}/id/${id}`,
             {
@@ -184,7 +178,7 @@ class CostItem {
         renderMonthList(year, month);
     }
 
-    async requestDelete(id, classify, year, month) {
+    async requestDelete(id: any, classify: any, year: any, month: any) {
         const response = await fetch(
             `/api/${classify === "수입" ? "income" : "expend"}/id/${id}`,
             {
@@ -290,20 +284,6 @@ class CostItem {
     }
 }
 
-function showModal(): void {
-    document.getElementById("modal-overlay").classList.add("active");
-
-    document
-        .getElementById("modal-overlay-backgroud")
-        .addEventListener("click", () => {
-            document.getElementById("modal-overlay").classList.remove("active");
-        });
-}
-
-function closeModal(): void {
-    document.getElementById("modal-overlay").classList.remove("active");
-}
-
 function sumAllCost(data): number {
     return data.reduce(
         (acc, item) =>
@@ -332,7 +312,7 @@ function sumExpenseCost(data): number {
     return sumCost;
 }
 
-function renderStatisticAll(data, flag: boolean) {
+function renderStatisticAll(data: any, flag: boolean) {
     const targetEl = document.querySelector(".monySum") as HTMLSelectElement;
     targetEl.innerText = "";
 
@@ -350,7 +330,7 @@ function renderStatisticIncome(data): void {
     targetEl.classList.add("style-imcome");
 }
 
-function renderStatisticExpense(data) {
+function renderStatisticExpense(data: any) {
     const targetEl = document.querySelector(
         ".monyExpense"
     ) as HTMLSelectElement;
@@ -401,7 +381,7 @@ async function renderAllList(selectClassify: string) {
     renderStatisticExpense(monyList);
 }
 
-async function renderMonthList(year, month) {
+async function renderMonthList(year: any, month: any) {
     listItemsEl.innerText = "";
 
     const response = await fetch(`/api/monthtotal`, {
@@ -454,7 +434,7 @@ async function renderMonthList(year, month) {
     renderStatisticExpense(data);
 }
 
-function init() {
+function init(): void {
     const selectMonthEl = document.querySelector(
         'input[type="month"]'
     ) as HTMLSelectElement;

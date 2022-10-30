@@ -30,24 +30,44 @@
                     <input type="month" class="selectMonth" />
                 </div>
                 <div class="reportArea">
-                    <table class="styled-table">
-                        <caption>수입 카테고리 내역</caption>
-                        <thead>
-                            <th>카테고리</th>
-                            <th>금액</th>
-                            <th>비율</th>
-                        </thead>
-                        <tbody class="incomeReort"></tbody>
-                    </table>
-                    <table class="styled-table">
-                        <caption>지출 카테고리 내역</caption>
-                        <thead>
-                            <th>카테고리</th>
-                            <th>금액</th>
-                            <th>비율</th>
-                        </thead>
-                        <tbody class="expendseReort"></tbody>
-                    </table>
+                    <div class="reportBox">
+                        <h1>수입 카테고리 보고서</h1>
+                        <table class="incomeSummerTotal styled-table">
+                            <thead>
+                                <th>총금액</th>
+                                <th>총 건수</th>
+                            </thead>
+                            <tbody class="incomeTotalReort"></tbody>
+                        </table>
+                        <table class="incomeStatistical styled-table">
+                            <thead>
+                                <th>카테고리</th>
+                                <th>금액</th>
+                                <th>건수</th>
+                                <th>비율</th>
+                            </thead>
+                            <tbody class="incomeReort"></tbody>
+                        </table>
+                    </div>
+                    <div class="reportBox">
+                        <h1>지출 카테고리 보고서</h1>
+                        <table class="expendSummerTotal styled-table">
+                            <thead>
+                                <th>총금액</th>
+                                <th>총 건수</th>
+                            </thead>
+                            <tbody class="expendTotalReort"></tbody>
+                        </table>
+                        <table class="extendStatistical styled-table">
+                            <thead>
+                                <th>카테고리</th>
+                                <th>금액</th>
+                                <th>건수</th>
+                                <th>비율</th>
+                            </thead>
+                            <tbody class="expendseReort"></tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
         </div>

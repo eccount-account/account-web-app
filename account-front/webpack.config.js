@@ -18,6 +18,7 @@ module.exports = {
         main: "./src/ts/index.ts", // 청크네임
         income: "./src/ts/income.ts",
         statistical: "./src/ts/statistical.ts",
+        utile: "./src/ts/utile.ts",
     },
     output: {
         // 출력
