@@ -3,41 +3,11 @@ import "../css/navigation.css";
 import "../css/home.css";
 import { createEl, cutDateFull, cutDateMonth } from "./utile";
 import { showModal, closeModal } from "./modal";
+import { EssentialData, CostFullData } from "./interface";
 
 const listItemsEl = document.querySelector(".ListItems") as HTMLSelectElement;
 
-interface PostOption {
-    method: string;
-    headers: object | any;
-    body: string;
-}
-
-interface ModyData {
-    id: number;
-    payedMoney: number;
-    payYear: number;
-    payMonth: number;
-    payDay: number;
-    payTime: number;
-    classify: string;
-    category: string;
-    memo: string;
-}
-
-interface FetchData {
-    category: string;
-    id: number;
-    memo: string;
-    payDay: number;
-    payMonth: number;
-    payTime: number;
-    payYear: number;
-    payedMoney: number;
-}
-
-//클라이언트 데이터 서버 전송
-//반환 데이터 Promise -> json 반환 [{id: 2, payedMoney: 3000, category: '교통비', memo: '안녕하세요2', payYear: 2022, …}]
-async function fetchData(url: string): Promise<FetchData[]> {
+async function fetchData(url: string): Promise<EssentialData[]> {
     const response = await fetch(url);
     const dataList = await response.json();
     console.log(dataList);
@@ -50,22 +20,6 @@ async function fetchData(url: string): Promise<FetchData[]> {
     return dataList;
 }
 
-//타입 못줘서 못쓰고있음
-//클라이언트에서 서버로 데이터 전송
-async function saveData(url: string, bodyData: string, method: string) {
-    const requstOption: PostOption = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: bodyData,
-    };
-
-    const response = await fetch(url, requstOption);
-    console.log(response);
-}
-
-//targetEl -> select엘리먼트
 function changeCategory(targetEl: HTMLSelectElement, classify: string): void {
     const INCOME_SELECT = ["금융소득", "근로소득", "기타", "없음"];
     const EXPEND_SELECT = [
@@ -129,13 +83,11 @@ class CostItem {
         this.memo = memo;
     }
 
-    //날짜 생성 함수
     getFullDate(): string {
         return `${this.payYear}-${this.payMonth}-${this.payDay}`;
     }
 
-    //반환값 -> listItemEl 엘리먼트
-    createItem() {
+    createItem(): HTMLElement {
         const listItemEl = createEl("tr", "cl-listItem");
         const payedmoneyEl = createEl("td", "cl-payedmoney");
         const payedateEl = createEl("td", "cl-payedate");
@@ -165,7 +117,6 @@ class CostItem {
         return listItemEl;
     }
 
-    //반환은 없는듯? promise
     async requestModify(
         id: number,
         money: number,
@@ -197,7 +148,13 @@ class CostItem {
         );
 
         const data = await response.status;
-        console.log(data);
+
+        if (data === 200) {
+            alert("수정이 완료되었습니다.");
+        } else {
+            alert("수정이 실패했습니다.");
+        }
+
         renderMonthList(year, month);
     }
 
@@ -218,7 +175,12 @@ class CostItem {
         );
 
         const data = await response.status;
-        console.log(data);
+        if (data === 200) {
+            alert("삭제가 완료되었습니다.");
+        } else {
+            alert("삭제가 실패했습니다.");
+        }
+
         renderMonthList(year, month);
     }
 
@@ -244,7 +206,6 @@ class CostItem {
 
         const detailBoardDateEl = createEl("input", "dateilBoard");
         const detailBoardDateP = createEl("p", "input-label");
-        console.log(detailBoardDateP);
 
         const detailBoardMomoEl = createEl("input", "detailBoardMomo");
         const detailBoardMomoP = createEl("p", "input-label");
@@ -258,7 +219,7 @@ class CostItem {
         detailBoardDateP.innerText = "날짜";
         detailBoardMomoP.innerText = "메모";
 
-        detailBoardMonyEl.value = selectItem.payedMoney;
+        detailBoardMonyEl.value = `${selectItem.payedMoney}`;
 
         changeCategory(detailBoardCategoryEl, classify);
 
@@ -285,11 +246,12 @@ class CostItem {
         boardBtnArea.appendChild(deleteBtn);
         detailBoardBoxEl.appendChild(boardBtnArea);
 
+        //수정버튼 클릭
         modifyBtn.addEventListener("click", () => {
             const [year, month, day] = cutDateFull(detailBoardDateEl.value);
             this.requestModify(
                 selectItem.id,
-                detailBoardMonyEl.value,
+                Number(detailBoardMonyEl.value),
                 detailBoardCategoryEl.value,
                 detailBoardMomoEl.value,
                 classify,
@@ -299,6 +261,8 @@ class CostItem {
             );
             closeModal();
         });
+
+        //삭제 버튼 클릭
         deleteBtn.addEventListener("click", () => {
             this.requestDelete(
                 selectItem.id,
@@ -313,7 +277,7 @@ class CostItem {
     }
 }
 
-function sumAllCost(data: ModyData[]): number {
+function sumAllCost(data: CostFullData[]): number {
     return data.reduce(
         (acc, item) =>
             (acc += item.payedMoney * (item.classify === "수입" ? 1 : -1)),
@@ -321,7 +285,7 @@ function sumAllCost(data: ModyData[]): number {
     );
 }
 
-function sumIncomeCost(data: ModyData[]): number {
+function sumIncomeCost(data: CostFullData[]): number {
     let sumCost = 0;
     data.forEach((item) => {
         if (item.classify === "수입") {
@@ -331,7 +295,7 @@ function sumIncomeCost(data: ModyData[]): number {
     return sumCost;
 }
 
-function sumExpenseCost(data: ModyData[]): number {
+function sumExpenseCost(data: CostFullData[]): number {
     let sumCost = 0;
     data.forEach((item) => {
         if (item.classify === "지출") {
@@ -341,7 +305,7 @@ function sumExpenseCost(data: ModyData[]): number {
     return sumCost;
 }
 
-function renderStatisticAll(data: ModyData[], flag: boolean): void {
+function renderStatisticAll(data: CostFullData[], flag: boolean): void {
     const targetEl = document.querySelector(".monySum") as HTMLSelectElement;
     targetEl.innerText = "";
 
@@ -352,14 +316,14 @@ function renderStatisticAll(data: ModyData[], flag: boolean): void {
     targetEl.innerText = `${sumAllCost(data).toLocaleString()}원`;
 }
 
-function renderStatisticIncome(data: ModyData[]): void {
+function renderStatisticIncome(data: CostFullData[]): void {
     const targetEl = document.querySelector(".monyIncome") as HTMLSelectElement;
     targetEl.innerText = "";
     targetEl.innerText = `${sumIncomeCost(data).toLocaleString()}원`;
     targetEl.classList.add("style-imcome");
 }
 
-function renderStatisticExpense(data: ModyData[]): void {
+function renderStatisticExpense(data: CostFullData[]): void {
     const targetEl = document.querySelector(
         ".monyExpense"
     ) as HTMLSelectElement;
@@ -373,7 +337,7 @@ async function renderAllList(selectClassify: string): Promise<void> {
 
     const response = await fetch(`/api/${selectClassify}`);
 
-    const monyList: ModyData[] = await response.json();
+    const monyList: CostFullData[] = await response.json();
     if (!monyList) {
         return;
     }
@@ -393,7 +357,6 @@ async function renderAllList(selectClassify: string): Promise<void> {
         listItemsEl.appendChild(costItem.createItem());
     });
 
-    //monyList 객체 반환
     renderStatisticAll(monyList, false);
     renderStatisticIncome(monyList);
     renderStatisticExpense(monyList);
@@ -415,7 +378,7 @@ async function renderMonthList(year: number, month: number): Promise<void> {
         }),
     });
 
-    const data: ModyData[] = await response.json();
+    const data: CostFullData[] = await response.json();
     if (!data) {
         return;
     }

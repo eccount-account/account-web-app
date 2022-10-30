@@ -19,6 +19,7 @@ module.exports = {
         income: "./src/ts/income.ts",
         statistical: "./src/ts/statistical.ts",
         utile: "./src/ts/utile.ts",
+        interface: "./src/ts/interface.ts",
     },
     output: {
         // 출력

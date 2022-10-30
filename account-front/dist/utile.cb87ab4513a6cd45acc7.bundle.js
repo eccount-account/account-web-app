@@ -41,7 +41,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "cutDateMonth": () => (/* binding */ cutDateMonth)
 /* harmony export */ });
 //유틸함수
-function createEl(elKind, className = "") {
+function createEl(elKind, className) {
     const el = document.createElement(elKind);
     el.className = className;
     return el;
@@ -57,4 +57,4 @@ function cutDateMonth(date) {
 
 /******/ })()
 ;
-//# sourceMappingURL=utile.b2657cf5db6c42171af4.bundle.js.map
+//# sourceMappingURL=utile.cb87ab4513a6cd45acc7.bundle.js.map

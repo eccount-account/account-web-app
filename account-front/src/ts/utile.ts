@@ -1,5 +1,8 @@
 //유틸함수
-export function createEl(elKind: any, className = "") {
+export function createEl<K extends keyof HTMLElementTagNameMap>(
+    elKind: K,
+    className: string
+): HTMLElementTagNameMap[K] {
     const el = document.createElement(elKind);
     el.className = className;
     return el;

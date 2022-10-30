@@ -2,8 +2,8 @@ import "../css/reset.css";
 import "../css/navigation.css";
 import "../css/statistical.css";
 import { createEl, cutDateMonth } from "./utile";
+import { CostFullData, ReportAllData } from "./interface";
 
-// targetEl엘리먼트 유흥비 10000 23111 2
 function createTableItem(
     targetEl: HTMLElement,
     categoryName: string,
@@ -11,15 +11,6 @@ function createTableItem(
     categoryCount: number,
     categoryAcc?: number
 ) {
-    console.log(
-        "출력",
-        targetEl,
-        categoryName,
-        categoryAcc,
-        categorySum,
-        categoryCount
-    );
-
     const listItemEl = createEl("tr", "listItem");
     const categoryNameEl = createEl("td", "categoryName");
     const categoryAccEl = createEl("td", "categoryAcc");
@@ -41,13 +32,11 @@ function createTableItem(
     targetEl.appendChild(listItemEl);
 }
 
-//엘리먼트 23111 7
 function createTotalItam(
     targetEl: HTMLElement,
     accSum: number,
     accCount: number
 ): void {
-    console.log("출력!!!@#@!#", targetEl, accSum, accCount);
     targetEl.innerText = "";
 
     const listItemEl = createEl("tr", "listItem");
@@ -71,52 +60,12 @@ function renderReportList(
 ): void {
     targetEl.innerText = "";
 
-    //{식비: 2111, 주거비: 11000, 유흥비: 10000}식비: 2111유흥비: 10000주거비: 11000[[Prototype]]: Object 23111 {식비: 2, 주거비: 3, 유흥비: 2}
-    //accData -> {금융소득: 3000}
-    console.log("ㄴㄴㄴ", targetEl, accData, accSum, categoryCount);
-
     for (const [name, acc] of Object.entries(accData)) {
-        //console.log("스티링", name, "숫자", acc);
         createTableItem(targetEl, name, accSum, categoryCount[name], acc);
     }
 }
 
-interface CalCost {
-    category: string;
-    classify: string;
-    id: number;
-    memo: string;
-    payDay: number;
-    payMonth: number;
-    payTime: number;
-    payYear: number;
-    payedMoney: number;
-}
-
-interface RetrnData {
-    totalAcc: number;
-    incomeCategoryAcc: object;
-    expendCategoryAcc: object;
-    incomeMonthTotal: number;
-    expendMonthTotal: number;
-    incomeCount: number;
-    expendCount: number;
-    incomeCategoryObj: object;
-    expendCetegoryObj: object;
-}
-
-function calculateCategoryCost(data: CalCost): RetrnData {
-    console.log("calculateCategoryCost", data);
-    //[{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
-    // category: "식비"
-    // classify: "지출"
-    // id: 5
-    // memo: "안녕하세요5"payDay: 25
-    // payMonth: 10
-    // payTime: 1101
-    // payYear: 2022
-    // payedMoney: 2000
-
+function calculateCategoryCost(data: CostFullData): ReportAllData {
     const incomeObj = {};
     const expendObj = {};
     const incomeCategoryObj = {};
@@ -165,7 +114,7 @@ function calculateCategoryCost(data: CalCost): RetrnData {
         }
     }
 
-    const sendData: RetrnData = {
+    const sendData: ReportAllData = {
         totalAcc: allMonthCost,
         incomeCategoryAcc: incomeObj,
         expendCategoryAcc: expendObj,
@@ -180,22 +129,10 @@ function calculateCategoryCost(data: CalCost): RetrnData {
     return sendData;
 }
 
-interface ExpendCategoryAcc {
-    expendCategoryAcc: object;
-    expendCetegoryObj: object;
-    expendCount: number;
-    expendMonthTotal: number;
-    incomeCategoryAcc: object;
-    incomeCategoryObj: object;
-    incomeCount: number;
-    incomeMonthTotal: number;
-    totalAcc: number;
-}
-
 function renderIncomeReport(
     incomeReportEl: HTMLElement,
     incomeTotalReortEl: HTMLElement,
-    accData: ExpendCategoryAcc
+    accData: ReportAllData
 ) {
     renderReportList(
         incomeReportEl,
@@ -214,7 +151,7 @@ function renderIncomeReport(
 function expendIncomeReport(
     expendseReortEl: HTMLElement,
     expendTotalReortEl: HTMLElement,
-    accData: ExpendCategoryAcc
+    accData: ReportAllData
 ) {
     renderReportList(
         expendseReortEl,
